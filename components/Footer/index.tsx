@@ -1,7 +1,7 @@
-"use client";
-import React from "react";
-import Image from "next/image";
-import { motion } from "framer-motion";
+'use client'
+import React from 'react'
+import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 const Footer = () => {
   return (
@@ -29,18 +29,18 @@ const Footer = () => {
                 viewport={{ once: true }}
                 className="animate_top w-1/2 lg:w-1/4"
               >
-                <a href="index.html" className="relative">
+                <a href="/" className="relative">
                   <Image
                     width={110}
                     height={80}
-                    src="/images/logo/logo-light.svg"
+                    src="/images/logo/light.png"
                     alt="Logo"
                     className="dark:hidden"
                   />
                   <Image
                     width={110}
                     height={80}
-                    src="/images/logo/logo-dark.svg"
+                    src="/images/logo/dark.png"
                     alt="Logo"
                     className="hidden dark:block"
                   />
@@ -211,7 +211,10 @@ const Footer = () => {
                         className="w-full dark:bg-black border border-stroke dark:border-strokedark shadow-solid-11 dark:shadow-none rounded-full focus:outline-none focus:border-primary dark:focus:border-primary py-3 px-6"
                       />
 
-                      <button aria-label="signup to newsletter" className="absolute right-0 p-4">
+                      <button
+                        aria-label="signup to newsletter"
+                        className="absolute right-0 p-4"
+                      >
                         <svg
                           className="fill-[#757693] dark:fill-white hover:fill-primary"
                           width="20"
@@ -419,7 +422,7 @@ const Footer = () => {
         </div>
       </footer>
     </>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

@@ -16,7 +16,7 @@ const BlogData: Blog[] = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.",
   },
   {
-    _id: 2,
+    _id: 3,
     mainImage: "/images/blog/blog-03.png",
     title: "Tips to quickly improve your coding speed.",
     metadata:
@@ -37,7 +37,7 @@ const BlogData: Blog[] = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.",
   },
   {
-    _id: 2,
+    _id: 3,
     mainImage: "/images/blog/blog-01.png",
     title: "Tips to quickly improve your coding speed.",
     metadata:

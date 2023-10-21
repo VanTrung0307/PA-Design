@@ -1,19 +1,15 @@
-"use client";
-import React from "react";
-import Image from "next/image";
-import { motion } from "framer-motion";
+'use client'
+import React from 'react'
+import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 const Contact = () => {
-  /**
-   * Source: https://www.joshwcomeau.com/react/the-perils-of-rehydration/
-   * Reason: To fix rehydration error
-   */
-  const [hasMounted, setHasMounted] = React.useState(false);
+  const [hasMounted, setHasMounted] = React.useState(false)
   React.useEffect(() => {
-    setHasMounted(true);
-  }, []);
+    setHasMounted(true)
+  }, [])
   if (!hasMounted) {
-    return null;
+    return null
   }
 
   return (
@@ -117,7 +113,10 @@ const Contact = () => {
                     </label>
                   </div>
 
-                  <button aria-label="send message" className="inline-flex items-center gap-2.5 bg-black hover:bg-blackho ease-in-out duration-300 dark:bg-btndark font-medium text-white rounded-full px-6 py-3">
+                  <button
+                    aria-label="send message"
+                    className="inline-flex items-center gap-2.5 bg-black hover:bg-blackho ease-in-out duration-300 dark:bg-btndark font-medium text-white rounded-full px-6 py-3"
+                  >
                     Send Message
                     <svg
                       className="fill-white"
@@ -187,7 +186,7 @@ const Contact = () => {
       </section>
       {/* <!-- ===== Contact End ===== --> */}
     </>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact
