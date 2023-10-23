@@ -1,8 +1,8 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Slider = () => {
-  const [currentIndex, setCurrentIndex] = useState(1)
+  const [currentIndex, setCurrentIndex] = useState(0)
   const images = [
     'https://source.unsplash.com/1600x900/?beach',
     'https://source.unsplash.com/1600x900/?cat',
@@ -10,6 +10,16 @@ const Slider = () => {
     'https://source.unsplash.com/1600x900/?lego',
     'https://source.unsplash.com/1600x900/?textures&patterns',
   ]
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length)
+    }, 10000)
+
+    return () => {
+      clearInterval(interval)
+    }
+  }, [])
 
   const back = () => {
     if (currentIndex > 1) {
@@ -26,22 +36,24 @@ const Slider = () => {
   }
 
   return (
-    <article className="relative w-full h-full flex flex-shrink-0 overflow-hidden shadow-2xl">
+    <article className="relative w-full h-full flex flex-shrink-0 overflow-hidden shadow-2xl mt-[-100px]">
       {images.map((image, index) => (
         <figure
           key={index}
-          className={`h-[500px] ${currentIndex === index + 1 ? '' : 'hidden'}`}
+          className={`h-[500px] top-0 left-0 w-full transition-transform duration-500 ${
+            currentIndex === index ? 'opacity-100' : 'opacity-0'
+          }`}
         >
           <img
             src={image}
             alt="Image"
-            className="absolute inset-0 z-10 h-full w-full object-fit"
+            className="absolute inset-0 z-10 h-full w-full object-cover"
           />
         </figure>
       ))}
 
       <div className="rounded-full bg-white text-black absolute top-5 right-5 text-sm px-2 text-center z-10">
-        <span>{currentIndex}</span>
+        <span>{currentIndex + 1}</span>
         <span>/</span>
         <span>{images.length}</span>
       </div>
