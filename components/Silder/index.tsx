@@ -14,7 +14,7 @@ const Slider = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length)
-    }, 10000)
+    }, 2000)
 
     return () => {
       clearInterval(interval)
@@ -36,7 +36,7 @@ const Slider = () => {
   }
 
   return (
-    <article className="relative w-full h-full flex flex-shrink-0 overflow-hidden shadow-2xl mt-[-100px]">
+    <article className="relative w-full h-full flex flex-shrink-0 overflow-hidden shadow-2xl">
       {images.map((image, index) => (
         <figure
           key={index}

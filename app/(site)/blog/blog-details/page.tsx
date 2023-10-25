@@ -1,8 +1,23 @@
-import Image from "next/image";
-import SharePost from "@/components/Blog/SharePost";
-import RelatedPost from "@/components/Blog/RelatedPost";
+import RelatedPost from '@/components/Blog/RelatedPost';
+import SharePost from '@/components/Blog/SharePost';
+import BlogData from '@/components/Blog/blogData';
+import { GetServerSideProps } from 'next';
+import Image from 'next/image';
 
-const SingleBlogPage = async () => {
+interface SingleBlogPageProps {
+  _id: number;
+}
+
+const SingleBlogPage = ({ _id }: SingleBlogPageProps) => {
+
+  const blogPost = BlogData.find((blog) => blog._id === _id);
+
+  if (!blogPost) {
+    return <div>Blog post not found</div>;
+  }
+
+  const { title, mainImage, metadata } = blogPost;
+
   return (
     <>
       <title>{`Blog Details - Solid`}</title>
@@ -10,61 +25,6 @@ const SingleBlogPage = async () => {
         <div className="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
           <div className="flex flex-col-reverse lg:flex-row gap-7.5 xl:gap-12.5">
             <div className="md:w-1/2 lg:w-[32%]">
-              <div className="animate_top rounded-md shadow-solid-13 bg-white dark:bg-blacksection border border-stroke dark:border-strokedark p-3.5 mb-10">
-                <form
-                  action="https://formbold.com/s/unique_form_id"
-                  method="POST"
-                >
-                  <div className="relative">
-                    <input
-                      type="text"
-                      placeholder="Search Here..."
-                      className="w-full dark:bg-black border border-stroke dark:border-strokedark shadow-solid-12 dark:shadow-none rounded-lg focus:outline-none focus:border-primary dark:focus:border-primary py-4 px-6"
-                    />
-
-                    <button
-                      className="absolute top-0 right-0 p-5"
-                      aria-label="search-icon"
-                    >
-                      <svg
-                        className="fill-black dark:fill-white hover:fill-primary dark:hover:fill-primary transition-all duration-300"
-                        width="21"
-                        height="21"
-                        viewBox="0 0 21 21"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M16.031 14.617L20.314 18.899L18.899 20.314L14.617 16.031C13.0237 17.3082 11.042 18.0029 9 18C4.032 18 0 13.968 0 9C0 4.032 4.032 0 9 0C13.968 0 18 4.032 18 9C18.0029 11.042 17.3082 13.0237 16.031 14.617ZM14.025 13.875C15.2941 12.5699 16.0029 10.8204 16 9C16 5.132 12.867 2 9 2C5.132 2 2 5.132 2 9C2 12.867 5.132 16 9 16C10.8204 16.0029 12.5699 15.2941 13.875 14.025L14.025 13.875Z" />
-                      </svg>
-                    </button>
-                  </div>
-                </form>
-              </div>
-
-              <div className="animate_top rounded-md shadow-solid-13 bg-white dark:bg-blacksection border border-stroke dark:border-strokedark p-9 mb-10">
-                <h4 className="font-semibold text-2xl text-black dark:text-white mb-7.5">
-                  Categories
-                </h4>
-
-                <ul>
-                  <li className="last:mb-0 mb-3 transition-all duration-300 hover:text-primary">
-                    <a href="#">Blog</a>
-                  </li>
-                  <li className="last:mb-0 mb-3 transition-all duration-300 hover:text-primary">
-                    <a href="#">Events</a>
-                  </li>
-                  <li className="last:mb-0 mb-3 transition-all duration-300 hover:text-primary">
-                    <a href="#">Grids</a>
-                  </li>
-                  <li className="last:mb-0 mb-3 transition-all duration-300 hover:text-primary">
-                    <a href="#">News</a>
-                  </li>
-                  <li className="last:mb-0 mb-3 transition-all duration-300 hover:text-primary">
-                    <a href="#">Rounded</a>
-                  </li>
-                </ul>
-              </div>
-
               <RelatedPost />
             </div>
 
@@ -73,8 +33,8 @@ const SingleBlogPage = async () => {
                 <div className="mb-10 w-full overflow-hidden ">
                   <div className="relative aspect-[97/60] w-full sm:aspect-[97/44]">
                     <Image
-                      src={"/images/blog/blog-01.png"}
-                      alt="Kobe Steel plant that supplied"
+                      src={mainImage}
+                      alt={title}
                       fill
                       className="object-cover object-center rounded-md"
                     />
@@ -82,18 +42,18 @@ const SingleBlogPage = async () => {
                 </div>
 
                 <h2 className="font-semibold text-3xl 2xl:text-sectiontitle2 text-black dark:text-white mt-11 mb-5">
-                  Kobe Steel plant that supplied
+                  {title}
                 </h2>
 
                 <ul className="flex flex-wrap gap-5 2xl:gap-7.5 mb-9">
                   <li>
-                    <span className="text-black dark:text-white">Author: </span>{" "}
+                    <span className="text-black dark:text-white">Author: </span>{' '}
                     Jhon Doe
                   </li>
                   <li>
                     <span className="text-black dark:text-white">
                       Published On: July 30, 2023
-                    </span>{" "}
+                    </span>{' '}
                   </li>
                   <li>
                     <span className="text-black dark:text-white">
@@ -105,12 +65,7 @@ const SingleBlogPage = async () => {
 
                 <div className="blog-details">
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nunc quis nibh lorem. Duis sed odio lorem. In a efficitur
-                    leo. Ut venenatis rhoncus quam sed condimentum. Curabitur
-                    vel turpis in dolor volutpat imperdiet in ut mi. Integer non
-                    volutpat nulla. Nunc elementum elit viverra, tempus quam
-                    non, interdum ipsum.
+                    {metadata}
                   </p>
 
                   <p>
@@ -126,20 +81,22 @@ const SingleBlogPage = async () => {
 
                   <div className="flex flex-wrap gap-5">
                     <Image
-                      src={"/images/blog/blog-01.png"}
+                      src={'/images/blog/blog-01.png'}
                       width={350}
                       height={200}
                       alt="image"
                     />
                     <Image
-                      src={"/images/blog/blog-02.png"}
+                      src={'/images/blog/blog-02.png'}
                       width={350}
                       height={200}
                       alt="image"
                     />
                   </div>
 
-                  <h3 className="pt-8">Nunc elementum elit viverra, tempus quam non</h3>
+                  <h3 className="pt-8">
+                    Nunc elementum elit viverra, tempus quam non
+                  </h3>
 
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -158,7 +115,17 @@ const SingleBlogPage = async () => {
         </div>
       </section>
     </>
-  );
-};
+  )
+}
 
-export default SingleBlogPage;
+export const getServerSideProps: GetServerSideProps<SingleBlogPageProps> = async (context) => {
+  const { _id } = context.query;
+
+  return {
+    props: {
+      _id: parseInt(_id as string),
+    },
+  };
+}
+
+export default SingleBlogPage

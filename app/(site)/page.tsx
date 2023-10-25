@@ -12,6 +12,7 @@ import Pricing from "@/components/Pricing";
 import Contact from "@/components/Contact";
 import Blog from "@/components/Blog";
 import Testimonial from "@/components/Testimonial";
+import Slider from "@/components/Silder";
 
 export const metadata: Metadata = {
   title: "PA Design",
@@ -35,6 +36,7 @@ export default function Home() {
       <Testimonial />
       <Pricing />
       <Contact /> */}
+      <Slider />
       <Blog />
     </main>
   );
