@@ -1,10 +1,11 @@
 'use client'
-import Image from 'next/image'
+import { BlogContext } from '@/app/(site)/BlogContext'
 import { Blog } from '@/types/blog'
-import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { useState } from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
 import { useRouter } from 'next/navigation'
+import { useContext, useState } from 'react'
 
 interface BlogItemProps {
   blog: Blog
@@ -15,8 +16,10 @@ const BlogItem: React.FC<BlogItemProps> = ({ blog, _id }) => {
   const { mainImage, title, metadata } = blog
   const [isHovered, setIsHovered] = useState(false)
   const router = useRouter()
+  const { setBlogId } = useContext(BlogContext)
 
   const handleClick = () => {
+    setBlogId(_id)
     router.push(`/blog/blog-details?_id=${_id}`)
   }
 
@@ -59,7 +62,7 @@ const BlogItem: React.FC<BlogItemProps> = ({ blog, _id }) => {
           {isHovered && (
             <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
               <div className="px-4">
-                <h4 className="font-medium text-lg xl:text-itemtitle2 text-white hover:text-primary mt-7.5 mb-3.5">
+                <h4 className="font-medium text-lg xl:text-itemtitle2 text-white mt-7.5 mb-3.5">
                   {`${title.slice(0, 40)}...`}
                 </h4>
                 <p className="text-white">

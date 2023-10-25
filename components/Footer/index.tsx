@@ -33,14 +33,14 @@ const Footer = () => {
                   <Image
                     width={110}
                     height={80}
-                    src="/images/logo/light.png"
+                    src="/images/logo/logo-light.png"
                     alt="Logo"
                     className="dark:hidden"
                   />
                   <Image
                     width={110}
                     height={80}
-                    src="/images/logo/dark.png"
+                    src="/images/logo/logo-dark.png"
                     alt="Logo"
                     className="hidden dark:block"
                   />
