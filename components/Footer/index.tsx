@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 const Footer = () => {
   return (
     <>
-      <footer className="bg-white dark:bg-blacksection border-t border-stroke dark:border-strokedark">
+      <footer className="bg-[#F0EBEB] dark:bg-blacksection border-t border-stroke dark:border-strokedark">
         <div className="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
           {/* <!-- Footer Top --> */}
           <div className="py-20 lg:py-25">
@@ -47,10 +47,10 @@ const Footer = () => {
                 </a>
 
                 <p className="mt-5 mb-10">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Architecture, Landscape, Interior design & decoration...
                 </p>
 
-                <p className="uppercase tracking-[5px] text-sectiontitle mb-1.5">
+                {/* <p className="uppercase tracking-[5px] text-sectiontitle mb-1.5">
                   contact
                 </p>
                 <a
@@ -58,11 +58,11 @@ const Footer = () => {
                   className="text-black dark:text-white font-medium text-itemtitle"
                 >
                   hello@solid.com
-                </a>
+                </a> */}
               </motion.div>
 
               <div className="w-full lg:w-2/3 xl:w-7/12 flex flex-col md:flex-row md:justify-between gap-8 md:gap-0">
-                <motion.div
+                {/* <motion.div
                   variants={{
                     hidden: {
                       opacity: 0,
@@ -118,7 +118,7 @@ const Footer = () => {
                       </a>
                     </li>
                   </ul>
-                </motion.div>
+                </motion.div> */}
 
                 <motion.div
                   variants={{
@@ -139,46 +139,81 @@ const Footer = () => {
                   className="animate_top"
                 >
                   <h4 className="font-medium text-black dark:text-white text-itemtitle2 mb-9">
-                    Support
+                    Contact Us
                   </h4>
 
                   <ul>
                     <li>
-                      <a
-                        href="#"
-                        className="inline-block hover:text-primary mb-3"
-                      >
-                        Company
+                      <a className="inline-block hover:text-primary mb-5 flex gap-[10px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" 
+                             viewBox="0 0 22 23" fill="none" >
+                          <g clip-path="url(#clip0_19_1085)">
+                            <path d="M10.2468 13.7598C11.6384 15.1716 13.3223 16.2616 15.1801 
+                            16.9532L17.6934 14.9532C17.7679 14.9018 17.8563 14.8744 17.9468 14.8744C18.0372 
+                            14.8744 18.1256 14.9018 18.2001 14.9532L22.8668 17.9598C23.0439 18.0663 23.1939 
+                            18.2126 23.3048 18.387C23.4158 18.5615 23.4846 18.7593 23.506 18.9649C23.5273 
+                            19.1705 23.5005 19.3783 23.4278 19.5718C23.355 19.7653 23.2383 19.9392 23.0868 
+                            20.0798L20.9001 22.2398C20.5869 22.5492 20.2021 22.7763 19.7798 22.9008C19.3575 
+                            23.0253 18.911 23.0433 18.4801 22.9532C14.1816 22.0654 10.2195 19.9862 7.04676 
+                            16.9532C3.94442 13.89 1.79761 9.99239 0.866761 5.73316C0.774805 5.30892 0.793997 
+                            4.86812 0.922478 4.45348C1.05096 4.03883 1.28437 3.66441 1.60009 3.36649L3.86676 
+                            1.17983C4.00703 1.03568 4.17808 0.925143 4.36713 0.856478C4.55617 0.787813 4.75829 
+                            0.762805 4.95837 0.783325C5.15844 0.803846 5.35128 0.869364 5.52245 
+                            0.974973C5.69362 1.08058 5.83868 1.22355 5.94676 1.39316L9.05343 5.99983C9.10701 
+                            6.07216 9.13594 6.1598 9.13594 6.24983C9.13594 6.33985 9.10701 6.42749 9.05343 
+                            6.49983L7.00676 8.95983C7.71715 10.7805 8.82392 12.4201 10.2468 13.7598Z" 
+                            fill="#1C75FD"/>
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_19_1085">
+                              <rect width="24" height="24" fill="white" transform="translate(0.100098)"/>
+                            </clipPath>
+                          </defs>
+                        </svg>
+                         Phone: 090 277 79 74
                       </a>
                     </li>
                     <li>
-                      <a
-                        href="#"
-                        className="inline-block hover:text-primary mb-3"
-                      >
-                        Press media
+                      <a className="inline-block hover:text-primary mb-5 flex gap-[10px]">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" 
+                           viewBox="0 0 25 24" fill="none">
+                        <path d="M4.76676 2.83301C3.7943 2.83301 2.86167 3.21932 2.17404 3.90695C1.48641 
+                        4.59458 1.1001 5.52721 1.1001 6.49967V6.86818L12.1001 12.7917L23.1001 
+                        6.87001V6.49967C23.1001 5.52721 22.7138 4.59458 22.0262 3.90695C21.3385 
+                        3.21932 20.4059 2.83301 19.4334 2.83301H4.76676ZM23.1001 8.95084L12.5346 
+                        14.6397C12.4011 14.7116 12.2518 14.7492 12.1001 14.7492C11.9484 14.7492 11.7991 
+                        14.7116 11.6656 14.6397L1.1001 8.95084V17.4997C1.1001 18.4721 1.48641 19.4048 
+                        2.17404 20.0924C2.86167 20.78 3.7943 21.1663 4.76676 21.1663H19.4334C20.4059 
+                        21.1663 21.3385 20.78 22.0262 20.0924C22.7138 19.4048 23.1001 18.4721 23.1001 
+                        17.4997V8.95084Z" fill="#1C75FD"/>
+                      </svg>
+                        Email: padesign.info@gmail.com
                       </a>
                     </li>
                     <li>
-                      <a
-                        href="#"
-                        className="inline-block hover:text-primary mb-3"
-                      >
-                        Our Blog
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="inline-block hover:text-primary mb-3"
-                      >
-                        Contact Us
+                      <a className="inline-block hover:text-primary mb-5 flex gap-[10px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" 
+                             viewBox="0 0 25 24" fill="none">
+                          <path d="M12.0121 23C10.4687 21.6835 9.03807 20.2402 7.7352 18.6852C5.78002 
+                          16.35 3.45825 12.8722 3.45825 9.55818C3.45741 7.86568 3.95867 6.21097 4.8986 
+                          4.80347C5.83853 3.39596 7.17488 2.29893 8.73853 1.6512C10.3022 1.00348 12.0228 
+                          0.834177 13.6827 1.16473C15.3426 1.49527 16.8672 2.31081 18.0634 3.50813C18.8598 
+                          4.30103 19.4911 5.24401 19.9207 6.28249C20.3503 7.32098 20.5696 8.43435 20.566 
+                          9.55818C20.566 12.8722 18.2443 16.35 16.2891 18.6852C14.9862 20.2402 13.5556 
+                          21.6835 12.0121 23ZM12.0121 5.89222C11.0399 5.89222 10.1074 6.27846 9.41992 
+                          6.96596C8.73242 7.65346 8.34619 8.58591 8.34619 9.55818C8.34619 10.5304 8.73242 
+                          11.4629 9.41992 12.1504C10.1074 12.8379 11.0399 13.2241 12.0121 13.2241C12.9844 
+                          13.2241 13.9169 12.8379 14.6044 12.1504C15.2919 11.4629 15.6781 10.5304 15.6781 
+                          9.55818C15.6781 8.58591 15.2919 7.65346 14.6044 6.96596C13.9169 6.27846 12.9844 
+                          5.89222 12.0121 5.89222Z" fill="#1C75FD"/>
+                        </svg>
+                        Address: 24 Huỳnh Văn Một, phường Hiệp Tân, Tân Phú , Ho Chi Minh City, Vietnam
                       </a>
                     </li>
                   </ul>
                 </motion.div>
 
-                <motion.div
+                {/* <motion.div
                   variants={{
                     hidden: {
                       opacity: 0,
@@ -238,7 +273,7 @@ const Footer = () => {
                       </button>
                     </div>
                   </form>
-                </motion.div>
+                </motion.div> */}
               </div>
             </div>
           </div>
