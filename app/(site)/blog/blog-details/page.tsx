@@ -7,37 +7,70 @@ import { useSearchParams } from 'next/navigation'
 import { useEffect } from 'react'
 
 const SingleBlogPage: React.FC = () => {
-
   const searchParams = useSearchParams()
+  const currentBlogId = searchParams.get('_id');
   useEffect(() => {
     const url = `${searchParams}`
-    console.log(url)
-    console.log(searchParams.get('_id'));
-    
-    // You can now use the current URL
-    // ...
   }, [searchParams])
 
-  const blogPost = BlogData.find((blog) => blog._id.toString() === searchParams.get('_id'))
-
-  
-  // const { _id } = useContext(BlogContext)
-  // const [blogPost, setBlogPost] = useState<Blog | null>(null)
-  // useEffect(() => {
-  //   if (_id) {
-  //     const fetchedBlogPost = BlogData.find((blog) => blog._id === _id)
-  //     setBlogPost(fetchedBlogPost || null)
-  //   }
-  // }, [_id])
+  const blogPost = BlogData.find(
+    (blog) => blog._id.toString() === currentBlogId
+  );
 
   return (
     <>
-      <title>{`Blog Details - Solid`}</title>
-      <section className="pt-35 lg:pt-45 xl:pt-50 pb-20 lg:pb-25 xl:pb-30">
+      <title>{`Blog Details -PA Design`}</title>
+
+      <section className="lg:pt-45 xl:pt-50 pb-20 lg:pb-25 xl:pb-30 mt-[-200px]">
         <div className="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
+          <nav
+            className="flex bg-gray-50 text-gray-700 py-3 px-5 rounded-lg dark:bg-gray-800 dark:border-gray-700"
+            aria-label="Breadcrumb"
+          >
+            <ol className="inline-flex items-center space-x-1 md:space-x-3">
+              <li className="inline-flex items-center">
+                <a
+                  href="/"
+                  className="text-sm text-gray-700 hover:text-gray-900 inline-flex items-center dark:text-gray-400 dark:hover:text-white"
+                >
+                  <svg
+                    className="w-4 h-4 mr-2"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
+                  </svg>
+                  Home
+                </a>
+              </li>
+              <li>
+                <div className="flex items-center">
+                  <svg
+                    className="w-6 h-6 text-gray-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <a
+                    href="#"
+                    className="text-gray-700 hover:text-gray-900 ml-1 md:ml-2 text-sm font-medium dark:text-gray-400 dark:hover:text-white"
+                  >
+                    {blogPost?.title}
+                  </a>
+                </div>
+              </li>
+            </ol>
+          </nav>
           <div className="flex flex-col-reverse lg:flex-row gap-7.5 xl:gap-12.5">
             <div className="md:w-1/2 lg:w-[32%]">
-              <RelatedPost />
+            {currentBlogId && <RelatedPost currentBlogId={currentBlogId} />}
             </div>
 
             {blogPost && (
@@ -54,9 +87,10 @@ const SingleBlogPage: React.FC = () => {
                     </div>
                   </div>
 
-                  <h2 className="font-semibold text-3xl 2xl:text-sectiontitle2 text-black dark:text-white mt-11 mb-5">
+                  <h2 className="font-semibold text-3xl 2xl:text-sectiontitle2 text-black dark:text-white mt-11">
                     {blogPost?.title}
                   </h2>
+                  <p className='mb-5'>{blogPost?.metadata}</p>
 
                   <ul className="flex flex-wrap gap-5 2xl:gap-7.5 mb-9">
                     <li>

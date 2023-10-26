@@ -1,48 +1,132 @@
-import { Blog } from "@/types/blog";
+import { Blog } from '@/types/blog'
 
 const BlogData: Blog[] = [
-  { 
+  {
     _id: 1,
-    mainImage: "/images/blog/blog-01.png",
-    title: "Free advertising for your online business",
-    metadata:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.",
+    mainImage:
+      'https://sawadeesign.vn/wp-content/uploads/2023/08/365242350_827942945443722_8833144784399307812_n.jpg',
+    title: 'THE DREAMERS',
+    metadata: 'NHA TRANG',
+    area: '200sqm',
+    location: 'Thich Quang Duc St, VCN, Nha Trang, Vietnam.',
+    leadArchitect: 'Doan Si Nguyen.',
+    designTeam: 'Nguyen Khanh Long, Tong Thao, Nguyen Hoang Trang, Vo Hoang Vu',
+    visualImages: 'Le Ha Quang Huy.',
+    investor: 'The Dreamers Coffee Shop.',
+    photographs: 'Hoang Le.',
   },
-  { 
+  {
     _id: 2,
-    mainImage: "/images/blog/blog-02.png",
-    title: "9 simple ways to improve your design skills",
-    metadata:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.",
+    mainImage:
+      'https://sawadeesign.vn/wp-content/uploads/2023/07/350464394_263347446252233_267630042248999183_n-1920x1283.jpg',
+    title: 'HUONG NHU BOTANICA STORE',
+    metadata: 'HO CHI MINH',
+    area: '',
+    location: 'Thao Dien, District 2, Vietnam.',
+    leadArchitect: 'Doan Si Nguyen.',
+    designTeam: 'Nguyen Khanh Long, Tong Thao',
+    visualImages: '',
+    investor: 'Huong Nhu Thao Moc.',
+    photographs: 'Quang Tran.',
   },
   {
     _id: 3,
-    mainImage: "/images/blog/blog-03.png",
-    title: "Tips to quickly improve your coding speed.",
-    metadata:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.",
+    mainImage:
+      'https://sawadeesign.vn/wp-content/uploads/2023/07/194146335_1993501214147800_2409711839707599754_n.jpg',
+    title: 'GODMOTHER BAKE AND BRUNCH',
+    metadata: 'HO CHI MINH',
+    area: '',
+    location: 'Friendship Tower, Le Duan St, District 1, HCMC, Vietnam.',
+    leadArchitect: 'Doan Si Nguyen.',
+    designTeam: 'Vo Thanh Phat, Nguyen Gia Hung',
+    visualImages: '',
+    investor: '',
+    photographs: 'Phu Dao',
   },
-  { 
+  {
     _id: 4,
-    mainImage: "/images/blog/blog-03.png",
-    title: "Free advertising for your online business",
-    metadata:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.",
+    mainImage:
+      'https://sawadeesign.vn/wp-content/uploads/2023/07/343604318_586533760118249_8900534535177371186_n-1-1920x1283.jpg',
+    title: 'THE CUP CAFE AND COCO TEA',
+    metadata: 'BINH DUONG',
+    area: '',
+    location: 'Uyen Hung, Binh Duong.',
+    leadArchitect: 'Doan Si Nguyen.',
+    designTeam: 'Nguyen Khanh Long, Nguyen Thien Van Trieu, Tong Thao.',
+    visualImages: 'Le Ha Quang Huy.',
+    investor: '18+ Co Ltd.',
+    photographs: 'Quang Tran.',
   },
-  { 
+  {
     _id: 5,
-    mainImage: "/images/blog/blog-04.png",
-    title: "9 simple ways to improve your design skills",
-    metadata:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.",
+    mainImage:
+      'https://sawadeesign.vn/wp-content/uploads/2023/07/329757954_600219935453285_4828959203461358606_n.jpg',
+    title: 'KATINAT TRANG QUANG KHAI',
+    metadata: 'HO CHI MINH',
+    area: '',
+    location: '2 Nguyen Huu Cau ST, Tan Dinh Ward, District 1, Vietnam.',
+    leadArchitect: 'Doan Si Nguyen.',
+    designTeam: 'Tran Son Lam, Tong Thao, Vo Hoang Vu, Nguyen Hoang Trang.',
+    visualImages: 'Le Ha Quang Huy.',
+    investor: 'Katinat Saigon Kafe.',
+    photographs: 'Dung Huynh.',
   },
   {
     _id: 6,
-    mainImage: "/images/blog/blog-01.png",
-    title: "Tips to quickly improve your coding speed.",
-    metadata:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.",
+    mainImage:
+      'https://sawadeesign.vn/wp-content/uploads/2023/07/1-4-1920x1200.jpg',
+    title: 'KATINAT CAN THO',
+    metadata: 'CAN THO',
+    area: '',
+    location: 'Can Tho, Vietnam.',
+    leadArchitect: 'Doan Si Nguyen.',
+    designTeam: 'Nguyen Khanh Long, Tong Thao, Nguyen Hoang Phi.',
+    visualImages: 'Le Ha Quang Huy.',
+    investor: 'Katinat Saigon Kafe.',
+    photographs: '',
   },
-];
+  {
+    _id: 7,
+    mainImage:
+      'https://sawadeesign.vn/wp-content/uploads/2023/07/323417273_1344659992975009_6966548763834517471_n.jpg',
+    title: 'KATINAT DANG VAN BI',
+    metadata: 'HO CHI MINH',
+    area: '',
+    location: '168 Dang Van Bi St, Binh Tho, Thu Duc, Vietnam.',
+    leadArchitect: 'Doan Si Nguyen.',
+    designTeam: 'Tran Son Lam, Nguyen Khanh Long, Tong Thao.',
+    visualImages: 'Le Ha Quang Huy.',
+    investor: 'Katinat Saigon Kafe.',
+    photographs: 'Dung Huynh.',
+  },
+  {
+    _id: 8,
+    mainImage:
+      'https://sawadeesign.vn/wp-content/uploads/2023/07/324734407_1136186190431751_3372705225422913148_n-1920x1283.jpg',
+    title: 'BEMIND CHU MANH TRINH',
+    metadata: 'HO CHI MINH',
+    area: '',
+    location: '46 Chu Manh Trinh, District 1, HCMC, Vietnam.',
+    leadArchitect: 'Doan Si Nguyen.',
+    designTeam: 'Nguyen Khanh Long, Nguyen Thien Van Trieu, Pham Duc Hiep, Tong Thao.',
+    visualImages: 'Le Ha Quang Huy.',
+    investor: 'Bemind Cafe.',
+    photographs: 'Quang Tran.',
+  },
+  {
+    _id: 9,
+    mainImage:
+      'https://sawadeesign.vn/wp-content/uploads/2023/07/313913097_2410001372497780_7011991509566920620_n-1920x1283.jpg',
+    title: 'BEMIND PASTEUR',
+    metadata: 'HO CHI MINH',
+    area: '',
+    location: '230/17 Pasteur St, District 3, HCMC, Vietnam.',
+    leadArchitect: 'Doan Si Nguyen.',
+    designTeam: 'Vo Thanh Phat, Tran Son Lam, Tong Thao, Nguyen Thien Van Trieu.',
+    visualImages: 'Le Ha Quang Huy.',
+    investor: 'Bemind Coffee.',
+    photographs: 'Quang Tran.',
+  },
+]
 
-export default BlogData;
+export default BlogData

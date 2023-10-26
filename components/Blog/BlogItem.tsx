@@ -49,7 +49,7 @@ const BlogItem: React.FC<BlogItemProps> = ({ blog, _id }) => {
         whileInView="visible"
         transition={{ duration: 1, delay: 0.5 }}
         viewport={{ once: true }}
-        className="animate_top bg-white dark:bg-blacksection rounded-lg shadow-solid-8 p-4 pb-9"
+        className="animate_top rounded-lg p-4 pb-9"
       >
         <Link
           href={`/blog/blog-details?_id=${_id}`}
@@ -58,15 +58,15 @@ const BlogItem: React.FC<BlogItemProps> = ({ blog, _id }) => {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <Image src={mainImage} alt={title} fill />
+          <Image src={mainImage} alt={title} fill className='rounded-lg'/>
           {isHovered && (
-            <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+            <div className="absolute inset-0 bg-black bg-opacity-50 flex rounded-lg items-center justify-center">
               <div className="px-4">
                 <h4 className="font-medium text-lg xl:text-itemtitle2 text-white mt-7.5 mb-3.5">
-                  {`${title.slice(0, 40)}...`}
+                  {`${title.slice(0, 40)}`}
                 </h4>
                 <p className="text-white">
-                  {metadata ? `${metadata.slice(0, 100)}...` : ''}
+                  {metadata ? `${metadata.slice(0, 100)}` : ''}
                 </p>
               </div>
             </div>
