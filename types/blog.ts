@@ -9,8 +9,9 @@ export type Author = {
 export type Blog = {
   _id: number;
   title: string;
-  metadata?: string;
+  city?: string;
   mainImage?: any;
+  categoryImage?: any[];
   area: string;
   location: string;
   leadArchitect: string;
