@@ -4,18 +4,48 @@ import SharePost from '@/components/Blog/SharePost'
 import BlogData from '@/components/Blog/blogData'
 import Image from 'next/image'
 import { useSearchParams } from 'next/navigation'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 const SingleBlogPage: React.FC = () => {
   const searchParams = useSearchParams()
-  const currentBlogId = searchParams.get('_id');
+  const currentBlogId = searchParams.get('_id')
   useEffect(() => {
     const url = `${searchParams}`
   }, [searchParams])
 
   const blogPost = BlogData.find(
-    (blog) => blog._id.toString() === currentBlogId
-  );
+    (blog) => blog._id.toString() === currentBlogId,
+  )
+
+  const [selectedImage, setSelectedImage] = useState<string | null>(null)
+
+  const openModal = (imageURL: string) => {
+    setSelectedImage(imageURL)
+  }
+
+  const closeModal = () => {
+    setSelectedImage(null)
+  }
+
+  const handlePreviousImage = () => {
+    if (!blogPost || !blogPost.categoryImage) return
+
+    const currentIndex = blogPost.categoryImage.indexOf(selectedImage)
+    const previousIndex =
+      (currentIndex - 1 + blogPost.categoryImage.length) %
+      blogPost.categoryImage.length
+    const previousImage = blogPost.categoryImage[previousIndex]
+    setSelectedImage(previousImage)
+  }
+
+  const handleNextImage = () => {
+    if (!blogPost || !blogPost.categoryImage) return
+
+    const currentIndex = blogPost.categoryImage.indexOf(selectedImage)
+    const nextIndex = (currentIndex + 1) % blogPost.categoryImage.length
+    const nextImage = blogPost.categoryImage[nextIndex]
+    setSelectedImage(nextImage)
+  }
 
   return (
     <>
@@ -70,7 +100,7 @@ const SingleBlogPage: React.FC = () => {
           </nav>
           <div className="flex flex-col-reverse lg:flex-row gap-7.5 xl:gap-12.5">
             <div className="md:w-1/2 lg:w-[32%]">
-            {currentBlogId && <RelatedPost currentBlogId={currentBlogId} />}
+              {currentBlogId && <RelatedPost currentBlogId={currentBlogId} />}
             </div>
 
             {blogPost && (
@@ -90,71 +120,147 @@ const SingleBlogPage: React.FC = () => {
                   <h2 className="font-semibold text-3xl 2xl:text-sectiontitle2 text-black dark:text-white mt-11">
                     {blogPost?.title}
                   </h2>
-                  <p className='mb-5'>{blogPost?.metadata}</p>
+                  <p className="mb-5 text-black dark:text-white">{blogPost?.city}</p>
 
-                  <ul className="flex flex-wrap gap-5 2xl:gap-7.5 mb-9">
+                  <ul className="flex flex-wrap gap-x-25 gap-y-5 2xl:gap-7.5 mb-9">
                     <li>
-                      <span className="text-black dark:text-white">
-                        Author:{' '}
-                      </span>{' '}
-                      Jhon Doe
+                      <span className="text-black dark:text-white">Area: </span>{' '}
+                      {blogPost.area}
                     </li>
                     <li>
                       <span className="text-black dark:text-white">
-                        Published On: July 30, 2023
+                        Visual Images:{' '}
                       </span>{' '}
+                      {blogPost.visualImages}
                     </li>
                     <li>
                       <span className="text-black dark:text-white">
-                        Category:
-                      </span>
-                      Events
+                        Photographs:{' '}
+                      </span>{' '}
+                      {blogPost.photographs}
+                    </li>
+                    <li>
+                      <span className="text-black dark:text-white">
+                        Location:{' '}
+                      </span>{' '}
+                      {blogPost.location}
+                    </li>
+                    <li>
+                      <span className="text-black dark:text-white">
+                        Lead Architec:{' '}
+                      </span>{' '}
+                      {blogPost.leadArchitect}
+                    </li>
+                    <li>
+                      <span className="text-black dark:text-white">
+                        Design Team:{' '}
+                      </span>{' '}
+                      {blogPost.designTeam}
+                    </li>
+                    <li>
+                      <span className="text-black dark:text-white">
+                        Investor:{' '}
+                      </span>{' '}
+                      {blogPost.investor}
                     </li>
                   </ul>
 
                   <div className="blog-details">
-                    <p>{blogPost?.metadata}</p>
-
-                    <p>
-                      Aenean augue ex, condimentum vel metus vitae, aliquam
-                      porta elit. Quisque non metus ac orci mollis posuere.
-                      Mauris vel ipsum a diam interdum ultricies sed vitae
-                      neque. Nulla porttitor quam vitae pulvinar placerat. Nulla
-                      fringilla elit sit amet justo feugiat sodales. Morbi
-                      eleifend, enim non eleifend laoreet, odio libero lobortis
-                      lectus, non porttitor sem urna sit amet metus. In
-                      sollicitudin quam est, pellentesque consectetur felis
-                      fermentum vitae.
-                    </p>
-
                     <div className="flex flex-wrap gap-5">
-                      <Image
-                        src={'/images/blog/blog-01.png'}
-                        width={350}
-                        height={200}
-                        alt="image"
-                      />
-                      <Image
-                        src={'/images/blog/blog-02.png'}
-                        width={350}
-                        height={200}
-                        alt="image"
-                      />
+                      {blogPost.categoryImage &&
+                        blogPost.categoryImage.map((image, index) => (
+                          <div
+                            key={index}
+                            className="cursor-pointer"
+                            onClick={() => openModal(image)}
+                          >
+                            <Image
+                              className="w-[246px] h-[246px] rounded"
+                              src={image}
+                              width={245}
+                              height={200}
+                              alt={`image-${index}`}
+                            />
+                          </div>
+                        ))}
                     </div>
-
-                    <h3 className="pt-8">
-                      Nunc elementum elit viverra, tempus quam non
-                    </h3>
-
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Nunc quis nibh lorem. Duis sed odio lorem. In a efficitur
-                      leo. Ut venenatis rhoncus quam sed condimentum. Curabitur
-                      vel turpis in dolor volutpat imperdiet in ut mi. Integer
-                      non volutpat nulla. Nunc elementum elit viverra, tempus
-                      quam non, interdum ipsum.
-                    </p>
                   </div>
+
+                  {selectedImage && (
+                    <div className="fixed inset-0 flex items-center justify-center z-50">
+                      <div className="absolute inset-0 bg-black opacity-75"></div>
+                      <div className="relative z-10">
+                        <Image
+                          className="rounded w-[650px] h-[650px]"
+                          src={selectedImage}
+                          width={500}
+                          height={300}
+                          alt="Popup Image"
+                        />
+                        <button
+                          className="absolute top-4 right-[-300px] text-white text-[20px] rounded hover:opacity-80"
+                          style={{
+                            background: 'red',
+                            width: '30px',
+                            height: '30px',
+                            color: 'white',
+                          }}
+                          onClick={closeModal}
+                        >
+                          X
+                        </button>
+                        <button
+                          onClick={handlePreviousImage}
+                          className="absolute left-[-50px] top-1/2 -translate-y-1/2 w-11 h-11 flex justify-center items-center z-10"
+                        >
+                          <svg
+                            className="w-20 h-20 font-bold transition duration-500 ease-in-out transform motion-reduce:transform-none text-white hover:text-gray-600 hover:-translate-x-2"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2.5"
+                              d="M15 19l-7-7 7-7"
+                            ></path>
+                          </svg>
+                        </button>
+
+                        <button
+                          onClick={handleNextImage}
+                          className="absolute right-[-50px] top-[300px] translate-y-1/2 w-11 h-11 flex justify-center items-center z-10"
+                        >
+                          <svg
+                            className="w-20 h-20 font-bold transition duration-500 ease-in-out transform motion-reduce:transform-none text-white hover:text-gray-600 hover:translate-x-2"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2.5"
+                              d="M9 5l7 7-7 7"
+                            ></path>
+                          </svg>
+                        </button>
+
+                        <div className="absolute bottom-4 right-4 text-white text-sm bg-black rounded-lg w-[70px] text-center">
+                          {blogPost && blogPost.categoryImage && (
+                            <span>
+                              {blogPost.categoryImage.indexOf(selectedImage) +
+                                1}{' '}
+                              / {blogPost.categoryImage.length}
+                            </span>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  )}
 
                   <SharePost />
                 </div>

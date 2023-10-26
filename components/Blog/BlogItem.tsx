@@ -13,7 +13,7 @@ interface BlogItemProps {
 }
 
 const BlogItem: React.FC<BlogItemProps> = ({ blog, _id }) => {
-  const { mainImage, title, metadata } = blog
+  const { mainImage, title, city } = blog
   const [isHovered, setIsHovered] = useState(false)
   const router = useRouter()
   const { setBlogId } = useContext(BlogContext)
@@ -66,7 +66,7 @@ const BlogItem: React.FC<BlogItemProps> = ({ blog, _id }) => {
                   {`${title.slice(0, 40)}`}
                 </h4>
                 <p className="text-white">
-                  {metadata ? `${metadata.slice(0, 100)}` : ''}
+                  {city ? `${city.slice(0, 100)}` : ''}
                 </p>
               </div>
             </div>
