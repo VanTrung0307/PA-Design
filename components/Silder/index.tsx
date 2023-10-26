@@ -40,7 +40,7 @@ const Slider = () => {
       {images.map((image, index) => (
         <figure
           key={index}
-          className={`h-[500px] top-0 left-0 w-full transition-transform duration-500 ${
+          className={`h-[600px] top-0 left-0 w-full transition-transform duration-500 ${
             currentIndex === index ? 'opacity-100' : 'opacity-0'
           }`}
         >
@@ -80,7 +80,7 @@ const Slider = () => {
 
       <button
         onClick={next}
-        className="absolute right-14 top-[200px] translate-y-1/2 w-11 h-11 flex justify-center items-center z-10"
+        className="absolute right-14 top-[270px] translate-y-1/2 w-11 h-11 flex justify-center items-center z-10"
       >
         <svg
           className="w-20 h-20 font-bold transition duration-500 ease-in-out transform motion-reduce:transform-none text-white hover:text-gray-600 hover:translate-x-2"

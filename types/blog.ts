@@ -9,11 +9,13 @@ export type Author = {
 export type Blog = {
   _id: number;
   title: string;
-  slug?: any;
   metadata?: string;
-  body?: string;
   mainImage?: any;
-  author?: Author;
-  tags?: string[];
-  publishedAt?: string;
+  area: string;
+  location: string;
+  leadArchitect: string;
+  designTeam: string;
+  visualImages: string;
+  investor: string;
+  photographs: string;
 };
