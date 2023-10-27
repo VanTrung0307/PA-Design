@@ -89,8 +89,7 @@ const SingleBlogPage: React.FC = () => {
                     ></path>
                   </svg>
                   <a
-                    href="#"
-                    className="text-gray-700 hover:text-gray-900 ml-1 md:ml-2 text-sm font-medium dark:text-gray-400 dark:hover:text-white"
+                    className="text-white ml-1 md:ml-2 text-sm font-medium"
                   >
                     {blogPost?.title}
                   </a>
@@ -165,8 +164,8 @@ const SingleBlogPage: React.FC = () => {
                     </li>
                   </ul>
 
-                  <div className="blog-details">
-                    <div className="flex flex-wrap gap-5">
+                  <div className="blog-details">         
+                    <div className="flex flex-wrap gap-5"  style={{ overflowY: 'auto', maxHeight: '500px' }}>
                       {blogPost.categoryImage &&
                         blogPost.categoryImage.map((image, index) => (
                           <div
@@ -175,7 +174,7 @@ const SingleBlogPage: React.FC = () => {
                             onClick={() => openModal(image)}
                           >
                             <Image
-                              className="w-[246px] h-[246px] rounded"
+                              className="w-[235px] h-[235px] rounded"
                               src={image}
                               width={245}
                               height={200}
@@ -198,11 +197,11 @@ const SingleBlogPage: React.FC = () => {
                           alt="Popup Image"
                         />
                         <button
-                          className="absolute top-4 right-[-300px] text-white text-[20px] rounded hover:opacity-80"
+                          className="absolute top-0 right-[0px] text-white text-[20px] rounded hover:opacity-80"
                           style={{
                             background: 'red',
-                            width: '30px',
-                            height: '30px',
+                            width: '35px',
+                            height: '35px',
                             color: 'white',
                           }}
                           onClick={closeModal}
@@ -249,7 +248,7 @@ const SingleBlogPage: React.FC = () => {
                           </svg>
                         </button>
 
-                        <div className="absolute bottom-4 right-4 text-white text-sm bg-black rounded-lg w-[70px] text-center">
+                        <div style={{ background: '#055CD6'}} className="absolute bottom-4 right-4 text-white text-sm rounded-lg w-[70px] text-center">
                           {blogPost && blogPost.categoryImage && (
                             <span>
                               {blogPost.categoryImage.indexOf(selectedImage) +
@@ -262,7 +261,7 @@ const SingleBlogPage: React.FC = () => {
                     </div>
                   )}
 
-                  <SharePost />
+                  {/* <SharePost /> */}
                 </div>
               </div>
             )}
