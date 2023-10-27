@@ -120,4 +120,3 @@ export default function BlogPage() {
     </>
   )
 }
-BlogPage.metadata = metadata;
