@@ -9,7 +9,7 @@ const Slider = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % randomMainImages.length)
-    }, 2000)
+    }, 5000)
 
     return () => {
       clearInterval(interval)
