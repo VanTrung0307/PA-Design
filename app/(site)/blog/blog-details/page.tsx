@@ -3,7 +3,7 @@ import RelatedPost from '@/components/Blog/RelatedPost'
 import SharePost from '@/components/Blog/SharePost'
 import BlogData from '@/components/Blog/blogData'
 import Image from 'next/image'
-import { useSearchParams } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
 
 const SingleBlogPage: React.FC = () => {
@@ -47,6 +47,11 @@ const SingleBlogPage: React.FC = () => {
     setSelectedImage(nextImage)
   }
 
+  const router = useRouter()
+  const handleClick = () => {
+    router.push(`/`)
+  }
+
   return (
     <>
       <title>{`Blog Details -PA Design`}</title>
@@ -58,9 +63,9 @@ const SingleBlogPage: React.FC = () => {
             aria-label="Breadcrumb"
           >
             <ol className="inline-flex items-center space-x-1 md:space-x-3">
-              <li className="inline-flex items-center">
+              <li className="inline-flex items-center cursor-pointer">
                 <a
-                  href="/"
+                  onClick={handleClick}
                   className="text-sm text-gray-700 hover:text-gray-900 inline-flex items-center dark:text-gray-400 dark:hover:text-white"
                 >
                   <svg
@@ -74,7 +79,7 @@ const SingleBlogPage: React.FC = () => {
                   Home
                 </a>
               </li>
-              <li>
+              <li className='cursor-pointer'>
                 <div className="flex items-center">
                   <svg
                     className="w-6 h-6 text-gray-400"
@@ -88,9 +93,7 @@ const SingleBlogPage: React.FC = () => {
                       clip-rule="evenodd"
                     ></path>
                   </svg>
-                  <a
-                    className="text-white ml-1 md:ml-2 text-sm font-medium"
-                  >
+                  <a className="text-white ml-1 md:ml-2 text-sm font-medium">
                     {blogPost?.title}
                   </a>
                 </div>
@@ -119,7 +122,9 @@ const SingleBlogPage: React.FC = () => {
                   <h2 className="font-semibold text-3xl 2xl:text-sectiontitle2 text-black dark:text-white mt-11">
                     {blogPost?.title}
                   </h2>
-                  <p className="mb-5 text-black dark:text-white">{blogPost?.city}</p>
+                  <p className="mb-5 text-black dark:text-white">
+                    {blogPost?.city}
+                  </p>
 
                   <ul className="flex flex-wrap gap-x-25 gap-y-5 2xl:gap-7.5 mb-9">
                     <li>
@@ -164,8 +169,11 @@ const SingleBlogPage: React.FC = () => {
                     </li>
                   </ul>
 
-                  <div className="blog-details">         
-                    <div className="flex flex-wrap gap-5"  style={{ overflowY: 'auto', maxHeight: '500px' }}>
+                  <div className="blog-details">
+                    <div
+                      className="flex flex-wrap gap-5"
+                      style={{ overflowY: 'auto', maxHeight: '500px' }}
+                    >
                       {blogPost.categoryImage &&
                         blogPost.categoryImage.map((image, index) => (
                           <div
@@ -248,7 +256,10 @@ const SingleBlogPage: React.FC = () => {
                           </svg>
                         </button>
 
-                        <div style={{ background: '#055CD6'}} className="absolute bottom-4 right-4 text-white text-sm rounded-lg w-[70px] text-center">
+                        <div
+                          style={{ background: '#055CD6' }}
+                          className="absolute bottom-4 right-4 text-white text-sm rounded-lg w-[70px] text-center"
+                        >
                           {blogPost && blogPost.categoryImage && (
                             <span>
                               {blogPost.categoryImage.indexOf(selectedImage) +

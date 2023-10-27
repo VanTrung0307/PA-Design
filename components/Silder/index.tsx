@@ -1,19 +1,14 @@
 'use client'
 import React, { useEffect, useState } from 'react'
+import BlogData from '../Blog/blogData'
+import { useRouter } from 'next/navigation'
 
 const Slider = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
-  const images = [
-    'https://source.unsplash.com/1600x900/?beach',
-    'https://source.unsplash.com/1600x900/?cat',
-    'https://source.unsplash.com/1600x900/?dog',
-    'https://source.unsplash.com/1600x900/?lego',
-    'https://source.unsplash.com/1600x900/?textures&patterns',
-  ]
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length)
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % randomMainImages.length)
     }, 2000)
 
     return () => {
@@ -28,34 +23,50 @@ const Slider = () => {
   }
 
   const next = () => {
-    if (currentIndex < images.length) {
+    if (currentIndex < randomMainImages.length) {
       setCurrentIndex(currentIndex + 1)
-    } else if (currentIndex <= images.length) {
-      setCurrentIndex(images.length - currentIndex + 1)
+    } else if (currentIndex <= randomMainImages.length) {
+      setCurrentIndex(randomMainImages.length - currentIndex + 1)
     }
+  }
+
+  const randomMainImages = BlogData.map((blog) => blog.mainImage)
+    .filter(Boolean)
+    .sort(() => Math.random() - 0.5)
+    .slice(0, 5)
+
+  const router = useRouter()
+  const handleClick = (_id: number) => {
+    router.push(`/blog/blog-details?_id=${_id}`)
   }
 
   return (
     <article className="relative w-full h-full flex flex-shrink-0 overflow-hidden shadow-2xl">
-      {images.map((image, index) => (
-        <figure
-          key={index}
-          className={`h-[600px] top-0 left-0 w-full transition-transform duration-500 ${
-            currentIndex === index ? 'opacity-100' : 'opacity-0'
-          }`}
-        >
-          <img
-            src={image}
-            alt="Image"
-            className="absolute inset-0 z-10 h-full w-full object-cover"
-          />
-        </figure>
-      ))}
+      {randomMainImages.map((image, index) => {
+        const blog = BlogData[index]
+        const { _id } = blog
+
+        return (
+          <figure
+            key={index}
+            className={`h-[600px] cursor-pointer top-0 left-0 w-full transition-transform duration-500 ${
+              currentIndex === index ? 'opacity-100' : 'opacity-0'
+            }`}
+            onClick={() => handleClick(_id)}
+          >
+            <img
+              src={image}
+              alt="Image"
+              className="absolute inset-0 z-10 h-full w-full object-cover"
+            />
+          </figure>
+        )
+      })}
 
       <div className="rounded-full bg-white text-black absolute top-5 right-5 text-sm px-2 text-center z-10">
         <span>{currentIndex + 1}</span>
         <span>/</span>
-        <span>{images.length}</span>
+        <span>{randomMainImages.length}</span>
       </div>
 
       <button

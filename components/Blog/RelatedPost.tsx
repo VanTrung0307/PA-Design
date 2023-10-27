@@ -4,13 +4,14 @@ import Link from 'next/link'
 import BlogData from './blogData'
 
 interface RelatedPostProps {
-  currentBlogId: string;
+  currentBlogId: string
 }
 
 const RelatedPost = ({ currentBlogId }: RelatedPostProps) => {
-
-  const filteredPosts = BlogData.filter((post) => post._id.toString() !== currentBlogId);
-  const relatedPosts = filteredPosts.slice(0, 4);
+  const filteredPosts = BlogData.filter(
+    (post) => post._id.toString() !== currentBlogId,
+  )
+  const relatedPosts = filteredPosts.slice(0, 4)
 
   return (
     <>
@@ -27,7 +28,9 @@ const RelatedPost = ({ currentBlogId }: RelatedPostProps) => {
             >
               <div className="relative max-w-45 w-45 h-18">
                 {post.mainImage ? (
-                  <Image fill src={post.mainImage} alt="Blog" />
+                  <Link href={`/blog/blog-details?_id=${post._id}`}>
+                    <Image fill src={post.mainImage} alt="Blog" />
+                  </Link>
                 ) : (
                   'No image'
                 )}
