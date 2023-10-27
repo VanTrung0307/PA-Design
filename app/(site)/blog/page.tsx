@@ -6,7 +6,6 @@ import React, { ChangeEvent, useState } from 'react'
 
 const metadata: Metadata = {
   title: 'Blog Page',
-  description: 'This is Blog page for Solid Pro'
 }
 
 export default function BlogPage() {

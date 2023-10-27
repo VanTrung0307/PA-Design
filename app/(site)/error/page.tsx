@@ -1,56 +1,76 @@
-import React from "react";
-import Image from "next/image";
-import { Metadata } from "next";
-
+'use client'
+import React from 'react'
+import { Metadata } from 'next'
+import { useRouter } from 'next/navigation'
 
 export const metadata: Metadata = {
-  title: "Error Page - Solid SaaS Boilerplate",
-  description: "This is Error page for Solid Pro",
-  // other metadata
-};
+  title: 'Error Page',
+}
 
 const ErroPage = () => {
+  const router = useRouter()
+  const handleClick = () => {
+    router.push(`/`)
+  }
+  const handleBack = () => {
+    router.back()
+  }
+
   return (
-    <section className="pt-45 lg:pt-50 xl:pt-55 pb-25 lg:pb-32.5 xl:pb-37.5 overflow-hidden">
-      <div className="animate_top mx-auto max-w-[518px] text-center">
-        <Image
-          src="/images/shape/404.svg"
-          alt="404"
-          className="mx-auto mb-7.5"
-          width={400}
-          height={400}
-        />
+    <section className="bg-white dark:bg-[#181C31] ">
+      <div className="container min-h-screen px-6 py-12 mx-auto lg:flex lg:items-center lg:gap-12">
+        <div className="wf-ull lg:w-1/2">
+          <p className="text-sm font-medium text-blue-500 dark:text-blue-400">
+            404 error
+          </p>
+          <h1 className="mt-3 text-2xl font-semibold text-gray-800 dark:text-white md:text-3xl">
+            Page not found
+          </h1>
+          <p className="mt-4 text-gray-500 dark:text-gray-400">
+            Sorry, the page you are looking for doesn't exist.Here are some
+            helpful links:
+          </p>
 
-        <h2 className="font-semibold text-2xl md:text-4xl text-black dark:text-white mb-5">
-          This Page Does Not Exist
-        </h2>
-        <p className="mb-7.5">
-          The page you were looking for appears to have been moved, deleted or
-          does not exist.
-        </p>
+          <div className="flex items-center mt-6 gap-x-3">
+            <button onClick={handleBack} className="flex items-center justify-center w-1/2 px-5 py-2 text-sm text-gray-700 transition-colors duration-200 bg-white border rounded-lg gap-x-2 sm:w-auto dark:hover:bg-gray-800 dark:bg-gray-900 hover:bg-gray-100 dark:text-gray-200 dark:border-gray-700">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                className="w-5 h-5 rtl:rotate-180"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18"
+                />
+              </svg>
 
-        <a
-          href="/"
-          className="inline-flex items-center gap-2.5 bg-black dark:bg-btndark hover:bg-blackho ease-in-out duration-300 font-medium text-white rounded-full px-6 py-3"
-        >
-          Return to Home
-          <svg
-            className="fill-white"
-            width="14"
-            height="14"
-            viewBox="0 0 14 14"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M10.4767 6.16664L6.00668 1.69664L7.18501 0.518311L13.6667 6.99998L7.18501 13.4816L6.00668 12.3033L10.4767 7.83331H0.333344V6.16664H10.4767Z"
-              fill=""
-            />
-          </svg>
-        </a>
+              <span>Go back</span>
+            </button>
+
+            <button
+              onClick={handleClick}
+              style={{ background: '#3B82F6', color: 'white' }}
+              className="w-1/2 px-5 py-2 text-sm tracking-wide text-white transition-colors duration-200 bg-blue-500 rounded-lg shrink-0 sm:w-auto hover:bg-blue-600 dark:hover:bg-blue-500 dark:bg-blue-600"
+            >
+              Take me home
+            </button>
+          </div>
+        </div>
+
+        <div className="relative w-full mt-12 lg:w-1/2 lg:mt-0">
+          <img
+            className="w-full max-w-lg lg:mx-auto"
+            src="https://merakiui.com/images/components/illustration.svg"
+            alt=""
+          />
+        </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default ErroPage;
+export default ErroPage

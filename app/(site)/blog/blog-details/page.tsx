@@ -93,7 +93,7 @@ const SingleBlogPage: React.FC = () => {
                       clip-rule="evenodd"
                     ></path>
                   </svg>
-                  <a className="text-white ml-1 md:ml-2 text-sm font-medium">
+                  <a className="text-black dark:text-white ml-1 md:ml-2 text-sm font-medium">
                     {blogPost?.title}
                   </a>
                 </div>
