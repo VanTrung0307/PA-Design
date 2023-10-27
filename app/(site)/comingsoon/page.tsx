@@ -1,10 +1,5 @@
 'use client'
-import React, { useEffect, useState } from 'react'
-import { Metadata } from 'next'
-
-export const metadata: Metadata = {
-  title: 'Coming Soon',
-}
+import { useEffect, useState } from 'react'
 
 const ComingSoonPage = () => {
   const styles = {
