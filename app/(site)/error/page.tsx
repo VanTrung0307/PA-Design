@@ -1,8 +1,9 @@
+'use client'
 import React from 'react'
 import { Metadata } from 'next'
 import { useRouter } from 'next/navigation'
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
   title: 'Error Page',
 }
 
