@@ -4,7 +4,7 @@ import BlogItem from '@/components/Blog/BlogItem'
 import { Metadata } from 'next'
 import React, { ChangeEvent, useState } from 'react'
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
   title: 'Blog Page',
   description: 'This is Blog page for Solid Pro'
 }
@@ -120,3 +120,4 @@ export default function BlogPage() {
     </>
   )
 }
+BlogPage.metadata = metadata;
