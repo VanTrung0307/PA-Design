@@ -22,6 +22,7 @@ export default function BlogPage() {
     : BlogData
   return (
     <>
+      <title>{`Projects - PA Design`}</title>
       {/* <!-- ===== Blog Grid Start ===== --> */}
       <section>
         <div className="animate_top mx-auto ">
@@ -119,4 +120,4 @@ export default function BlogPage() {
     </>
   )
 }
-BlogPage.metadata = metadata;
+BlogPage.metadata = metadata

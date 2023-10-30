@@ -54,9 +54,9 @@ const SingleBlogPage: React.FC = () => {
 
   return (
     <>
-      <title>{`Blog Details -PA Design`}</title>
+      <title>{`Projects Details -PA Design`}</title>
 
-      <section className="lg:pt-45 xl:pt-50 pb-20 lg:pb-25 xl:pb-30 mt-[-200px]">
+      <section className="lg:pt-45 xl:pt-50 pb-20 lg:pb-25 xl:pb-30 mt-[-100px]">
         <div className="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
           <nav
             className="flex bg-gray-50 text-gray-700 py-3 px-5 rounded-lg dark:bg-gray-800 dark:border-gray-700"
@@ -79,7 +79,7 @@ const SingleBlogPage: React.FC = () => {
                   Home
                 </a>
               </li>
-              <li className='cursor-pointer'>
+              <li className="cursor-pointer">
                 <div className="flex items-center">
                   <svg
                     className="w-6 h-6 text-gray-400"
@@ -100,13 +100,9 @@ const SingleBlogPage: React.FC = () => {
               </li>
             </ol>
           </nav>
-          <div className="flex flex-col-reverse lg:flex-row gap-7.5 xl:gap-12.5">
-            <div className="md:w-1/2 lg:w-[32%]">
-              {currentBlogId && <RelatedPost currentBlogId={currentBlogId} />}
-            </div>
-
+          <div className="flex flex-col-reverse mb-10 lg:flex-row gap-7.5 xl:gap-12.5">
             {blogPost && (
-              <div className="lg:w-2/3">
+              <div className="w-full">
                 <div className="animate_top rounded-md shadow-solid-13 bg-white dark:bg-blacksection border border-stroke dark:border-strokedark p-7.5 md:p-10">
                   <div className="mb-10 w-full overflow-hidden ">
                     <div className="relative aspect-[97/60] w-full sm:aspect-[97/44]">
@@ -119,61 +115,66 @@ const SingleBlogPage: React.FC = () => {
                     </div>
                   </div>
 
-                  <h2 className="font-semibold text-3xl 2xl:text-sectiontitle2 text-black dark:text-white mt-11">
-                    {blogPost?.title}
-                  </h2>
-                  <p className="mb-5 text-black dark:text-white">
-                    {blogPost?.city}
-                  </p>
+                  <div className="grid grid-cols-3 gap-4">
+                    <div className="...">
+                      <h2 className="font-semibold text-3xl 2xl:text-sectiontitle2 text-black dark:text-white mt-11">
+                        {blogPost?.title}
+                      </h2>
+                      <p className="mb-5 text-black dark:text-white">
+                        {blogPost?.city}
+                      </p>
+                    </div>
 
-                  <ul className="flex flex-wrap gap-x-25 gap-y-5 2xl:gap-7.5 mb-9">
-                    <li>
-                      <span className="text-black dark:text-white">Area: </span>{' '}
-                      {blogPost.area}
-                    </li>
-                    <li>
-                      <span className="text-black dark:text-white">
-                        Visual Images:{' '}
-                      </span>{' '}
-                      {blogPost.visualImages}
-                    </li>
-                    <li>
-                      <span className="text-black dark:text-white">
-                        Photographs:{' '}
-                      </span>{' '}
-                      {blogPost.photographs}
-                    </li>
-                    <li>
-                      <span className="text-black dark:text-white">
-                        Location:{' '}
-                      </span>{' '}
-                      {blogPost.location}
-                    </li>
-                    <li>
-                      <span className="text-black dark:text-white">
-                        Lead Architec:{' '}
-                      </span>{' '}
-                      {blogPost.leadArchitect}
-                    </li>
-                    <li>
-                      <span className="text-black dark:text-white">
-                        Design Team:{' '}
-                      </span>{' '}
-                      {blogPost.designTeam}
-                    </li>
-                    <li>
-                      <span className="text-black dark:text-white">
-                        Investor:{' '}
-                      </span>{' '}
-                      {blogPost.investor}
-                    </li>
-                  </ul>
+                    <div className="col-span-2 ...">
+                      <ul className="flex flex-wrap gap-x-25 gap-y-5 2xl:gap-7.5 mb-9">
+                        <li>
+                          <span className="text-black dark:text-white">
+                            Area:{' '}
+                          </span>{' '}
+                          {blogPost.area}
+                        </li>
+                        <li>
+                          <span className="text-black dark:text-white">
+                            Visual Images:{' '}
+                          </span>{' '}
+                          {blogPost.visualImages}
+                        </li>
+                        <li>
+                          <span className="text-black dark:text-white">
+                            Photographs:{' '}
+                          </span>{' '}
+                          {blogPost.photographs}
+                        </li>
+                        <li>
+                          <span className="text-black dark:text-white">
+                            Location:{' '}
+                          </span>{' '}
+                          {blogPost.location}
+                        </li>
+                        <li>
+                          <span className="text-black dark:text-white">
+                            Lead Architec:{' '}
+                          </span>{' '}
+                          {blogPost.leadArchitect}
+                        </li>
+                        <li>
+                          <span className="text-black dark:text-white">
+                            Design Team:{' '}
+                          </span>{' '}
+                          {blogPost.designTeam}
+                        </li>
+                        <li>
+                          <span className="text-black dark:text-white">
+                            Investor:{' '}
+                          </span>{' '}
+                          {blogPost.investor}
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
 
                   <div className="blog-details">
-                    <div
-                      className="flex flex-wrap gap-5"
-                      style={{ overflowY: 'auto', maxHeight: '500px' }}
-                    >
+                    <div className="flex flex-wrap gap-5">
                       {blogPost.categoryImage &&
                         blogPost.categoryImage.map((image, index) => (
                           <div
@@ -182,7 +183,7 @@ const SingleBlogPage: React.FC = () => {
                             onClick={() => openModal(image)}
                           >
                             <Image
-                              className="w-[235px] h-[235px] rounded"
+                              className="w-[232px] h-[232px] rounded"
                               src={image}
                               width={245}
                               height={200}
@@ -276,6 +277,9 @@ const SingleBlogPage: React.FC = () => {
                 </div>
               </div>
             )}
+          </div>
+          <div className="md:w-full lg:w-[32%]">
+            {currentBlogId && <RelatedPost currentBlogId={currentBlogId} />}
           </div>
         </div>
       </section>
