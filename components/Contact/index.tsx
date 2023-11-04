@@ -211,7 +211,7 @@ const Contact = () => {
                 src="/images/logo/logo-light.png"
                 alt="Logo"
                 className="dark:hidden"
-                style={{border: '5px solid black'}}
+                style={{ border: '5px solid black' }}
               />
               <Image
                 width={500}
@@ -219,7 +219,7 @@ const Contact = () => {
                 src="/images/logo/logo-dark.png"
                 alt="Logo"
                 className="hidden dark:block"
-                style={{border: '5px solid white'}}
+                style={{ border: '5px solid white' }}
               />
               <div className="flex text-center items-center justify-center mt-5">
                 <span className="text-black dark:text-white text-3xl font-bold">
@@ -230,42 +230,62 @@ const Contact = () => {
           </div>
           <div className="mt-16 lg:mt-20">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3919.475212061519!2d106.6290307!3d10.7748689!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ea0e426dca3%3A0xe297ba38b2b5ca26!2zMjQgSHXhu7NuaCBWxINuIE3hu5l0LCBIb8OgIFRoYW5oLCBUw6JuIFBow7osIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmlldG5hbQ!5e0!3m2!1sen!2s!4v1698295891479!5m2!1sen!2s"
-                  className="w-[650px] h-[400px] rounded-lg flex ml-[-50px]"
-                  loading="lazy"
-                />
-              
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3919.475212061519!2d106.6290307!3d10.7748689!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ea0e426dca3%3A0xe297ba38b2b5ca26!2zMjQgSHXhu7NuaCBWxINuIE3hu5l0LCBIb8OgIFRoYW5oLCBUw6JuIFBow7osIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmlldG5hbQ!5e0!3m2!1sen!2s!4v1698295891479!5m2!1sen!2s"
+                className="w-[650px] h-[400px] rounded-lg flex ml-[-50px]"
+                loading="lazy"
+                style={{
+                  WebkitFilter: 'grayscale(100%)',
+                  filter: 'grayscale(100%)',
+                }}
+              />
+
               <div>
                 <div className="max-w-full mx-auto rounded-lg overflow-hidden">
                   <div className="px-6 py-4">
                     <h4 className="font-medium text-black dark:text-white text-metatitle3 mb-4">
-                      Our Loaction
+                      Contact
                     </h4>
-                    <p>
-                      24 Huỳnh Văn Một, phường Hiệp Tân, Tân Phú , Ho Chi Minh
-                      City, Vietnam
+                    <p className="flex mb-4">
+                      <span className="mr-2 font-medium">Address:</span>
+                      <span>
+                        24 Huỳnh Văn Một, phường Hiệp Tân, Tân Phú , Ho Chi Minh
+                        City, Vietnam
+                      </span>
                     </p>
-                  </div>
-                  <div className="border-t border-gray-200 px-6 py-4">
-                    <h4 className="font-medium text-black dark:text-white text-metatitle3 mb-4">
-                      Hours
-                    </h4>
-                    <p>Monday - Friday: 9am - 5pm</p>
-                    <p>Saturday: 10am - 4pm</p>
-                    <p>Sunday: Closed</p>
-                  </div>
-                  <div className="border-t border-gray-200 px-6 py-4">
-                    <h4 className="font-medium text-black dark:text-white text-metatitle3 mb-4">
-                      Contact Us
-                    </h4>
-                    <p>
-                      <a href="#">Email: padesign.info@gmail.com</a>
+                    <p className="flex mb-4">
+                      <span className="mr-2 font-medium">Phone Number:</span>
+                      <a href="tel:0902777974" className="hover:text-[#006BFF]">
+                        090 277 79 74
+                      </a>
                     </p>
-                    <p>
-                      <a href="#">Phone Number: 090 277 79 74</a>
+                    <p className="flex mb-4">
+                      <span className="mr-2 font-medium">Email:</span>
+                      <a
+                        href="mailto:padesign.info@gmail.com"
+                        className="hover:text-[#006BFF]"
+                      >
+                        padesign.info@gmail.com
+                      </a>
                     </p>
+                    <a
+                      className="flex items-center hover:text-[#006BFF] cursor-pointer"
+                      href="https://www.facebook.com/PADesign.info"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        className="bi bi-facebook mr-2"
+                        viewBox="0 0 16 16"
+                      >
+                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                      </svg>
+                      <span>PA Design</span>
+                    </a>
                   </div>
                 </div>
               </div>

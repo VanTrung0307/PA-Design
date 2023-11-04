@@ -49,7 +49,7 @@ const BlogItem: React.FC<BlogItemProps> = ({ blog, _id }) => {
         whileInView="visible"
         transition={{ duration: 1, delay: 0.5 }}
         viewport={{ once: true }}
-        className="animate_top rounded-lg p-4 pb-9"
+        className="animate_top rounded-lg"
       >
         <Link
           href={`/blog/blog-details?_id=${_id}`}

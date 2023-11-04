@@ -11,35 +11,46 @@ const RelatedPost = ({ currentBlogId }: RelatedPostProps) => {
   const filteredPosts = BlogData.filter(
     (post) => post._id.toString() !== currentBlogId,
   )
-  const relatedPosts = filteredPosts.slice(0, 4)
+  const relatedPosts = filteredPosts.slice(0, 3)
 
   return (
     <>
-      <div className="animate_top rounded-md shadow-solid-13 bg-white dark:bg-blacksection border border-stroke dark:border-strokedark p-9">
-        <h4 className="font-semibold text-2xl text-black dark:text-white mb-7.5">
+      <div className="animate_top rounded-md shadow-solid-13 bg-white dark:bg-blacksection border border-stroke dark:border-strokedark p-9 w-full">
+        <h4 className="font-semibold text-4xl text-black dark:text-white mb-7.5 text-center">
           Related Posts
         </h4>
 
-        <div>
+        <div className="w-full">
           {relatedPosts.map((post, key) => (
             <div
-              className="flex xl:flex-nowrap flex-wrap gap-4 2xl:gap-6 mb-7.5"
+              className="inline-block xl:inline-block xl:w-1/3 xl:pr-4 mb-7.5 rounded-lg"
               key={key}
             >
-              <div className="relative max-w-45 w-45 h-18">
+              <div className="relative max-w-full w-100 h-100 group gap-5 rounded-lg">
                 {post.mainImage ? (
                   <Link href={`/blog/blog-details?_id=${post._id}`}>
-                    <Image fill src={post.mainImage} alt="Blog" />
+                    <div className="relative gap-5">
+                      <Image
+                        width={1000}
+                        height={1000}
+                        src={post.mainImage}
+                        alt="Blog"
+                        className="object-cover w-full h-full rounded-lg"
+                      />
+                      <div className="absolute w-full h-full bottom-0 left-0 right-0 p-2 bg-black bg-opacity-70 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center">
+                        <h5 className="font-medium text-2xl text-white">
+                          {post.title.slice(0,24)}
+                        </h5>
+                        <h5 className="font-medium text-sm text-white">
+                          {post.city}
+                        </h5>
+                      </div>
+                    </div>
                   </Link>
                 ) : (
                   'No image'
                 )}
               </div>
-              <h5 className="font-medium text-md text-black dark:text-white hover:text-primary dark:hover:text-primary transition-all duration-300">
-                <Link href={`/blog/blog-details?_id=${post._id}`}>
-                  {post.title?.slice(0, 40)}...
-                </Link>
-              </h5>
             </div>
           ))}
         </div>
