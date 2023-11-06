@@ -8,10 +8,11 @@ interface RelatedPostProps {
 }
 
 const RelatedPost = ({ currentBlogId }: RelatedPostProps) => {
-  const filteredPosts = BlogData.filter(
-    (post) => post._id.toString() !== currentBlogId,
-  )
-  const relatedPosts = filteredPosts.slice(0, 3)
+  // Shuffle the BlogData array to get random posts
+  const shuffledPosts = BlogData.sort(() => 0.5 - Math.random())
+  const relatedPosts = shuffledPosts
+    .filter((post) => post._id.toString() !== currentBlogId)
+    .slice(0, 3)
 
   return (
     <>
@@ -29,7 +30,7 @@ const RelatedPost = ({ currentBlogId }: RelatedPostProps) => {
               <div className="relative max-w-full w-100 h-100 group gap-5 rounded-lg">
                 {post.mainImage ? (
                   <Link href={`/blog/blog-details?_id=${post._id}`}>
-                    <div className="relative gap-5">
+                    <div className="relative gap-5 w-[400px] h-[250px]">
                       <Image
                         width={1000}
                         height={1000}
@@ -39,7 +40,7 @@ const RelatedPost = ({ currentBlogId }: RelatedPostProps) => {
                       />
                       <div className="absolute w-full h-full bottom-0 left-0 right-0 p-2 bg-black bg-opacity-70 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center">
                         <h5 className="font-medium text-2xl text-white">
-                          {post.title.slice(0,24)}
+                          {post.title.slice(0, 24)}
                         </h5>
                         <h5 className="font-medium text-sm text-white">
                           {post.city}
