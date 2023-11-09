@@ -55,7 +55,7 @@ const SingleBlogPage: React.FC = () => {
     <>
       <title>{`Projects Details - PA Design`}</title>
 
-      <section className="lg:pt-45 xl:pt-50 pb-20 lg:pb-25 xl:pb-30">
+      <section className="xl:pt-10 pb-20 lg:pb-25 xl:pb-30">
         <nav
           className="flex bg-gray-50 text-gray-700 py-3 px-5 rounded-lg dark:bg-gray-800 dark:border-gray-700 -mt-11"
           aria-label="Breadcrumb"
@@ -122,7 +122,7 @@ const SingleBlogPage: React.FC = () => {
                     {blogPost?.city}
                   </p>
 
-                  <ul className="flex flex-wrap gap-x-10 gap-y-5 2xl:gap-7.5 mb-11">
+                  <ul className="grid grid-cols-1 gap-2 mb-4">
                     <li>
                       <span className="text-black dark:text-white">Area: </span>{' '}
                       {blogPost.area}
@@ -188,35 +188,20 @@ const SingleBlogPage: React.FC = () => {
                       <div className="fixed inset-0 flex items-center justify-center z-50">
                         <div className="modal-container">
                           <div
-                            className="absolute inset-0 bg-black opacity-75"
+                            className="absolute inset-0 bg-black opacity-90"
                             onClick={closeModal}
                           ></div>
                           <div className="relative z-10">
                             <Image
-                              className="rounded w-[650px] h-[650px]"
+                              className="rounded max-w-full h-auto"
                               src={selectedImage}
                               width={500}
                               height={300}
                               alt="Popup Image"
                             />
-                            {/* <button
-                              className="absolute top-0 -right-[400px] text-white text-[20px] rounded hover:opacity-80"
-                              onClick={closeModal}
-                            >
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="30"
-                                height="30"
-                                fill="currentColor"
-                                className="bi bi-x-lg"
-                                viewBox="0 0 16 16"
-                              >
-                                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
-                              </svg>
-                            </button> */}
                             <button
                               onClick={handlePreviousImage}
-                              className="absolute left-[-50px] top-1/2 -translate-y-1/2 w-11 h-11 flex justify-center items-center z-10"
+                              className="absolute left-[-420px] top-1/2 -translate-y-1/2 w-8 h-8 flex justify-center items-center z-10"
                             >
                               <svg
                                 className="w-20 h-20 font-bold transition duration-500 ease-in-out transform motion-reduce:transform-none text-white hover:text-gray-600 hover:-translate-x-2"
@@ -236,7 +221,7 @@ const SingleBlogPage: React.FC = () => {
 
                             <button
                               onClick={handleNextImage}
-                              className="absolute right-[-50px] top-[275px] translate-y-1/2 w-11 h-11 flex justify-center items-center z-10"
+                              className="absolute right-[-420px] top-1/2 -translate-y-1/2 w-8 h-8 flex justify-center items-center z-10"
                             >
                               <svg
                                 className="w-20 h-20 font-bold transition duration-500 ease-in-out transform motion-reduce:transform-none text-white hover:text-gray-600 hover:translate-x-2"

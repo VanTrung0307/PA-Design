@@ -16,24 +16,7 @@ const Contact = () => {
     <>
       {/* <!-- ===== Contact Start ===== --> */}
       <section id="support" className="px-4 md:px-8 2xl:px-0">
-        {/* <div className="container mx-auto py-16 px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
-                <div className="max-w-lg">
-                    <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">About Us</h2>
-                    <p className="mt-4 text-gray-600 text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis
-                        eros at lacus feugiat hendrerit sed ut tortor. Suspendisse et magna quis elit efficitur consequat.
-                        Mauris eleifend velit a pretium iaculis. Donec sagittis velit et magna euismod, vel aliquet nulla
-                        malesuada. Nunc pharetra massa lectus, a fermentum arcu volutpat vel.</p>
-                    <div className="mt-8">
-                        <a href="#" className="text-blue-500 hover:text-blue-600 font-medium">Learn more about us
-                            <span className="ml-2">&#8594;</span></a>
-                    </div>
-                </div>
-                <div className="mt-12 md:mt-0">
-                    <img src="https://images.unsplash.com/photo-1531973576160-7125cd663d86" alt="About Us Image" className="object-cover rounded-lg shadow-md" />
-                </div>
-            </div>
-        </div> */}
+
 
         <div className="mx-auto max-w-c-1390 relative pt-10 lg:pt-15 xl:pt-20 px-7.5 lg:px-15 xl:px-20 overflow-hidden">
           <div className="absolute -z-1 rounded-lg left-0 top-0 w-full h-2/3 bg-gradient-to-t from-[#fff] to-[#dee7ff47] dark:bg-gradient-to-t dark:from-[#24283E] dark:to-[#252A42]"></div>
@@ -85,84 +68,7 @@ const Contact = () => {
                 beautiful and modern architecture.
               </p>
 
-              {/* <form
-                action="https://formbold.com/s/unique_form_id"
-                method="POST"
-              >
-                <div className="flex flex-col lg:flex-row lg:justify-between gap-7.5 lg:gap-14 mb-7.5">
-                  <input
-                    type="text"
-                    placeholder="Full name"
-                    className="w-full lg:w-1/2 bg-transparent border-b border-stroke dark:border-strokedark focus-visible:outline-none focus:border-waterloo dark:focus:border-manatee focus:placeholder:text-black dark:focus:placeholder:text-white pb-3.5"
-                  />
 
-                  <input
-                    type="email"
-                    placeholder="Email address"
-                    className="w-full lg:w-1/2 bg-transparent border-b border-stroke dark:border-strokedark focus-visible:outline-none focus:border-waterloo dark:focus:border-manatee focus:placeholder:text-black dark:focus:placeholder:text-white pb-3.5"
-                  />
-                </div>
-
-                <div className="flex flex-col lg:flex-row lg:justify-between gap-7.5 lg:gap-14 mb-12.5">
-                  <input
-                    type="text"
-                    placeholder="Subject"
-                    className="w-full lg:w-1/2 bg-transparent border-b border-stroke dark:border-strokedark focus-visible:outline-none focus:border-waterloo dark:focus:border-manatee focus:placeholder:text-black dark:focus:placeholder:text-white pb-3.5"
-                  />
-
-                  <input
-                    type="text"
-                    placeholder="Phone number"
-                    className="w-full lg:w-1/2 bg-transparent border-b border-stroke dark:border-strokedark focus-visible:outline-none focus:border-waterloo dark:focus:border-manatee focus:placeholder:text-black dark:focus:placeholder:text-white pb-3.5"
-                  />
-                </div>
-
-                <div className="flex mb-11.5">
-                  <textarea
-                    placeholder="Message"
-                    rows={4}
-                    className="w-full bg-transparent border-b border-stroke dark:border-strokedark focus-visible:outline-none focus:border-waterloo dark:focus:border-manatee focus:placeholder:text-black dark:focus:placeholder:text-white"
-                  ></textarea>
-                </div>
-
-                <div className="flex flex-wrap xl:justify-between ">
-                  <div className="flex mb-4 md:mb-0">
-                    <input
-                      id="default-checkbox"
-                      type="checkbox"
-                      value=""
-                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600 mt-2"
-                    />
-                    <label
-                      htmlFor="default-checkbox"
-                      className="max-w-[425px] flex cursor-pointer select-none pl-5 text-sm"
-                    >
-                      By clicking Checkbox, you agree to use our “Form” terms
-                      And consent cookie usage in browser.
-                    </label>
-                  </div>
-
-                  <button
-                    aria-label="send message"
-                    className="inline-flex items-center gap-2.5 bg-black hover:bg-blackho ease-in-out duration-300 dark:bg-btndark font-medium text-white rounded-full px-6 py-3"
-                  >
-                    Send Message
-                    <svg
-                      className="fill-white"
-                      width="14"
-                      height="14"
-                      viewBox="0 0 14 14"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M10.4767 6.16664L6.00668 1.69664L7.18501 0.518311L13.6667 6.99998L7.18501 13.4816L6.00668 12.3033L10.4767 7.83331H0.333344V6.16664H10.4767Z"
-                        fill=""
-                      />
-                    </svg>
-                  </button>
-                </div>
-              </form> */}
             </motion.div>
 
             <motion.div
@@ -183,28 +89,7 @@ const Contact = () => {
               viewport={{ once: true }}
               className="animate_top w-full md:w-2/5 lg:w-[26%] md:p-7.5 xl:pt-15"
             >
-              {/* <h2 className="text-black dark:text-white text-3xl xl:text-sectiontitle2 font-semibold mb-12.5">
-                Award
-              </h2>
 
-              <div className="mb-7 5">
-                <h4 className="font-medium text-black dark:text-white text-metatitle3 mb-4">
-                  Award 1
-                </h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
-              <div className="mb-7 5">
-                <h4 className="font-medium text-black dark:text-white text-metatitle3 mb-4">
-                  Award 2
-                </h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
-              <div>
-                <h4 className="font-medium text-black dark:text-white text-metatitle3 mb-4">
-                  Award 3
-                </h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div> */}
               <Image
                 width={500}
                 height={500}
@@ -232,7 +117,7 @@ const Contact = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3919.475212061519!2d106.6290307!3d10.7748689!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ea0e426dca3%3A0xe297ba38b2b5ca26!2zMjQgSHXhu7NuaCBWxINuIE3hu5l0LCBIb8OgIFRoYW5oLCBUw6JuIFBow7osIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmlldG5hbQ!5e0!3m2!1sen!2s!4v1698295891479!5m2!1sen!2s"
-                className="w-[650px] h-[400px] rounded-lg flex ml-[-50px]"
+                className="w-[600px] h-[370px] rounded-lg flex ml-[5px]"
                 loading="lazy"
                 style={{
                   WebkitFilter: 'grayscale(100%)',
@@ -243,48 +128,76 @@ const Contact = () => {
               <div>
                 <div className="max-w-full mx-auto rounded-lg overflow-hidden">
                   <div className="px-6 py-4">
-                    <h4 className="font-medium text-black dark:text-white text-metatitle3 mb-4">
+                    <h4 className="font-bold text-black dark:text-white text-[40px] mb-10">
                       Contact
                     </h4>
-                    <p className="flex mb-4">
-                      <span className="mr-2 font-medium">Address:</span>
-                      <span>
-                        24 Huỳnh Văn Một, phường Hiệp Tân, Tân Phú , Ho Chi Minh
-                        City, Vietnam
-                      </span>
-                    </p>
-                    <p className="flex mb-4">
-                      <span className="mr-2 font-medium">Phone Number:</span>
-                      <a href="tel:0902777974" className="hover:text-[#006BFF]">
-                        090 277 79 74
-                      </a>
-                    </p>
-                    <p className="flex mb-4">
-                      <span className="mr-2 font-medium">Email:</span>
-                      <a
-                        href="mailto:padesign.info@gmail.com"
-                        className="hover:text-[#006BFF]"
-                      >
-                        padesign.info@gmail.com
-                      </a>
-                    </p>
+
                     <a
-                      className="flex items-center hover:text-[#006BFF] cursor-pointer"
-                      href="https://www.facebook.com/PADesign.info"
-                      target="_blank"
+                      className="flex flex-col mb-4"
+                      href="https://www.google.com/maps?ll=10.774869,106.631606&z=16&t=m&hl=en&gl=US&mapclient=embed&q=24+Hu%E1%BB%B3nh+V%C4%83n+M%E1%BB%99t+Ho%C3%A0+Thanh+T%C3%A2n+Ph%C3%BA+Th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh"
+                      target="https://www.google.com/maps?ll=10.774869,106.631606&z=16&t=m&hl=en&gl=US&mapclient=embed&q=24+Hu%E1%BB%B3nh+V%C4%83n+M%E1%BB%99t+Ho%C3%A0+Thanh+T%C3%A2n+Ph%C3%BA+Th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh"
                       rel="noopener noreferrer"
                     >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        className="bi bi-facebook mr-2"
-                        viewBox="0 0 16 16"
-                      >
-                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
-                      </svg>
-                      <span>PA Design</span>
+                      <span className="mr-2 font-bold text-[20px] flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-geo-alt-fill mr-2" viewBox="0 0 16 16">
+                          <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                        </svg>
+                        Address
+                      </span>
+                      <span className="hover:text-[#006BFF] cursor-pointer">24 Huynh Van Mot, Hiep Tan Ward, Tan Phu District, Ho Chi Minh City, Vietnam</span>
+                    </a>
+
+                    <a
+                      className="flex flex-col mb-4"
+                      href="tel:0902777974"
+                      target="tel:0902777974"
+                      rel="noopener noreferrer"
+                    >
+                      <span className="mr-2 font-bold text-[20px] flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-telephone-fill mr-2" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                        </svg>
+                        Phone Number
+                      </span>
+                      <span className="hover:text-[#006BFF] cursor-pointer">090 277 79 74</span>
+                    </a>
+
+                    <a
+                      className="flex flex-col mb-4"
+                      href="mailto:padesign.info@gmail.com"
+                      target="mailto:padesign.info@gmail.com"
+                      rel="noopener noreferrer"
+                    >
+                      <span className="mr-2 font-bold text-[20px] flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-envelope-at-fill mr-2" viewBox="0 0 16 16">
+                          <path d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2H2Zm-2 9.8V4.698l5.803 3.546L0 11.801Zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586l-1.239-.757ZM16 9.671V4.697l-5.803 3.546.338.208A4.482 4.482 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671Z" />
+                          <path d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034v.21Zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791Z" />
+                        </svg>
+                        Email
+                      </span>
+                      <span className="hover:text-[#006BFF] cursor-pointer">padesign.info@gmail.com</span>
+                    </a>
+
+                    <a
+                      className="flex flex-col mb-4"
+                      href="https://www.facebook.com/PADesign.info"
+                      target="https://www.facebook.com/PADesign.info"
+                      rel="noopener noreferrer"
+                    >
+                      <span className="mr-2 font-bold text-[20px] flex items-center">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          className="bi bi-facebook mr-2"
+                          viewBox="0 0 16 16"
+                        >
+                          <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                        </svg>
+                        Facebook
+                      </span>
+                      <span className="hover:text-[#006BFF] cursor-pointer">PA Design</span>
                     </a>
                   </div>
                 </div>
