@@ -59,7 +59,7 @@ const Slider = () => {
             <li
               key={index}
               className={`w-3 h-3 rounded-full ${
-                currentIndex === index ? 'bg-white' : 'bg-black opacity-[0.5]'
+                currentIndex === index ? 'bg-white' : 'bg-[#000]'
               }`}
               onClick={() => handleChangeClick(index)}
             />
