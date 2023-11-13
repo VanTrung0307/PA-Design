@@ -118,7 +118,7 @@ const SingleBlogPage: React.FC = () => {
                     </li>
                     <li>
                       <span className="text-black dark:text-white">
-                        Lead Architec:{' '}
+                        Lead Architect:{' '}
                       </span>{' '}
                       {blogPost.leadArchitect}
                     </li>
