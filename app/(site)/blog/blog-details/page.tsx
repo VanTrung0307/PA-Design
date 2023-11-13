@@ -56,56 +56,27 @@ const SingleBlogPage: React.FC = () => {
       <title>{`Projects Details - PA Design`}</title>
 
       <section className="xl:pt-10 pb-20 lg:pb-25 xl:pb-30">
-        <nav
-          className="flex bg-gray-50 text-gray-700 py-3 px-5 rounded-lg dark:bg-gray-800 dark:border-gray-700 -mt-11"
-          aria-label="Breadcrumb"
-        >
-          <ol className="inline-flex items-center space-x-1 md:space-x-3">
-            <li className="inline-flex items-center cursor-pointer">
-              <a
-                onClick={handleClick}
-                className="text-[20px] text-gray-700 hover:text-gray-900 inline-flex items-center dark:text-gray-400 dark:hover:text-white"
-              >
-                <svg
-                  className="w-5 h-5 mr-2"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
-                </svg>
-                Home
-              </a>
-            </li>
-            <li className="cursor-pointer">
-              <div className="flex items-center">
-                <svg
-                  className="w-7 h-7 text-gray-400"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg>
-                <a className="text-black text-[20px] dark:text-white ml-1 md:ml-2 text-sm font-medium">
-                  {blogPost?.title}
-                </a>
-              </div>
-            </li>
-          </ol>
-        </nav>
+
         {blogPost && (
-          <div className="mb-10 w-full overflow-hidden ">
+          <div className="mb-10 w-full overflow-hidden relative" onContextMenu={(e) => e.preventDefault()}>
             <div className="relative aspect-[97/60] w-full sm:aspect-[97/44]">
+              <div
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                  pointerEvents: 'none',
+                }}
+              ></div>
               <Image
                 src={blogPost?.mainImage}
                 alt={blogPost?.title}
                 fill
                 className="object-cover object-center"
+                draggable={false}
+                onDragStart={(e) => e.preventDefault()}
               />
             </div>
           </div>
@@ -171,15 +142,28 @@ const SingleBlogPage: React.FC = () => {
                         blogPost.categoryImage.map((image, index) => (
                           <div
                             key={index}
-                            className="cursor-pointer"
+                            className="cursor-pointer relative"
+                            onContextMenu={(e) => e.preventDefault()}
                             onClick={() => openModal(image)}
                           >
+                            <div
+                              style={{
+                                position: 'absolute',
+                                top: 0,
+                                left: 0,
+                                width: '100%',
+                                height: '100%',
+                                pointerEvents: 'none', // Allow clicks to go through the overlay
+                              }}
+                            ></div>
                             <Image
                               className="w-[400px] h-[400px] rounded"
                               src={image}
                               width={400}
                               height={400}
                               alt={`image-${index}`}
+                              draggable={false}
+                              onDragStart={(e) => e.preventDefault()}
                             />
                           </div>
                         ))}
@@ -190,14 +174,27 @@ const SingleBlogPage: React.FC = () => {
                           <div
                             className="absolute inset-0 bg-black opacity-90"
                             onClick={closeModal}
+                            onContextMenu={(e) => e.preventDefault()}
                           ></div>
                           <div className="relative z-10">
+                            <div
+                              style={{
+                                position: 'absolute',
+                                top: 0,
+                                left: 0,
+                                width: '100%',
+                                height: '100%',
+                                pointerEvents: 'none', // Allow clicks to go through the overlay
+                              }}
+                            ></div>
                             <Image
                               className="rounded max-w-full h-auto"
                               src={selectedImage}
                               width={500}
                               height={300}
                               alt="Popup Image"
+                              draggable={false}
+                              onDragStart={(e) => e.preventDefault()}
                             />
                             <button
                               onClick={handlePreviousImage}
@@ -245,10 +242,8 @@ const SingleBlogPage: React.FC = () => {
                             >
                               {blogPost && blogPost.categoryImage && (
                                 <span>
-                                  {blogPost.categoryImage.indexOf(
-                                    selectedImage,
-                                  ) + 1}{' '}
-                                  / {blogPost.categoryImage.length}
+                                  {blogPost.categoryImage.indexOf(selectedImage) + 1} /{' '}
+                                  {blogPost.categoryImage.length}
                                 </span>
                               )}
                             </div>
