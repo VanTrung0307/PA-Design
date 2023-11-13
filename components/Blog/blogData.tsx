@@ -46,6 +46,8 @@ const BlogData: Blog[] = [
       'https://sawadeesign.vn/wp-content/uploads/2023/08/366049109_827954332109250_5325117456272426019_n-1920x1972.jpg',
       'https://sawadeesign.vn/wp-content/uploads/2023/08/366372859_827954388775911_2604140265122149420_n-1920x1972.jpg'
     ],
+    categories: 'COFFEE',
+    create_at: '13/11/2023',
     title: 'THE DREAMERS',
     city: 'NHA TRANG',
     area: '200sqm',
@@ -60,6 +62,8 @@ const BlogData: Blog[] = [
     _id: 2,
     mainImage:
       'https://sawadeesign.vn/wp-content/uploads/2023/07/350464394_263347446252233_267630042248999183_n-1920x1283.jpg',
+    categories: 'COFFEE',
+    create_at: '13/11/2023',
     title: 'HUONG NHU BOTANICA STORE',
     city: 'HO CHI MINH',
     area: '',
@@ -74,6 +78,8 @@ const BlogData: Blog[] = [
     _id: 3,
     mainImage:
       'https://sawadeesign.vn/wp-content/uploads/2023/07/194146335_1993501214147800_2409711839707599754_n.jpg',
+    categories: 'BAKE',
+    create_at: '13/11/2023',
     title: 'GODMOTHER BAKE AND BRUNCH',
     city: 'HO CHI MINH',
     area: '',
@@ -88,6 +94,8 @@ const BlogData: Blog[] = [
     _id: 4,
     mainImage:
       'https://sawadeesign.vn/wp-content/uploads/2023/07/343604318_586533760118249_8900534535177371186_n-1-1920x1283.jpg',
+    categories: 'COFFEE',
+    create_at: '13/11/2023',
     title: 'THE CUP CAFE AND COCO TEA',
     city: 'BINH DUONG',
     area: '',
@@ -102,6 +110,8 @@ const BlogData: Blog[] = [
     _id: 5,
     mainImage:
       'https://sawadeesign.vn/wp-content/uploads/2023/07/329757954_600219935453285_4828959203461358606_n.jpg',
+    categories: 'COFFEE',
+    create_at: '13/11/2023',
     title: 'KATINAT TRANG QUANG KHAI',
     city: 'HO CHI MINH',
     area: '',
@@ -116,6 +126,8 @@ const BlogData: Blog[] = [
     _id: 6,
     mainImage:
       'https://sawadeesign.vn/wp-content/uploads/2023/07/1-4-1920x1200.jpg',
+    categories: 'COFFEE',
+    create_at: '13/11/2023',
     title: 'KATINAT CAN THO',
     city: 'CAN THO',
     area: '',
@@ -130,6 +142,8 @@ const BlogData: Blog[] = [
     _id: 7,
     mainImage:
       'https://sawadeesign.vn/wp-content/uploads/2023/07/323417273_1344659992975009_6966548763834517471_n.jpg',
+    categories: 'COFFEE',
+    create_at: '13/11/2023',
     title: 'KATINAT DANG VAN BI',
     city: 'HO CHI MINH',
     area: '',
@@ -144,6 +158,8 @@ const BlogData: Blog[] = [
     _id: 8,
     mainImage:
       'https://sawadeesign.vn/wp-content/uploads/2023/07/324734407_1136186190431751_3372705225422913148_n-1920x1283.jpg',
+    categories: 'COFFEE',
+    create_at: '13/11/2023',
     title: 'BEMIND CHU MANH TRINH',
     city: 'HO CHI MINH',
     area: '',
@@ -159,6 +175,8 @@ const BlogData: Blog[] = [
     _id: 9,
     mainImage:
       'https://sawadeesign.vn/wp-content/uploads/2023/07/313913097_2410001372497780_7011991509566920620_n-1920x1283.jpg',
+    categories: 'COFFEE',
+    create_at: '13/11/2023',
     title: 'BEMIND PASTEUR',
     city: 'HO CHI MINH',
     area: '',

@@ -2,24 +2,78 @@
 import BlogData from '@/components/Blog/blogData'
 import BlogItem from '@/components/Blog/BlogItem'
 import { Metadata } from 'next'
-import React, { ChangeEvent, useState } from 'react'
+import React, { ChangeEvent, useRef, useState } from 'react'
 
 const metadata: Metadata = {
   title: 'Blog Page',
 }
 
 export default function BlogPage() {
-  const uniqueCities = Array.from(new Set(BlogData.map((blog) => blog.city)))
-
   const [selectedCity, setSelectedCity] = useState('')
+  const [selectedCategory, setSelectedCategory] = useState('')
+  const [selectedCreatedDate, setSelectedCreatedDate] = useState('')
+
+  const uniqueCities = Array.from(new Set(BlogData.map((blog) => blog.city)))
+  const uniqueCategories = Array.from(new Set(BlogData.map((blog) => blog.categories)))
 
   const handleCityChange = (event: ChangeEvent<HTMLSelectElement>) => {
     setSelectedCity(event.target.value)
   }
+  const handleCategoryChange = (event: ChangeEvent<HTMLSelectElement>) => {
+    setSelectedCategory(event.target.value)
+  }
+  const handleCreateDateChange = (event: ChangeEvent<HTMLSelectElement>) => {
+    setSelectedCreatedDate(event.target.value)
+  }
 
-  const filteredBlogData = selectedCity
-    ? BlogData.filter((blog) => blog.city === selectedCity)
-    : BlogData
+  const selectedCityRef = useRef<HTMLSelectElement>(null);
+  const selectedCategoryRef = useRef<HTMLSelectElement>(null);
+  const selectedCreatedDateRef = useRef<HTMLSelectElement>(null);
+
+  const filteredBlogData = BlogData.filter((blog) => {
+    if (
+      (selectedCity && blog.city !== selectedCity) ||
+      (selectedCategory && blog.categories !== selectedCategory) ||
+      (selectedCreatedDate === "N" && !blog.create_at) ||
+      (selectedCreatedDate === "O" && !blog.create_at)
+    ) {
+      return false;
+    }
+
+    return true;
+  }).sort((a, b) => {
+    if (
+      selectedCreatedDate === "N" &&
+      a.create_at &&
+      b.create_at
+    ) {
+      return new Date(b.create_at).getTime() - new Date(a.create_at).getTime();
+    } else if (
+      selectedCreatedDate === "O" &&
+      a.create_at &&
+      b.create_at
+    ) {
+      return new Date(a.create_at).getTime() - new Date(b.create_at).getTime();
+    }
+    return 0; // No sorting applied for other options
+  });
+
+  const handleReset = () => {
+    setSelectedCity('');
+    setSelectedCategory('');
+    setSelectedCreatedDate('');
+
+    if (selectedCityRef.current) {
+      selectedCityRef.current.selectedIndex = 0;
+    }
+    if (selectedCategoryRef.current) {
+      selectedCategoryRef.current.selectedIndex = 0;
+    }
+    if (selectedCreatedDateRef.current) {
+      selectedCreatedDateRef.current.selectedIndex = 0;
+    }
+  };
+
   return (
     <>
       <title>{`Projects - PA Design`}</title>
@@ -31,6 +85,7 @@ export default function BlogPage() {
               <select
                 className="block appearance-none w-full bg-white border border-gray-300 text-gray-700 py-3 px-4 pr-8 rounded-[100px] leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 onChange={handleCityChange}
+                ref={selectedCityRef}
               >
                 <option value="">Select Location</option>
                 {uniqueCities.map((city, index) => (
@@ -52,21 +107,15 @@ export default function BlogPage() {
             <div className="relative inline-block ml-4 text-black">
               <select
                 className="block appearance-none w-full bg-white border border-gray-300 text-gray-700 py-3 px-4 pr-8 rounded-[100px] leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                onChange={(event) => {
-                  const selectElement = event.target
-                  const options = selectElement.options
-                  const selectedOption = options[selectElement.selectedIndex]
-                  for (let i = 0; i < options.length; i++) {
-                    options[i].classList.remove('font-semibold', 'text-black')
-                  }
-                  selectedOption.classList.add('font-semibold', 'text-black')
-                }}
+                onChange={handleCategoryChange}
+                ref={selectedCategoryRef}
               >
                 <option>Select Categories</option>
-                <option value="CPN">Company</option>
-                <option value="CF">Coffee</option>
-                <option value="P">Park</option>
-                <option value="M">Mall</option>
+                {uniqueCategories.map((category, index) => (
+                  <option key={index} value={category}>
+                    {category}
+                  </option>
+                ))}
               </select>
               <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                 <svg
@@ -82,20 +131,12 @@ export default function BlogPage() {
             <div className="relative inline-block ml-4 text-black">
               <select
                 className="block appearance-none w-full bg-white border border-gray-300 text-gray-700 py-3 px-4 pr-8 rounded-[100px] leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                onChange={(event) => {
-                  const selectElement = event.target
-                  const options = selectElement.options
-                  const selectedOption = options[selectElement.selectedIndex]
-                  for (let i = 0; i < options.length; i++) {
-                    options[i].classList.remove('font-semibold', 'text-black')
-                  }
-                  selectedOption.classList.add('font-semibold', 'text-black')
-                }}
+                onChange={handleCreateDateChange}
+                ref={selectedCreatedDateRef}
               >
                 <option selected>All</option>
                 <option value="N">Newest & Lastest</option>
                 <option value="O">Oldest</option>
-                <option value="P">Popular</option>
               </select>
               <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                 <svg
@@ -106,6 +147,18 @@ export default function BlogPage() {
                   <path fill-rule="evenodd" d="M6 8l4 4 4-4h-8z" />
                 </svg>
               </div>
+            </div>
+
+            <div className="relative inline-block ml-4">
+              <button
+                className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+                onClick={handleReset}
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2v1z" />
+                  <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466z" />
+                </svg>
+              </button>
             </div>
           </div>
 
