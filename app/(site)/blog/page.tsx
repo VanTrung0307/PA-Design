@@ -47,13 +47,13 @@ export default function BlogPage() {
       a.create_at &&
       b.create_at
     ) {
-      return new Date(b.create_at).getTime() - new Date(a.create_at).getTime();
+      return new Date(b.create_at).getDate() - new Date(a.create_at).getDate();
     } else if (
       selectedCreatedDate === "O" &&
       a.create_at &&
       b.create_at
     ) {
-      return new Date(a.create_at).getTime() - new Date(b.create_at).getTime();
+      return new Date(a.create_at).getDate() - new Date(b.create_at).getDate();
     }
     return 0; // No sorting applied for other options
   });
@@ -151,7 +151,7 @@ export default function BlogPage() {
 
             <div className="relative inline-block ml-4">
               <button
-                className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+                className="px-4 py-2 bg-blue-500 text-black dark:text-white rounded hover:bg-blue-600"
                 onClick={handleReset}
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">
