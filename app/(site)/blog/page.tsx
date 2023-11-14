@@ -83,7 +83,7 @@ export default function BlogPage() {
           <div className='mb-10'>
             <div className="relative inline-block ml-4 text-black cursor-pointer">
               <select
-                className="block appearance-none w-full bg-white border border-gray-300 text-gray-700 py-3 px-4 pr-8 rounded-[100px] leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                className="block cursor-pointer appearance-none w-full bg-white border border-gray-300 text-gray-700 py-3 px-4 pr-8 rounded-[100px] leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 onChange={handleCityChange}
                 ref={selectedCityRef}
               >
@@ -106,7 +106,7 @@ export default function BlogPage() {
             </div>
             <div className="relative inline-block ml-4 text-black cursor-pointer">
               <select
-                className="block appearance-none w-full bg-white border border-gray-300 text-gray-700 py-3 px-4 pr-8 rounded-[100px] leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                className="block cursor-pointer appearance-none w-full bg-white border border-gray-300 text-gray-700 py-3 px-4 pr-8 rounded-[100px] leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 onChange={handleCategoryChange}
                 ref={selectedCategoryRef}
               >
@@ -130,7 +130,7 @@ export default function BlogPage() {
 
             <div className="relative inline-block ml-4 text-black cursor-pointer">
               <select
-                className="block appearance-none w-full bg-white border border-gray-300 text-gray-700 py-3 px-4 pr-8 rounded-[100px] leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                className="block appearance-none cursor-pointer w-full bg-white border border-gray-300 text-gray-700 py-3 px-4 pr-8 rounded-[100px] leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 onChange={handleCreateDateChange}
                 ref={selectedCreatedDateRef}
               >
@@ -151,7 +151,7 @@ export default function BlogPage() {
 
             <div className="relative inline-block ml-4 cursor-pointer">
               <button
-                className="px-4 py-2 bg-blue-500 text-black dark:text-white rounded hover:bg-blue-600"
+                className="cursor-pointer px-4 py-2 bg-blue-500 text-black dark:text-white rounded hover:bg-blue-600"
                 onClick={handleReset}
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">
