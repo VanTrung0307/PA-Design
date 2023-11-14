@@ -81,7 +81,7 @@ export default function BlogPage() {
       <section>
         <div className="mx-auto max-w-c-1280 px-4 md:px-8 xl:px-0 mt-15 xl:mt-20">
           <div className='mb-10'>
-            <div className="relative inline-block ml-4 text-black">
+            <div className="relative inline-block ml-4 text-black cursor-pointer">
               <select
                 className="block appearance-none w-full bg-white border border-gray-300 text-gray-700 py-3 px-4 pr-8 rounded-[100px] leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 onChange={handleCityChange}
@@ -104,7 +104,7 @@ export default function BlogPage() {
                 </svg>
               </div>
             </div>
-            <div className="relative inline-block ml-4 text-black">
+            <div className="relative inline-block ml-4 text-black cursor-pointer">
               <select
                 className="block appearance-none w-full bg-white border border-gray-300 text-gray-700 py-3 px-4 pr-8 rounded-[100px] leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 onChange={handleCategoryChange}
@@ -128,7 +128,7 @@ export default function BlogPage() {
               </div>
             </div>
 
-            <div className="relative inline-block ml-4 text-black">
+            <div className="relative inline-block ml-4 text-black cursor-pointer">
               <select
                 className="block appearance-none w-full bg-white border border-gray-300 text-gray-700 py-3 px-4 pr-8 rounded-[100px] leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 onChange={handleCreateDateChange}
@@ -149,7 +149,7 @@ export default function BlogPage() {
               </div>
             </div>
 
-            <div className="relative inline-block ml-4">
+            <div className="relative inline-block ml-4 cursor-pointer">
               <button
                 className="px-4 py-2 bg-blue-500 text-black dark:text-white rounded hover:bg-blue-600"
                 onClick={handleReset}
