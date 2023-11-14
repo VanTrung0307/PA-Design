@@ -282,6 +282,119 @@ const BlogData: Blog[] = [
     investor: '',
     photographs: '',
   },
+  {
+    _id: 8,
+    mainImage:
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1699963935/C%E1%BB%ADa%20H%C3%A0ng%20Trang%20S%E1%BB%A9c%20Mihy/xa9hqbvqaairc7bdqjqv.jpg',
+    categoryImage: [
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1699963935/C%E1%BB%ADa%20H%C3%A0ng%20Trang%20S%E1%BB%A9c%20Mihy/xa9hqbvqaairc7bdqjqv.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1699963947/C%E1%BB%ADa%20H%C3%A0ng%20Trang%20S%E1%BB%A9c%20Mihy/cyerkmzthr2zblry0s05.jpg'
+    ],
+    categories: 'STORE',
+    create_at: '09/12/2022',
+    title: 'Cửa Hàng Trang Sức Mihy',
+    city: 'HO CHI MINH',
+    area: '30m2',
+    location: 'Tan Binh, TP.HCM',
+    leadArchitect: '',
+    designTeam: '',
+    visualImages: '',
+    investor: '',
+    photographs: '',
+  },
+  {
+    _id: 9,
+    mainImage:
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1699964336/Nh%C3%A2n%20Ho%C3%A0%206/iizeldjbyarocxpxfsbk.jpg',
+    categoryImage: [
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1699964336/Nh%C3%A2n%20Ho%C3%A0%206/iizeldjbyarocxpxfsbk.jpg'
+    ],
+    categories: 'HOTEL',
+    create_at: '22/10/2022',
+    title: 'Nhân Hoà 6 - Pharmacy & Hotel',
+    city: 'DA LAT',
+    area: '600m2',
+    location: 'Da Lat',
+    leadArchitect: '',
+    designTeam: '',
+    visualImages: '',
+    investor: '',
+    photographs: '',
+  },
+  {
+    _id: 10,
+    mainImage:
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1699964587/Gi%C3%A0ng%20C%C3%A0%20Ph%C3%AA/ubwnajhuzzfmsjvdey6w.jpg',
+    categoryImage: [
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1699964587/Gi%C3%A0ng%20C%C3%A0%20Ph%C3%AA/ubwnajhuzzfmsjvdey6w.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1699964606/Gi%C3%A0ng%20C%C3%A0%20Ph%C3%AA/kjnttkrn2dnyy4alqnkj.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1699964618/Gi%C3%A0ng%20C%C3%A0%20Ph%C3%AA/tzzsmi8ewryi8y04napc.jpg'
+    ],
+    categories: 'COFFEE',
+    create_at: '20/10/2022',
+    title: 'Giàng Cà Phê',
+    city: 'HO CHI MINH',
+    area: '240m2',
+    location: 'Binh Tan, HCMC',
+    leadArchitect: '',
+    designTeam: '',
+    visualImages: '',
+    investor: '',
+    photographs: 'DECIN Media',
+  },
+  {
+    _id: 11,
+    mainImage:
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1699965276/Thao%20Dien%20Villa%202/oyg1xknefnhcb04hhjyn.png',
+    categoryImage: [
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1699965276/Thao%20Dien%20Villa%202/oyg1xknefnhcb04hhjyn.png',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1699965281/Thao%20Dien%20Villa%202/ivrtvbh7mhy8mork26t3.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1699965286/Thao%20Dien%20Villa%202/jsn43swjasgnqaibhzbc.png',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1699965289/Thao%20Dien%20Villa%202/sdgjlhululgq4vfmjbvi.png',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1699965293/Thao%20Dien%20Villa%202/d5mjsyhhbebrztojjpep.png',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1699965297/Thao%20Dien%20Villa%202/kst1asp5yhwjhfksuvvm.png',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1699965300/Thao%20Dien%20Villa%202/cmu7yloyizda4dwn8qf2.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1699965354/Thao%20Dien%20Villa%202/ge9yur7ey5y3eifmekpd.jpg'
+    ],
+    categories: 'VILLA',
+    create_at: '29/03/2021',
+    title: 'Thao Dien Villa',
+    city: 'HO CHI MINH',
+    area: '300m2',
+    location: 'Thao Dien, Q2, HCMC',
+    leadArchitect: '',
+    designTeam: '',
+    visualImages: '',
+    investor: '',
+    photographs: '',
+  },
+  {
+    _id: 12,
+    mainImage:
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1699966198/Gateway/cvgk5q5dqtmalw8em6lh.jpg',
+    categoryImage: [
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1699966198/Gateway/cvgk5q5dqtmalw8em6lh.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1699966203/Gateway/djjmpyjr65wmnje68ixw.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1699966207/Gateway/u9gskk7kisvqfj8dw5vt.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1699966212/Gateway/oxjiude8pvcubmmlgqkc.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1699966216/Gateway/mekek17k7tsxcisljvsd.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1699966219/Gateway/czvc36zjlvemj7uxen3s.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1699966223/Gateway/dlzawg5j28dbnsuuf5l6.png',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1699966227/Gateway/ezndbekkrv29dzpzhpvw.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1699966341/Gateway/ijl7hizm7deydg8jda6s.png'
+    ],
+    categories: 'HOUSE',
+    create_at: '09/12/2020',
+    title: 'Gateway',
+    city: 'VUNG TAU',
+    area: '500m2',
+    location: 'VungTau, VN',
+    leadArchitect: '',
+    designTeam: '',
+    visualImages: '',
+    investor: '',
+    photographs: '',
+  },
 ]
 
 export default BlogData
