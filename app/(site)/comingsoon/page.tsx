@@ -45,7 +45,7 @@ const ComingSoonPage = () => {
   return (
     <>
       <title>{`Coming Soon - PA Design`}</title>
-      <section className="flex flex-col items-center justify-center h-full w-full flex-1 mt-[200px] mb-[400px]">
+      <section className="flex flex-col items-center justify-center h-full w-full flex-1 mt-[200px] mb-[380px]">
         <div className="flex flex-col items-center">
           <h1 className="text-5xl font-extrabold text-center lg:text-7xl 2xl:text-8xl">
             <span style={styles.gradientTextDark}>Coming</span>
