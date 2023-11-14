@@ -40,7 +40,7 @@ const Slider = () => {
         return (
           <figure
             key={index}
-            className={`h-[750px] cursor-pointer top-0 left-0 w-full transition-transform duration-500 ${
+            className={`h-[850px] cursor-pointer top-0 left-0 w-full transition-transform duration-500 ${
               currentIndex === index ? 'opacity-100' : 'opacity-0'
             }`}
             onClick={() => handleClick(_id)}

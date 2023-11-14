@@ -93,7 +93,7 @@ const Contact = () => {
               <Image
                 width={500}
                 height={500}
-                src="/images/logo/logo-light.png"
+                src="/images/logo2/logo-light.png"
                 alt="Logo"
                 className="dark:hidden"
                 style={{ border: '5px solid black' }}
@@ -101,7 +101,7 @@ const Contact = () => {
               <Image
                 width={500}
                 height={500}
-                src="/images/logo/logo-dark.png"
+                src="/images/logo2/logo-dark.png"
                 alt="Logo"
                 className="hidden dark:block"
                 style={{ border: '5px solid white' }}
@@ -117,7 +117,7 @@ const Contact = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3919.475212061519!2d106.6290307!3d10.7748689!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ea0e426dca3%3A0xe297ba38b2b5ca26!2zMjQgSHXhu7NuaCBWxINuIE3hu5l0LCBIb8OgIFRoYW5oLCBUw6JuIFBow7osIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmlldG5hbQ!5e0!3m2!1sen!2s!4v1698295891479!5m2!1sen!2s"
-                className="w-[600px] h-[370px] rounded-lg flex ml-[5px]"
+                className="xl:w-[600px] md:max-w-full h-[370px] rounded-lg flex ml-[5px]"
                 loading="lazy"
                 style={{
                   WebkitFilter: 'grayscale(100%)',

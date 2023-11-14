@@ -49,11 +49,11 @@ const BlogItem: React.FC<BlogItemProps> = ({ blog, _id }) => {
         whileInView="visible"
         transition={{ duration: 1, delay: 0.5 }}
         viewport={{ once: true }}
-        className="animate_top rounded-lg"
+        className="animate_top rounded-lg max-w-full h-[400px]"
       >
         <Link
           href={`/blog/blog-details?_id=${_id}`}
-          className="block relative aspect-[368/239]"
+          className="block relative aspect-[368/239] max-w-full h-[400px]"
           onClick={handleClick}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
