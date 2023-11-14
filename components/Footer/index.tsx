@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 const Footer = () => {
   return (
     <>
-      <footer className="bg-[#F0EBEB] dark:bg-blacksection border-t border-stroke dark:border-strokedark mt-11">
+      <footer className="bg-[transparent] dark:bg-blacksection border-t border-stroke dark:border-strokedark mt-11">
         <div className="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
           {/* <!-- Footer Top --> */}
 
