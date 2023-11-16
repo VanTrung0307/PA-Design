@@ -6,14 +6,14 @@ import { motion } from 'framer-motion'
 const Footer = () => {
   return (
     <>
-      <footer className="bg-[transparent] dark:bg-blacksection border-t border-stroke dark:border-strokedark mt-11">
+      <footer className="bg-[transparent] dark:bg-blacksection mt-11">
         <div className="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
           {/* <!-- Footer Top --> */}
 
           {/* <!-- Footer Top --> */}
 
           {/* <!-- Footer Bottom --> */}
-          <div className="border-t border-stroke dark:border-strokedark flex flex-wrap flex-col lg:flex-row items-center justify-center lg:justify-between gap-5 lg:gap-0 py-7">
+          <div className="flex flex-wrap flex-col lg:flex-row items-center justify-center lg:justify-between gap-5 lg:gap-0 py-7">
             <motion.div
               variants={{
                 hidden: {
