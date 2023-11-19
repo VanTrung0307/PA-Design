@@ -47,15 +47,33 @@ export default function BlogPage() {
       a.create_at &&
       b.create_at
     ) {
-      return new Date(b.create_at).getDate() - new Date(a.create_at).getDate();
+      const dateA = new Date(a.create_at);
+      const dateB = new Date(b.create_at);
+
+      if (dateB.getFullYear() !== dateA.getFullYear()) {
+        return dateB.getFullYear() - dateA.getFullYear();
+      } else if (dateB.getMonth() !== dateA.getMonth()) {
+        return dateB.getMonth() - dateA.getMonth();
+      } else {
+        return dateB.getDate() - dateA.getDate();
+      }
     } else if (
       selectedCreatedDate === "O" &&
       a.create_at &&
       b.create_at
     ) {
-      return new Date(a.create_at).getDate() - new Date(b.create_at).getDate();
+      const dateA = new Date(a.create_at);
+      const dateB = new Date(b.create_at);
+
+      if (dateA.getFullYear() !== dateB.getFullYear()) {
+        return dateA.getFullYear() - dateB.getFullYear();
+      } else if (dateA.getMonth() !== dateB.getMonth()) {
+        return dateA.getMonth() - dateB.getMonth();
+      } else {
+        return dateA.getDate() - dateB.getDate();
+      }
     }
-    return 0; // No sorting applied for other options
+    return 0;
   });
 
   const handleReset = () => {
