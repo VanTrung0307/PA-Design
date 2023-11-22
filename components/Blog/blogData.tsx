@@ -395,6 +395,53 @@ const BlogData: Blog[] = [
     investor: '',
     photographs: '',
   },
+  {
+    _id: 13,
+    mainImage:
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1700627202/PT%20FLOWER/gwnvp9iukqsftyfqpwnv.jpg',
+    categoryImage: [
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1700627202/PT%20FLOWER/gwnvp9iukqsftyfqpwnv.jpg',
+    ],
+    categories: 'STORE',
+    create_at: '27/11/2020',
+    title: 'PT FLOWER',
+    city: 'HO CHI MINH',
+    area: '',
+    location: '79 Phan Ke Binh, HCMC',
+    leadArchitect: '',
+    designTeam: '',
+    visualImages: '',
+    investor: '',
+    photographs: '',
+  },
+  {
+    _id: 14,
+    mainImage:
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1700627439/2%207%20%7C%207%20C%20O%20R%20P%20O%20R%20A%20T%20I%20O%20N/y3qai0lolrexkxw6jzf3.jpg',
+    categoryImage: [
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1700627439/2%207%20%7C%207%20C%20O%20R%20P%20O%20R%20A%20T%20I%20O%20N/y3qai0lolrexkxw6jzf3.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1700627396/2%207%20%7C%207%20C%20O%20R%20P%20O%20R%20A%20T%20I%20O%20N/okwhncgmblaphb3wrall.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1700627398/2%207%20%7C%207%20C%20O%20R%20P%20O%20R%20A%20T%20I%20O%20N/jmlwciuwczbkvfv6w0og.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1700627401/2%207%20%7C%207%20C%20O%20R%20P%20O%20R%20A%20T%20I%20O%20N/ngmws9pe9xfvtemhql4q.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1700627405/2%207%20%7C%207%20C%20O%20R%20P%20O%20R%20A%20T%20I%20O%20N/dqtsafhzacdiir1yixwh.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1700627412/2%207%20%7C%207%20C%20O%20R%20P%20O%20R%20A%20T%20I%20O%20N/xulxw2kszvtc6fvytd7d.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1700627413/2%207%20%7C%207%20C%20O%20R%20P%20O%20R%20A%20T%20I%20O%20N/g9kkarivcrebpm7rrhfq.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1700627417/2%207%20%7C%207%20C%20O%20R%20P%20O%20R%20A%20T%20I%20O%20N/w4wuaooomr4sza4zyw6e.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1700627423/2%207%20%7C%207%20C%20O%20R%20P%20O%20R%20A%20T%20I%20O%20N/q8edkb980fcvfanafxbv.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1700627432/2%207%20%7C%207%20C%20O%20R%20P%20O%20R%20A%20T%20I%20O%20N/sifhrgyzmtxxshzuknae.jpg'
+    ],
+    categories: 'COMPANY',
+    create_at: '17/07/2019',
+    title: '2 7 | 7 C O R P O R A T I O N',
+    city: 'HO CHI MINH',
+    area: '',
+    location: 'Quận Thủ Đức',
+    leadArchitect: '',
+    designTeam: 'PA Design Team',
+    visualImages: '',
+    investor: '',
+    photographs: '',
+  },
 ]
 
 export default BlogData
