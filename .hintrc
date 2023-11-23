@@ -9,6 +9,12 @@
     "no-inline-styles": "off",
     "axe/forms": "off",
     "axe/text-alternatives": "off",
-    "compat-api/html": "off"
+    "compat-api/html": "off",
+    "axe/aria": [
+      "default",
+      {
+        "aria-allowed-attr": "off"
+      }
+    ]
   }
 }
