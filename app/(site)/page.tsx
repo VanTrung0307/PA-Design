@@ -1,4 +1,3 @@
-'use client'
 import Blog from '@/components/Blog'
 import Slider from '@/components/Silder'
 import { Metadata } from 'next'
