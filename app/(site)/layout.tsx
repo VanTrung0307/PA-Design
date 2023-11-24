@@ -1,5 +1,4 @@
 'use client'
-
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Lines from '@/components/Lines'
@@ -10,7 +9,6 @@ const inter = Inter({ subsets: ['latin'] })
 import '../globals.css'
 
 import ToasterContext from '../context/ToastContext'
-import { BlogProvider } from './BlogContext'
 
 export default function RootLayout({
   children,
@@ -28,7 +26,7 @@ export default function RootLayout({
           <Lines />
           <Header />
           <ToasterContext />
-          <BlogProvider>{children}</BlogProvider>
+          {children}
           <Footer />
           <ScrollToTop />
         </ThemeProvider>

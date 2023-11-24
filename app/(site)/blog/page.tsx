@@ -1,12 +1,7 @@
 'use client'
 import BlogData from '@/components/Blog/blogData'
 import BlogItem from '@/components/Blog/BlogItem'
-import { Metadata } from 'next'
 import React, { ChangeEvent, useRef, useState } from 'react'
-
-const metadata: Metadata = {
-  title: 'Blog Page',
-}
 
 export default function BlogPage() {
   const [selectedCity, setSelectedCity] = useState('')
@@ -191,4 +186,3 @@ export default function BlogPage() {
     </>
   )
 }
-BlogPage.metadata = metadata

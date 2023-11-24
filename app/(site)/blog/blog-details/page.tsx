@@ -2,7 +2,7 @@
 import RelatedPost from '@/components/Blog/RelatedPost'
 import BlogData from '@/components/Blog/blogData'
 import Image from 'next/image'
-import { useRouter, useSearchParams } from 'next/navigation'
+import { useSearchParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
 
 const SingleBlogPage: React.FC = () => {
@@ -17,6 +17,11 @@ const SingleBlogPage: React.FC = () => {
   )
 
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
+  if (selectedImage) {
+    document.body.classList.add('overflow-hidden');
+  } else {
+    document.body.classList.remove('overflow-hidden');
+  }
 
   const openModal = (imageURL: string) => {
     setSelectedImage(imageURL)
@@ -46,16 +51,21 @@ const SingleBlogPage: React.FC = () => {
     setSelectedImage(nextImage)
   }
 
-  const router = useRouter()
-  const handleClick = () => {
-    router.push(`/`)
-  }
+  const [zoomLevel, setZoomLevel] = useState(1);
+
+  const handleZoomIn = () => {
+    setZoomLevel(zoomLevel + 0.1);
+  };
+
+  const handleZoomOut = () => {
+    setZoomLevel(zoomLevel - 0.1);
+  };
 
   return (
     <>
       <title>{`Projects Details - PA Design`}</title>
 
-      <section className="xl:pt-10 pb-20 lg:pb-25 xl:pb-30">
+      <section className="xl:pt-0 pb-20 lg:pb-25 xl:pb-30">
 
         {blogPost && (
           <div className="mb-10 w-full overflow-hidden relative" onContextMenu={(e) => e.preventDefault()}>
@@ -153,11 +163,11 @@ const SingleBlogPage: React.FC = () => {
                                 left: 0,
                                 width: '100%',
                                 height: '100%',
-                                pointerEvents: 'none', // Allow clicks to go through the overlay
+                                pointerEvents: 'none',
                               }}
                             ></div>
                             <Image
-                              className="w-[400px] h-[400px] rounded"
+                              className="w-[400px] h-[400px] rounded object-cover"
                               src={image}
                               width={400}
                               height={400}
@@ -169,7 +179,7 @@ const SingleBlogPage: React.FC = () => {
                         ))}
                     </div>
                     {selectedImage && (
-                      <div className="fixed inset-0 flex items-center justify-center z-50">
+                      <div className="fixed inset-0 flex items-center justify-center z-99999">
                         <div className="modal-container">
                           <div
                             className="absolute inset-0 bg-black opacity-90"
@@ -177,28 +187,41 @@ const SingleBlogPage: React.FC = () => {
                             onContextMenu={(e) => e.preventDefault()}
                           ></div>
                           <div className="relative z-10">
-                            <div
-                              style={{
-                                position: 'absolute',
-                                top: 0,
-                                left: 0,
-                                width: '100%',
-                                height: '100%',
-                                pointerEvents: 'none', // Allow clicks to go through the overlay
-                              }}
-                            ></div>
                             <Image
                               className="rounded max-w-full h-auto"
                               src={selectedImage}
-                              width={500}
-                              height={300}
+                              width={500 * zoomLevel}
+                              height={300 * zoomLevel}
                               alt="Popup Image"
                               draggable={false}
                               onDragStart={(e) => e.preventDefault()}
                             />
                             <button
+                              onClick={handleZoomIn}
+                              className="fixed top-8 right-[70px] z-20 space-x-2 w-10 h-10 flex justify-center items-center hover:bg-primary rounded"
+                              title="Zoom In"
+                            >
+                              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className="bi bi-zoom-in text-white" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11M13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0"/>
+                                <path d="M10.344 11.742c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1 6.538 6.538 0 0 1-1.398 1.4z"/>
+                                <path fill-rule="evenodd" d="M6.5 3a.5.5 0 0 1 .5.5V6h2.5a.5.5 0 0 1 0 1H7v2.5a.5.5 0 0 1-1 0V7H3.5a.5.5 0 0 1 0-1H6V3.5a.5.5 0 0 1 .5-.5"/>
+                              </svg>
+                            </button>
+                            <button
+                              onClick={handleZoomOut}
+                              className="fixed top-8 right-[130px] z-20 space-x-2 w-10 h-10 flex justify-center items-center hover:bg-primary rounded"
+                              title="Zoom Out"
+                            >
+                              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className="bi bi-zoom-out text-white" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11M13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0" />
+                                <path d="M10.344 11.742c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1 6.538 6.538 0 0 1-1.398 1.4z" />
+                                <path fill-rule="evenodd" d="M3 6.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5" />
+                              </svg>
+                            </button>
+                            <button
                               onClick={handlePreviousImage}
-                              className="absolute left-[-420px] top-1/2 -translate-y-1/2 w-8 h-8 flex justify-center items-center z-10"
+                              className="fixed left-[20px] top-1/2 -translate-y-1/2 w-8 h-8 flex justify-center items-center z-10"
+                              title="Previous"
                             >
                               <svg
                                 className="w-20 h-20 font-bold transition duration-500 ease-in-out transform motion-reduce:transform-none text-white hover:text-gray-600 hover:-translate-x-2"
@@ -218,7 +241,8 @@ const SingleBlogPage: React.FC = () => {
 
                             <button
                               onClick={handleNextImage}
-                              className="absolute right-[-420px] top-1/2 -translate-y-1/2 w-8 h-8 flex justify-center items-center z-10"
+                              className="fixed right-[20px] top-1/2 -translate-y-1/2 w-8 h-8 flex justify-center items-center z-10"
+                              title="Next"
                             >
                               <svg
                                 className="w-20 h-20 font-bold transition duration-500 ease-in-out transform motion-reduce:transform-none text-white hover:text-gray-600 hover:translate-x-2"
@@ -235,18 +259,6 @@ const SingleBlogPage: React.FC = () => {
                                 ></path>
                               </svg>
                             </button>
-
-                            <div
-                              style={{ background: '#055CD6' }}
-                              className="absolute bottom-4 right-4 text-white text-sm rounded-lg w-[70px] text-center"
-                            >
-                              {blogPost && blogPost.categoryImage && (
-                                <span>
-                                  {blogPost.categoryImage.indexOf(selectedImage) + 1} /{' '}
-                                  {blogPost.categoryImage.length}
-                                </span>
-                              )}
-                            </div>
                           </div>
                         </div>
                       </div>

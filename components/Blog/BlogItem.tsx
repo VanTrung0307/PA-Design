@@ -1,5 +1,4 @@
 'use client'
-import { BlogContext } from '@/app/(site)/BlogContext'
 import { Blog } from '@/types/blog'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
@@ -16,12 +15,6 @@ const BlogItem: React.FC<BlogItemProps> = ({ blog, _id }) => {
   const { mainImage, title, city } = blog
   const [isHovered, setIsHovered] = useState(false)
   const router = useRouter()
-  const { setBlogId } = useContext(BlogContext)
-
-  const handleClick = () => {
-    setBlogId(_id)
-    router.push(`/blog/blog-details?_id=${_id}`)
-  }
 
   const handleMouseEnter = () => {
     setIsHovered(true)
@@ -54,11 +47,10 @@ const BlogItem: React.FC<BlogItemProps> = ({ blog, _id }) => {
         <Link
           href={`/blog/blog-details?_id=${_id}`}
           className="block relative aspect-[368/239] max-w-full h-[400px]"
-          onClick={handleClick}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <Image src={mainImage} alt={title} fill className='rounded-lg'/>
+          <Image src={mainImage} alt={title} fill className='rounded-lg object-cover'/>
           {isHovered && (
             <div className="absolute inset-0 bg-black bg-opacity-50 flex rounded-lg items-center justify-center">
               <div className="px-4">

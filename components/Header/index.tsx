@@ -13,6 +13,7 @@ const Header = () => {
   const [stickyMenu, setStickyMenu] = useState(false)
 
   const pathUrl = usePathname()
+  const currentPath = typeof window !== 'undefined' ? window.location.pathname : '';
 
   // Sticky menu
   const handleStickyMenu = () => {
@@ -26,6 +27,23 @@ const Header = () => {
   useEffect(() => {
     window.addEventListener('scroll', handleStickyMenu)
   })
+
+  useEffect(() => {
+    const handleRouteChange = (event: any) => {
+      const { pathname } = event.state || {};
+      if (pathname !== '/') {
+        setTimeout(() => {
+          window.history.pushState({ pathname: '/' }, '', '/');
+        }, 500);
+      }
+    };
+
+    window.addEventListener('popstate', handleRouteChange);
+
+    return () => {
+      window.removeEventListener('popstate', handleRouteChange);
+    };
+  }, []);
 
   return (
     <header className={`left-0 top-0 w-full z-99999 py-7`}>
@@ -57,31 +75,26 @@ const Header = () => {
             <span className="block relative cursor-pointer w-5.5 h-5.5">
               <span className="block absolute w-full h-full">
                 <span
-                  className={`block relative top-0 left-0 bg-black dark:bg-white rounded-sm w-0 h-0.5 my-1 ease-in-out duration-200 delay-[0] ${
-                    !navigationOpen ? '!w-full delay-300' : ''
-                  }`}
+                  className={`block relative top-0 left-0 bg-black dark:bg-white rounded-sm w-0 h-0.5 my-1 ease-in-out duration-200 delay-[0] ${!navigationOpen ? '!w-full delay-300' : ''
+                    }`}
                 ></span>
                 <span
-                  className={`block relative top-0 left-0 bg-black dark:bg-white rounded-sm w-0 h-0.5 my-1 ease-in-out duration-200 delay-150 ${
-                    !navigationOpen ? '!w-full delay-400' : ''
-                  }`}
+                  className={`block relative top-0 left-0 bg-black dark:bg-white rounded-sm w-0 h-0.5 my-1 ease-in-out duration-200 delay-150 ${!navigationOpen ? '!w-full delay-400' : ''
+                    }`}
                 ></span>
                 <span
-                  className={`block relative top-0 left-0 bg-black dark:bg-white rounded-sm w-0 h-0.5 my-1 ease-in-out duration-200 delay-200 ${
-                    !navigationOpen ? '!w-full delay-500' : ''
-                  }`}
+                  className={`block relative top-0 left-0 bg-black dark:bg-white rounded-sm w-0 h-0.5 my-1 ease-in-out duration-200 delay-200 ${!navigationOpen ? '!w-full delay-500' : ''
+                    }`}
                 ></span>
               </span>
               <span className="block absolute w-full h-full rotate-45">
                 <span
-                  className={`block bg-black dark:bg-white rounded-sm ease-in-out duration-200 delay-300 absolute left-2.5 top-0 w-0.5 h-0 ${
-                    navigationOpen ? 'h-full delay-[0]' : ''
-                  }`}
+                  className={`block bg-black dark:bg-white rounded-sm ease-in-out duration-200 delay-300 absolute left-2.5 top-0 w-0.5 h-0 ${navigationOpen ? 'h-full delay-[0]' : ''
+                    }`}
                 ></span>
                 <span
-                  className={`block bg-black dark:bg-white rounded-sm ease-in-out duration-200 delay-400 absolute left-0 top-[.55rem] w-full h-0 ${
-                    navigationOpen ? 'h-0.5 dealy-200' : ''
-                  }`}
+                  className={`block bg-black dark:bg-white rounded-sm ease-in-out duration-200 delay-400 absolute left-0 top-[.55rem] w-full h-0 ${navigationOpen ? 'h-0.5 dealy-200' : ''
+                    }`}
                 ></span>
               </span>
             </span>
@@ -91,10 +104,9 @@ const Header = () => {
 
         {/* Nav Menu Start   */}
         <div
-          className={`w-full lg:w-full h-0 lg:h-auto invisible lg:visible lg:flex items-center justify-between ${
-            navigationOpen &&
+          className={`w-full lg:w-full h-0 lg:h-auto invisible lg:visible lg:flex items-center justify-between ${navigationOpen &&
             '!visible bg-white dark:bg-blacksection shadow-solid-5 h-auto max-h-[400px] overflow-y-scroll rounded-md mt-4 p-7.5'
-          }`}
+            }`}
         >
           <nav>
             <ul className="flex lg:items-center flex-col lg:flex-row gap-5 lg:gap-10">
@@ -132,11 +144,10 @@ const Header = () => {
                     <div className="flex justify-end items-center ml-[100px]">
                       <Link
                         href={`${menuItem.path}`}
-                        className={`${
-                          pathUrl === menuItem.path
-                            ? 'hover:text-primary text-primary'
-                            : 'hover:text-primary'
-                        }`}
+                        className={`${pathUrl === menuItem.path
+                            ? 'hover:text-[#222] text-[#222] dark:text-white'
+                            : 'hover:text-[#222] dark:hover:text-white'
+                          }`}
                       >
                         {menuItem.title}
                       </Link>
@@ -149,20 +160,6 @@ const Header = () => {
 
           <div className="flex items-center gap-6 mt-7 lg:mt-0">
             <ThemeToggler />
-
-            {/* <Link
-              href="https://github.com/NextJSTemplates/solid-nextjs"
-              className="text-waterloo text-regular font-medium hover:text-primary"
-            >
-            GitHub Repo 🌟
-            </Link>
-
-            <Link
-              href="https://nextjstemplates.com/templates/solid"
-              className="flex items-center justify-center bg-primary hover:bg-primaryho ease-in-out duration-300 text-white text-regular rounded-full py-2.5 px-7.5"
-            >
-              Get Pro 🔥
-            </Link> */}
           </div>
         </div>
       </div>
