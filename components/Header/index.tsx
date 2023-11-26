@@ -13,7 +13,6 @@ const Header = () => {
   const [stickyMenu, setStickyMenu] = useState(false)
 
   const pathUrl = usePathname()
-  const currentPath = typeof window !== 'undefined' ? window.location.pathname : '';
 
   // Sticky menu
   const handleStickyMenu = () => {
@@ -27,23 +26,6 @@ const Header = () => {
   useEffect(() => {
     window.addEventListener('scroll', handleStickyMenu)
   })
-
-  useEffect(() => {
-    const handleRouteChange = (event: any) => {
-      const { pathname } = event.state || {};
-      if (pathname !== '/') {
-        setTimeout(() => {
-          window.history.pushState({ pathname: '/' }, '', '/');
-        }, 500);
-      }
-    };
-
-    window.addEventListener('popstate', handleRouteChange);
-
-    return () => {
-      window.removeEventListener('popstate', handleRouteChange);
-    };
-  }, []);
 
   return (
     <header className={`left-0 top-0 w-full z-99999 py-7`}>

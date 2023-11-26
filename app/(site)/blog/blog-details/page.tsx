@@ -3,14 +3,11 @@ import RelatedPost from '@/components/Blog/RelatedPost'
 import BlogData from '@/components/Blog/blogData'
 import Image from 'next/image'
 import { useSearchParams } from 'next/navigation'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
-const SingleBlogPage: React.FC = () => {
+export default function SingleBlogPage() {
   const searchParams = useSearchParams()
   const currentBlogId = searchParams.get('_id')
-  useEffect(() => {
-    const url = `${searchParams}`
-  }, [searchParams])
 
   const blogPost = BlogData.find(
     (blog) => blog._id.toString() === currentBlogId,
@@ -276,5 +273,3 @@ const SingleBlogPage: React.FC = () => {
     </>
   )
 }
-
-export default SingleBlogPage

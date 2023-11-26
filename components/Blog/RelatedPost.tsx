@@ -38,7 +38,7 @@ const RelatedPost = ({ currentBlogId }: RelatedPostProps) => {
                         alt="Blog"
                         className="object-cover w-full h-full rounded-lg"
                       />
-                      <div className="absolute w-full h-full bottom-0 left-0 right-0 p-2 bg-black bg-opacity-70 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center">
+                      <div className="absolute w-full h-full rounded-lg bottom-0 left-0 right-0 p-2 bg-black bg-opacity-70 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center">
                         <h5 className="font-medium text-2xl text-white">
                           {post.title.length > 24
                             ? `${post.title.slice(0, 24)}...`

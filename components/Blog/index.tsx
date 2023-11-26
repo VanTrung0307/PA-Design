@@ -1,8 +1,7 @@
-'use client'
 import BlogItem from './BlogItem'
 import BlogData from './blogData'
 
-const Blog = async () => {
+const Blog = () => {
   return (
     <section className="py-20 lg:py-25 xl:py-30 mt-[-120px]">
       <div className="mx-auto max-w-c-1280 px-4 md:px-8 xl:px-0 mt-15 xl:mt-20">
