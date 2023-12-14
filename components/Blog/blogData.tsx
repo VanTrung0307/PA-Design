@@ -442,6 +442,43 @@ const BlogData: Blog[] = [
     investor: '',
     photographs: '',
   },
+  {
+    _id: 15,
+    mainImage:
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1702559516/GOVAP%20HOUSE/awbud0egxqgnhaktqbpt.jpg',
+    categoryImage: [
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1702559516/GOVAP%20HOUSE/awbud0egxqgnhaktqbpt.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1702559518/GOVAP%20HOUSE/jtv9wolbmldru1itdxea.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1702559522/GOVAP%20HOUSE/nfu1ogirh0t7as40r5sh.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1702559525/GOVAP%20HOUSE/obz3jqgpluysjbbdyoly.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1702559529/GOVAP%20HOUSE/spr6m858qsv2bxqd03kf.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1702559532/GOVAP%20HOUSE/hf9qf6ztgz3nfxzozxsg.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1702559537/GOVAP%20HOUSE/cqjnxbwafl7vqnhaghcy.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1702559539/GOVAP%20HOUSE/sk0ltknhvjlr9raw8pcr.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1702559542/GOVAP%20HOUSE/k9ltghpnmp35skphhf6u.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1702559546/GOVAP%20HOUSE/hn4qudihsipduslczeho.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1702559549/GOVAP%20HOUSE/urxmkbv8c9aqiuan9wjm.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1702559552/GOVAP%20HOUSE/pdyupwekcqff24zszqvs.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1702559555/GOVAP%20HOUSE/w84gcqe2vanhvl3e0lp0.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1702559559/GOVAP%20HOUSE/rsevbxapgze0cuasbqbi.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1702559562/GOVAP%20HOUSE/by1ahyg07sdaen2xh13j.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1702559566/GOVAP%20HOUSE/lg862vvmhjtahfaal2f3.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1702559569/GOVAP%20HOUSE/ecowqevafnochaixjm4p.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1702559572/GOVAP%20HOUSE/cn5xyyyskza8kqpbmi9q.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1702559575/GOVAP%20HOUSE/histdrnqw1tmq0nrxpdb.jpg'
+    ],
+    categories: 'HOUSE',
+    create_at: '04/12/2023',
+    title: 'GOVAP HOUSE',
+    city: 'HO CHI MINH',
+    area: '300 sqm',
+    location: 'Go Vap District, HCMC',
+    leadArchitect: '',
+    designTeam: '',
+    visualImages: '',
+    investor: '',
+    photographs: '',
+  },
 ]
 
 export default BlogData
