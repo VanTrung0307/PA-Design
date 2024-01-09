@@ -39,7 +39,7 @@ const BlogData: Blog[] = [
     photographs: '',
   },
   {
-    _id: 1,
+    _id: 14,
     mainImage:
       'https://res.cloudinary.com/df7v1hify/image/upload/v1699866848/Thao%20Dien%20Villa/tyxnlzbxbunuoxckotav.jpg',
     categoryImage: [
@@ -121,7 +121,7 @@ const BlogData: Blog[] = [
     photographs: '',
   },
   {
-    _id: 2,
+    _id: 13,
     mainImage:
       'https://res.cloudinary.com/df7v1hify/image/upload/v1699886331/PA%20Design/zto3euzq3m3ln6ocm0xe.jpg',
     categoryImage: [
@@ -164,7 +164,7 @@ const BlogData: Blog[] = [
     photographs: '',
   },
   {
-    _id: 3,
+    _id: 12,
     mainImage:
       'https://res.cloudinary.com/df7v1hify/image/upload/v1699888624/SPIRAL%20HOUSE/m3m1yg4swmutgdxr7gil.jpg',
     categoryImage: [
@@ -200,7 +200,7 @@ const BlogData: Blog[] = [
     photographs: '',
   },
   {
-    _id: 4,
+    _id: 11,
     mainImage:
       'https://res.cloudinary.com/df7v1hify/image/upload/v1699957137/LITTLE%20HOUSE/ffyskr5pxeougyhboan4.jpg',
     categoryImage: [
@@ -220,7 +220,7 @@ const BlogData: Blog[] = [
     photographs: '',
   },
   {
-    _id: 5,
+    _id: 10,
     mainImage:
       'https://res.cloudinary.com/df7v1hify/image/upload/v1699957306/%5BLAVILLA%5D%20N%E1%BB%99i%20Th%E1%BA%A5t%20-%20M%E1%BB%99t%20Tho%C3%A1ng%20%C4%90%C3%B4ng%20D%C6%B0%C6%A1ng/t9484i4tfgaer7m5gi8b.jpg',
     categoryImage: [
@@ -256,7 +256,7 @@ const BlogData: Blog[] = [
     photographs: '',
   },
   {
-    _id: 6,
+    _id: 9,
     mainImage:
       'https://res.cloudinary.com/df7v1hify/image/upload/v1699958998/COCO%20HOUSE/z8oeeszjhfxoawj6hees.jpg',
     categoryImage: [
@@ -290,7 +290,7 @@ const BlogData: Blog[] = [
     photographs: '',
   },
   {
-    _id: 7,
+    _id: 8,
     mainImage:
       'https://res.cloudinary.com/df7v1hify/image/upload/v1699959745/C%C4%82N%20H%E1%BB%98%20VISTA%20VERDE/gu4meukbnimjicunejjo.jpg',
     categoryImage: [
@@ -320,7 +320,7 @@ const BlogData: Blog[] = [
     photographs: '',
   },
   {
-    _id: 8,
+    _id: 7,
     mainImage:
       'https://res.cloudinary.com/df7v1hify/image/upload/v1699963935/C%E1%BB%ADa%20H%C3%A0ng%20Trang%20S%E1%BB%A9c%20Mihy/xa9hqbvqaairc7bdqjqv.jpg',
     categoryImage: [
@@ -340,7 +340,7 @@ const BlogData: Blog[] = [
     photographs: '',
   },
   {
-    _id: 9,
+    _id: 6,
     mainImage:
       'https://res.cloudinary.com/df7v1hify/image/upload/v1699964336/Nh%C3%A2n%20Ho%C3%A0%206/iizeldjbyarocxpxfsbk.jpg',
     categoryImage: [
@@ -359,7 +359,7 @@ const BlogData: Blog[] = [
     photographs: '',
   },
   {
-    _id: 10,
+    _id: 5,
     mainImage:
       'https://res.cloudinary.com/df7v1hify/image/upload/v1699964587/Gi%C3%A0ng%20C%C3%A0%20Ph%C3%AA/ubwnajhuzzfmsjvdey6w.jpg',
     categoryImage: [
@@ -380,7 +380,7 @@ const BlogData: Blog[] = [
     photographs: 'DECIN Media',
   },
   {
-    _id: 11,
+    _id: 4,
     mainImage:
       'https://res.cloudinary.com/df7v1hify/image/upload/v1699965276/Thao%20Dien%20Villa%202/oyg1xknefnhcb04hhjyn.png',
     categoryImage: [
@@ -406,7 +406,7 @@ const BlogData: Blog[] = [
     photographs: '',
   },
   {
-    _id: 12,
+    _id: 3,
     mainImage:
       'https://res.cloudinary.com/df7v1hify/image/upload/v1699966198/Gateway/cvgk5q5dqtmalw8em6lh.jpg',
     categoryImage: [
@@ -433,7 +433,7 @@ const BlogData: Blog[] = [
     photographs: '',
   },
   {
-    _id: 13,
+    _id: 2,
     mainImage:
       'https://res.cloudinary.com/df7v1hify/image/upload/v1700627202/PT%20FLOWER/gwnvp9iukqsftyfqpwnv.jpg',
     categoryImage: [
@@ -452,7 +452,7 @@ const BlogData: Blog[] = [
     photographs: '',
   },
   {
-    _id: 14,
+    _id: 1,
     mainImage:
       'https://res.cloudinary.com/df7v1hify/image/upload/v1700627439/2%207%20%7C%207%20C%20O%20R%20P%20O%20R%20A%20T%20I%20O%20N/y3qai0lolrexkxw6jzf3.jpg',
     categoryImage: [

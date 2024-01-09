@@ -1,4 +1,5 @@
 import Blog from '@/components/Blog'
+import HappyNewYear from '@/components/HappyNewYear'
 import Slider from '@/components/Silder'
 import { Metadata } from 'next'
 
@@ -9,8 +10,9 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main>
-      <Slider />
-      <Blog />
+      {/* <Slider />, */}
+      <HappyNewYear />,
+      {/* <Blog /> */}
     </main>
   )
 }

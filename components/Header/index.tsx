@@ -123,7 +123,7 @@ const Header = () => {
                       </ul>
                     </>
                   ) : (
-                    <div className="flex justify-end items-center ml-[100px]">
+                    <div className="flex justify-center items-center ml-[150px]">
                       <Link
                         href={`${menuItem.path}`}
                         className={`${pathUrl === menuItem.path
