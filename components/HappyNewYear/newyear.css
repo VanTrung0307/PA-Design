@@ -10,7 +10,6 @@
   transition: all 100ms ease-in;
 }
 .feliz {
-  margin-top: 130px;
   width: 100%;
   font-family: 'Pacifico', cursive;
   font-size: 100px;
@@ -23,7 +22,7 @@
   animation: vem_feliz 2s ease-in-out 7s forwards;
 }
 .ano_novo {
-  margin-top: 100px;
+  margin-top: 95px;
   position: absolute;
   top: 0;
   left: 0;
@@ -339,14 +338,15 @@ a.author {
   list-style: none;
   overflow: hidden;
   margin-left: 680px;
+  margin-top: 400px;
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
   text-align: left;
   text-decoration: none;
   transition: box-shadow 0.15s, transform 0.15s;
-  user-select: none;
   -webkit-user-select: none;
+  user-select: none;
   touch-action: manipulation;
   white-space: nowrap;
   will-change: box-shadow, transform;
@@ -354,6 +354,14 @@ a.author {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .button-29 {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 16px;
+  }
 }
 
 .button-29:focus {
