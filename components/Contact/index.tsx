@@ -19,7 +19,7 @@ const Contact = () => {
 
 
         <div className="mx-auto max-w-c-1390 relative pt-10 lg:pt-15 xl:pt-20 px-7.5 lg:px-15 xl:px-20 overflow-hidden">
-          <div className="absolute -z-1 rounded-lg left-0 top-0 w-full h-2/3 bg-gradient-to-t from-[#fff] to-[#dee7ff47] dark:bg-gradient-to-t dark:from-[#24283E] dark:to-[#252A42]"></div>
+          <div className="absolute -z-1 rounded-lg left-0 top-0 w-full h-2/3 bg-gradient-to-t from-[#fff] to-[#dee7ff47] dark:bg-gradient-to-t dark:from-[#e3e6ee47] dark:to-[#e3e6ee47]"></div>
           <div className="absolute -z-1 bottom-[-255px] left-0 w-full h-full">
             <Image
               src="./images/shape/shape-dotted-light.svg"
