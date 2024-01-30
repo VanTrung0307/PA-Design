@@ -18,7 +18,5 @@ export type Blog = {
   location: string;
   leadArchitect: string;
   designTeam: string;
-  visualImages: string;
-  investor: string;
-  photographs: string;
+  description: string;
 };
