@@ -528,7 +528,21 @@ const BlogData: Blog[] = [
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706636361/16.%20Sunrise%20City%20Apartment/1.%20Liv/cshma8qpr4b90rd0oedk.jpg',
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706636265/16.%20Sunrise%20City%20Apartment/2.%20Kit%20%2B%20Din/ip1ca3wsoq9qfdcoli0f.jpg',
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706636291/16.%20Sunrise%20City%20Apartment/2.%20Kit%20%2B%20Din/awrxsse5ofbrptrnzo0c.jpg',
-      
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706636349/16.%20Sunrise%20City%20Apartment/2.%20Kit%20%2B%20Din/abj7uuddcts7nfql4b8t.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706636349/16.%20Sunrise%20City%20Apartment/2.%20Kit%20%2B%20Din/amuibnthmkr5ixf2tl6g.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706636350/16.%20Sunrise%20City%20Apartment/2.%20Kit%20%2B%20Din/onrqcupotiwnvyaxkche.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706636351/16.%20Sunrise%20City%20Apartment/2.%20Kit%20%2B%20Din/uwzzhzx43lkxkewvoyb1.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706636352/16.%20Sunrise%20City%20Apartment/2.%20Kit%20%2B%20Din/xszxmhhs2sqq9s4eqzpy.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706636351/16.%20Sunrise%20City%20Apartment/3.%20Bed%20%2B%20Wc/jybvdzryh1mwmwgny9yb.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706636351/16.%20Sunrise%20City%20Apartment/3.%20Bed%20%2B%20Wc/tuuq40fo8ayoe55m1bgw.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706636352/16.%20Sunrise%20City%20Apartment/3.%20Bed%20%2B%20Wc/xxl1ef70x3a12sefw61k.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706636353/16.%20Sunrise%20City%20Apartment/3.%20Bed%20%2B%20Wc/woaxqblvgjoyu8eudihg.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706636354/16.%20Sunrise%20City%20Apartment/3.%20Bed%20%2B%20Wc/rxzhlbvdl3veiabvwg15.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706636354/16.%20Sunrise%20City%20Apartment/3.%20Bed%20%2B%20Wc/gyvtwhaf0oxo46aitl1j.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706636354/16.%20Sunrise%20City%20Apartment/3.%20Bed%20%2B%20Wc/r5ujxlcvnk4ucxfz86ny.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706636355/16.%20Sunrise%20City%20Apartment/3.%20Bed%20%2B%20Wc/zi9kkuvbte7hcd0de7vv.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706636355/16.%20Sunrise%20City%20Apartment/3.%20Bed%20%2B%20Wc/dlvpiidwvdbdk1fuxi4e.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706636355/16.%20Sunrise%20City%20Apartment/3.%20Bed%20%2B%20Wc/m3dyotu4t40fusukyjra.jpg'
     ],
     categories: 'APARTMENT',
     create_at: '17/07/2019',
@@ -539,6 +553,25 @@ const BlogData: Blog[] = [
     leadArchitect: 'Tran Thi Thu Thanh',
     designTeam: 'Chau Vinh Thien, Pham Hoang Duong',
     description: 'This is an apartment in District 7 with city view but little space. PA team has made the best use of the space to arrange the functions  , which meets the owners requirement of using the house without feeling stuffy. Multifunctional funiture is used to make the house neat and tidy and not taking too much space. We choose the Pastel tone to make the house lighter, brighter and more spacious. Also, curves are used to make highlight for the house.'
+  },
+  {
+    _id: 1,
+    mainImage:
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706638356/17.%20Azura%20Store/vspl0xuz0jy8ycn0xfly.jpg',
+    categoryImage: [
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706638356/17.%20Azura%20Store/vspl0xuz0jy8ycn0xfly.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706638356/17.%20Azura%20Store/nf8lr9ovc3ttzzdsgkhd.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706638357/17.%20Azura%20Store/a8kenskxaaqzwcwc8ptr.jpg'
+    ],
+    categories: 'STORE',
+    create_at: '17/07/2019',
+    title: 'AZURA STORE',
+    city: 'HO CHI MINH',
+    area: '100 sqm',
+    location: 'Thu Duc City, HCMC',
+    leadArchitect: 'Chau Vinh Thien',
+    designTeam: 'Pham Hoang Duong, Tran Thi Thu Thanh, Huynh Dang Khanh Linh',
+    description: 'A shophouse at Opal Garden Apartment with a gentle and soft design. We emphasise the light and airy space to help customers feel comfortable and increase the closeness between customers and staff. We also use Pastel colours to create a friendly and young atmosphere'
   },
 ]
 

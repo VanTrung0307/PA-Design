@@ -99,24 +99,15 @@ export default function SingleBlogPage() {
                   <p className="mb-10 text-black dark:text-white text-center">
                     {blogPost?.city}
                   </p>
+                  <p className="mb-10 text-black dark:text-white text-center">
+                    {blogPost.description}
+                  </p>
 
                   <ul className="grid grid-cols-1 gap-2 mb-4">
                     <li>
                       <span className="text-black dark:text-white">Area: </span>{' '}
                       {blogPost.area}
                     </li>
-                    {/* <li>
-                      <span className="text-black dark:text-white">
-                        Visual Images:{' '}
-                      </span>{' '}
-                      {blogPost.visualImages}
-                    </li> */}
-                    {/* <li>
-                      <span className="text-black dark:text-white">
-                        Photographs:{' '}
-                      </span>{' '}
-                      {blogPost.photographs}
-                    </li> */}
                     <li>
                       <span className="text-black dark:text-white">
                         Location:{' '}
@@ -134,12 +125,6 @@ export default function SingleBlogPage() {
                         Design Team:{' '}
                       </span>{' '}
                       {blogPost.designTeam}
-                    </li>
-                    <li>
-                      <span className="text-black dark:text-white">
-                        Description:{' '}
-                      </span>{' '}
-                      {blogPost.description}
                     </li>
                   </ul>
 
