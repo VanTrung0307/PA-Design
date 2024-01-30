@@ -93,7 +93,7 @@ const Contact = () => {
               <Image
                 width={500}
                 height={500}
-                src="/images/logo2/logo-light.png"
+                src="/images/logo2/logo-light-01.png"
                 alt="Logo"
                 className="dark:hidden"
                 style={{ border: '5px solid black' }}
@@ -101,7 +101,7 @@ const Contact = () => {
               <Image
                 width={500}
                 height={500}
-                src="/images/logo2/logo-dark.png"
+                src="/images/logo2/logo-dark-01.png"
                 alt="Logo"
                 className="hidden dark:block"
                 style={{ border: '5px solid white' }}
