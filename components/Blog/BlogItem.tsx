@@ -13,6 +13,7 @@ interface BlogItemProps {
 
 const BlogItem: React.FC<BlogItemProps> = ({ blog, _id }) => {
   const { mainImage, title, city } = blog
+  // const { categoryImage, title, city } = blog
   const [isHovered, setIsHovered] = useState(false)
   const router = useRouter()
 
@@ -51,6 +52,16 @@ const BlogItem: React.FC<BlogItemProps> = ({ blog, _id }) => {
           onMouseLeave={handleMouseLeave}
         >
           <Image src={mainImage} alt={title} fill className='rounded-lg object-cover'/>
+          {/* {categoryImage &&
+            categoryImage.map((image, index) => (
+              <Image
+                key={index}
+                src={image}
+                alt={`${title} Image ${index + 1}`}
+                fill
+                className="rounded-lg object-cover"
+              />
+            ))} */}
           {isHovered && (
             <div className="absolute inset-0 bg-black bg-opacity-50 flex rounded-lg items-center justify-center">
               <div className="px-4">

@@ -2,7 +2,7 @@ import { Blog } from '@/types/blog'
 
 const BlogData: Blog[] = [
   {
-    _id: 17,
+    _id: 1,
     mainImage:
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706624045/Thao%20Dien%20Villa/yv7l53jtuzyubb2oevod.jpg',
     categoryImage: [
@@ -82,7 +82,7 @@ const BlogData: Blog[] = [
     description: 'To meet the need of a luxurious yet cozy, connected and not showing-off living space as well as ensure the house’s functions, PA Design has chosen the NEO Classic Style. We use the key tones of grey and white, combined with the brown of wood to create the cozy feeling and metallic colours to highlight the luxury of the space. To make the best use of the area and the space, the villa is designed with required functions with a garage, ground floor, and two floors. The basic areas include the living room, kitchen, ancestor room, and five bed rooms. Also, the villa has entertaining spaces such as movie room, karaoke room, and a mini gym. Last but not least, we ensure every space is airy and is filled with natural light to bring the owner the relaxation, comfort and enjoyment.'
   },
   {
-    _id: 16,
+    _id: 2,
     mainImage:
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706625931/Go%20Vap%20House/niajck4wpjai4fc53spe.jpg',
     categoryImage: [
@@ -120,7 +120,7 @@ const BlogData: Blog[] = [
     description: 'The signature space for the owner who loves the beauty of peace and simplicity. The house applies the elegant and delicate design language to express the grace and luxury without showing off. Last but not least, the owner’s personal style and characteristics are clearly shown through the highlights of the space such as the aquarium or details made of glass.'
   },
   {
-    _id: 15,
+    _id: 3,
     mainImage:
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706627035/Spiral%20House/adtydsr3x9ryxskwxhs9.jpg',
     categoryImage: [
@@ -150,7 +150,7 @@ const BlogData: Blog[] = [
     description: 'The house for three generations in a busy residential area in District 9. With the mission to make the “breathing air” out of the crowded city, along with a unique space for the house owner, we have designed the house with curves and spirals to create gentle flows of water. The living space is cut and shaped to make green ways that lead light and wind to every room in the house. The main block stands in the back instead of the front side to create a “breathing space” for the building as well as a “barrier” separating the house from the noisy world.'
   },
   {
-    _id: 14,
+    _id: 4,
     mainImage:
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706627423/PA%20Design%20Office/lzuqgqhomk8tlhmcskoa.jpg',
     categoryImage: [
@@ -194,7 +194,7 @@ const BlogData: Blog[] = [
     description: 'PA Design Studio is reconstucted from an old house. For the purpose of not only a working place but also a space for meditation and reflection of artists who are surrounded by the stuffy city, PA creates a little airy garden to escape the chain of the city and buff the creativity inside each PA member.'
   },
   {
-    _id: 13,
+    _id: 5,
     mainImage:
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706628150/Lavilla/mfjmfsrpzufcxjv8kwpu.jpg',
     categoryImage: [
@@ -226,7 +226,7 @@ const BlogData: Blog[] = [
     description: 'Located on a 300 sqm land in Tan An Centre, Long An Province. Lavilla has been built based on the family’s requirement about a new and innovative house. The main colour is grey white, combining with yellow to create the highlights for the house. The design is the combination of simple space blocks to form light waves on the Mekong Delta river. By using different materials such as copper, iron, and glass in an innovative way, we have created a unique trait for the building. Besides, the house is developed based on the primary requirements about the belief of spiritual world of the owner. PA Design always respects personal beliefs and helps customers bring the story into their house. Since the house locates at the end of a T-junction, its main door does not face the street as usual. In stead, we turn the main door’s direction to the East and combine with a pond and a screen to separate the inside space from the T-junction. This combination creates a necessary privacy for the house and copes well with the Feng Shui factors.'
   },
   {
-    _id: 12,
+    _id: 6,
     mainImage:
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706628856/VISTA%20VERDE/qnngfpa7v4idmogzl5lx.png',
     categoryImage: [
@@ -258,7 +258,7 @@ const BlogData: Blog[] = [
     description: 'Vista Verde is a project to design and reconstruct the close space of an apartment into the open space of a villa with wonderful views. The interior is designed in a simple and modern style to create an airy and gentle space, combined with elegant colours to help the owner feel relaxed and comfortable after a hard working day. To avoid the monotony, we also design different ceilings in different spaces to make unique traits for each room.'
   },
   {
-    _id: 11,
+    _id: 7,
     mainImage:
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706631380/Long%20An%20House/yzqknrsll83whrr4tj1u.jpg',
     categoryImage: [
@@ -287,7 +287,7 @@ const BlogData: Blog[] = [
     description: 'Based on the idea of demonstrating the traditional beauty of Vietnam, PA Design has brough an old but gold experience to the customer. This is the nostalgia that harmoniously integrates with modern features in the new pace of life. We use traditional materials such as Yin Yang roof tiles and wood and paint the wall in an elegant style to tell an old story in modern colours. To us, this house is not only a shelter but also a home for the owner to comeback after a hard working day.'
   },
   {
-    _id: 10,
+    _id: 8,
     mainImage:
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706631622/Coco%20House/bque2cxxhbuvq2dxvj0x.jpg',
     categoryImage: [
@@ -332,7 +332,7 @@ const BlogData: Blog[] = [
     description: 'Mihy Jewelry is a small project but PA Design has poured our heart and soul into. The construction is inspired from the jewelers treasuring the jewelries on their delicate hands. The materials and furniture follow a special style to depict a jewlry workshop. By this, customers can experience the feeling of choosing the jewlries at where they are made.'
   },
   {
-    _id: 8,
+    _id: 10,
     mainImage:
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706632421/Nhon%20Hoa%206/pz7kdjctclnbhw1by73q.jpg',
     categoryImage: [
@@ -344,7 +344,7 @@ const BlogData: Blog[] = [
     ],
     categories: 'APARTMENT',
     create_at: '17/07/2019',
-    title: 'NHON HOA 6',
+    title: 'HOUSE',
     city: 'DA LAT',
     area: '450 sqm',
     location: 'Da Lat City',
@@ -353,7 +353,7 @@ const BlogData: Blog[] = [
     description: 'This construction is a challenge from the investor to "bring the boat to the mountain". PA team has brought the image of a boat to the roof of the building combining with the traditonal patterns. Additionally, PA has created a large void to get all the natual and sun light to the corridors and stairs. The curves also represent the solf waves that the boat is riding on.'
   },
   {
-    _id: 7,
+    _id: 11,
     mainImage:
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706632766/Giang%20Caf%C3%A9/xbgwd84kaykjyuracqfb.jpg',
     categoryImage: [
@@ -369,7 +369,7 @@ const BlogData: Blog[] = [
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706633261/Giang%20Caf%C3%A9/pecgdvqxcw1t1lqoavyb.jpg',
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706633270/Giang%20Caf%C3%A9/dm3brcg6woegtv3mckzv.jpg'
     ],
-    categories: 'COFFEE',
+    categories: 'CAFÉ',
     create_at: '17/07/2019',
     title: 'GIANG CAFÉ',
     city: 'HO CHI MINH',
@@ -380,7 +380,7 @@ const BlogData: Blog[] = [
     description: 'Giang Cafe is a challenging mission for PA team from the investor: make the appearence younger and more attractive yet keep its art origin. We choose modern and young materials such as mosaic tiles and bright wood to make the Cafe friendlier to youngsters. We also use many glasses tiles to get the natural lights and bring the people inside a comfortable and relaxing feeling. Last but not least, green corners and plants are added to provide the cafe with fresh air.'
   },
   {
-    _id: 6,
+    _id: 12,
     mainImage:
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706633664/Gateway%20Vung%20Tau%20Penthouse/jaixs8cg5shvvkkphjkp.jpg',
     categoryImage: [
@@ -417,7 +417,7 @@ const BlogData: Blog[] = [
     description: 'A Penthouse at the gateway of Vung Tau City. This is a personal resort house so it is designed following the owner characteristic with the white as the key colour. The highlighting details are made of glass, mirror, and water ripple metal panels to enhance the modern and grace features of the house. The dining room has a big table to hold parties for the family in their holidays. Bedrooms are also arranged similarly to the owners personal house to make a familiar and comfortable feeling.'
   },
   {
-    _id: 5,
+    _id: 13,
     mainImage:
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706634514/Gateway%20Vung%20Tau%20Apartment/a8xqdmwxnjjkfunyi8pv.jpg',
     categoryImage: [
@@ -440,7 +440,7 @@ const BlogData: Blog[] = [
     description: 'Inspired from constructions in Santorini, PA team has brought Aegean Sea into the Gateway Apartment. Using the key materials including bamboo and wood, we create a signature style for the house and make it as peaceful as in a fishing village with a breeze from the sea.'
   },
   {
-    _id: 4,
+    _id: 14,
     mainImage:
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706635576/27%7C7%20CORPORATION/iddhyaq98sjgqdrqzx86.jpg',
     categoryImage: [
@@ -457,7 +457,7 @@ const BlogData: Blog[] = [
     ],
     categories: 'APARTMENT',
     create_at: '17/07/2019',
-    title: '27|7 CORPORATION',
+    title: 'OFFICE',
     city: 'HO CHI MINH',
     area: '460 sqm',
     location: 'Thu Duc City, HCMC',
@@ -466,7 +466,7 @@ const BlogData: Blog[] = [
     description: 'This office was rescontructed from an old film studio. We use modern and bright colours combined with the open working space to make the staff feel airy and fresh. We also mainly use black, white and wood materials and colours to bring the light feeling for people working inside.'
   },
   {
-    _id: 3,
+    _id: 15,
     mainImage:
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706635746/15.%20Dragon%20Hill%20Apartment/rljmoe9qfmftpe8d3gqa.jpg',
     categoryImage: [
@@ -509,7 +509,7 @@ const BlogData: Blog[] = [
     description: 'The apartment has a modern style with the highlights from the gentle curves. The combination of the Navy Blue and neutral  colours such as white, grey, and natural wood makes the space shines and brings the relaxing positive energy to the house.'
   },
   {
-    _id: 2,
+    _id: 16,
     mainImage:
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706636356/16.%20Sunrise%20City%20Apartment/1.%20Liv/inpe92rljaxooevl9h83.jpg',
     categoryImage: [
@@ -555,7 +555,7 @@ const BlogData: Blog[] = [
     description: 'This is an apartment in District 7 with city view but little space. PA team has made the best use of the space to arrange the functions  , which meets the owners requirement of using the house without feeling stuffy. Multifunctional funiture is used to make the house neat and tidy and not taking too much space. We choose the Pastel tone to make the house lighter, brighter and more spacious. Also, curves are used to make highlight for the house.'
   },
   {
-    _id: 1,
+    _id: 17,
     mainImage:
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706638356/17.%20Azura%20Store/vspl0xuz0jy8ycn0xfly.jpg',
     categoryImage: [
