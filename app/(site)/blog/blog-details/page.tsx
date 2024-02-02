@@ -172,7 +172,7 @@ export default function SingleBlogPage() {
                             <Image
                               className="rounded max-w-full h-auto"
                               src={selectedImage}
-                              width={800 * zoomLevel}
+                              width={500 * zoomLevel}
                               height={300 * zoomLevel}
                               alt="Popup Image"
                               draggable={false}
