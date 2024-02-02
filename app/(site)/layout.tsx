@@ -8,6 +8,7 @@ import { ThemeProvider } from 'next-themes'
 const inter = Inter({ subsets: ['latin'] })
 import '../globals.css'
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 import ToasterContext from '../context/ToastContext'
 
@@ -29,6 +30,7 @@ export default function RootLayout({
           <ToasterContext />
           {children}
           <Analytics />
+          <SpeedInsights />
           <Footer />
           <ScrollToTop />
         </ThemeProvider>
