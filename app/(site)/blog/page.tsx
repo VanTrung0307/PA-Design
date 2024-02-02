@@ -17,73 +17,69 @@ export default function BlogPage() {
   const handleCategoryChange = (event: ChangeEvent<HTMLSelectElement>) => {
     setSelectedCategory(event.target.value)
   }
-  const handleCreateDateChange = (event: ChangeEvent<HTMLSelectElement>) => {
-    setSelectedCreatedDate(event.target.value)
-  }
+  // const handleCreateDateChange = (event: ChangeEvent<HTMLSelectElement>) => {
+  //   setSelectedCreatedDate(event.target.value)
+  // }
 
   const selectedCityRef = useRef<HTMLSelectElement>(null);
   const selectedCategoryRef = useRef<HTMLSelectElement>(null);
-  const selectedCreatedDateRef = useRef<HTMLSelectElement>(null);
+  // const selectedCreatedDateRef = useRef<HTMLSelectElement>(null);
 
   const filteredBlogData = BlogData.filter((blog) => {
     if (
       (selectedCity && blog.city !== selectedCity) ||
-      (selectedCategory && blog.categories !== selectedCategory) ||
-      (selectedCreatedDate === "N" && !blog.create_at) ||
-      (selectedCreatedDate === "O" && !blog.create_at)
+      (selectedCategory && blog.categories !== selectedCategory)
+      // (selectedCreatedDate === "N" && !blog.create_at) ||
+      // (selectedCreatedDate === "O" && !blog.create_at)
     ) {
       return false;
     }
 
     return true;
-  }).sort((a, b) => {
-    if (
-      selectedCreatedDate === "N" &&
-      a.create_at &&
-      b.create_at
-    ) {
-      const dateA = new Date(a.create_at);
-      const dateB = new Date(b.create_at);
+  // }).sort((a, b) => {
+  //   if (
+  //     selectedCreatedDate === "N" &&
+  //     a.create_at &&
+  //     b.create_at
+  //   ) {
+  //     const dateA = new Date(a.create_at);
+  //     const dateB = new Date(b.create_at);
 
-      if (dateB.getFullYear() !== dateA.getFullYear()) {
-        return dateB.getFullYear() - dateA.getFullYear();
-      } else if (dateB.getMonth() !== dateA.getMonth()) {
-        return dateB.getMonth() - dateA.getMonth();
-      } else {
-        return dateB.getDate() - dateA.getDate();
-      }
-    } else if (
-      selectedCreatedDate === "O" &&
-      a.create_at &&
-      b.create_at
-    ) {
-      const dateA = new Date(a.create_at);
-      const dateB = new Date(b.create_at);
+  //     if (dateB.getFullYear() !== dateA.getFullYear()) {
+  //       return dateB.getFullYear() - dateA.getFullYear();
+  //     } else if (dateB.getMonth() !== dateA.getMonth()) {
+  //       return dateB.getMonth() - dateA.getMonth();
+  //     } else {
+  //       return dateB.getDate() - dateA.getDate();
+  //     }
+  //   } else if (
+  //     selectedCreatedDate === "O" &&
+  //     a.create_at &&
+  //     b.create_at
+  //   ) {
+  //     const dateA = new Date(a.create_at);
+  //     const dateB = new Date(b.create_at);
 
-      if (dateA.getFullYear() !== dateB.getFullYear()) {
-        return dateA.getFullYear() - dateB.getFullYear();
-      } else if (dateA.getMonth() !== dateB.getMonth()) {
-        return dateA.getMonth() - dateB.getMonth();
-      } else {
-        return dateA.getDate() - dateB.getDate();
-      }
-    }
-    return 0;
+  //     if (dateA.getFullYear() !== dateB.getFullYear()) {
+  //       return dateA.getFullYear() - dateB.getFullYear();
+  //     } else if (dateA.getMonth() !== dateB.getMonth()) {
+  //       return dateA.getMonth() - dateB.getMonth();
+  //     } else {
+  //       return dateA.getDate() - dateB.getDate();
+  //     }
+  //   }
+  //   return 0;
   });
 
   const handleReset = () => {
     setSelectedCity('');
     setSelectedCategory('');
-    setSelectedCreatedDate('');
 
     if (selectedCityRef.current) {
       selectedCityRef.current.selectedIndex = 0;
     }
     if (selectedCategoryRef.current) {
       selectedCategoryRef.current.selectedIndex = 0;
-    }
-    if (selectedCreatedDateRef.current) {
-      selectedCreatedDateRef.current.selectedIndex = 0;
     }
   };
 
@@ -141,7 +137,7 @@ export default function BlogPage() {
               </div>
             </div>
 
-            <div className="relative inline-block ml-4 text-black cursor-pointer">
+            {/* <div className="relative inline-block ml-4 text-black cursor-pointer">
               <select
                 className="block appearance-none cursor-pointer w-full bg-white border border-gray-300 text-gray-700 py-3 px-4 pr-8 rounded-[100px] leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 onChange={handleCreateDateChange}
@@ -160,7 +156,7 @@ export default function BlogPage() {
                   <path fill-rule="evenodd" d="M6 8l4 4 4-4h-8z" />
                 </svg>
               </div>
-            </div>
+            </div> */}
 
             <div className="relative inline-block ml-4 cursor-pointer">
               <button

@@ -455,7 +455,7 @@ const BlogData: Blog[] = [
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706635575/27%7C7%20CORPORATION/e9jd7jfok73evvom5pxv.jpg',
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706635575/27%7C7%20CORPORATION/jzgpaf1bp7okjyfwkcei.jpg'
     ],
-    categories: 'HOUSE',
+    categories: 'OFFICE',
     create_at: '17/07/2019',
     title: '27|7 CORPPORATION',
     city: 'HO CHI MINH',
