@@ -7,6 +7,7 @@ import { Inter } from 'next/font/google'
 import { ThemeProvider } from 'next-themes'
 const inter = Inter({ subsets: ['latin'] })
 import '../globals.css'
+import { Analytics } from '@vercel/analytics/react';
 
 import ToasterContext from '../context/ToastContext'
 
@@ -27,6 +28,7 @@ export default function RootLayout({
           <Header />
           <ToasterContext />
           {children}
+          <Analytics />
           <Footer />
           <ScrollToTop />
         </ThemeProvider>
