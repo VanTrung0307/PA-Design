@@ -342,9 +342,9 @@ const BlogData: Blog[] = [
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706632422/Nhon%20Hoa%206/ftsqddyvrqf09ijlm8ul.jpg',
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706632422/Nhon%20Hoa%206/mfacoec2cvdvd3zbm2lb.jpg'
     ],
-    categories: 'APARTMENT',
+    categories: 'HOUSE',
     create_at: '17/07/2019',
-    title: 'HOUSE',
+    title: 'NHON HOA 6',
     city: 'DA LAT',
     area: '450 sqm',
     location: 'Da Lat City',
@@ -455,9 +455,9 @@ const BlogData: Blog[] = [
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706635575/27%7C7%20CORPORATION/e9jd7jfok73evvom5pxv.jpg',
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706635575/27%7C7%20CORPORATION/jzgpaf1bp7okjyfwkcei.jpg'
     ],
-    categories: 'APARTMENT',
+    categories: 'HOUSE',
     create_at: '17/07/2019',
-    title: 'OFFICE',
+    title: '27|7 CORPPORATION',
     city: 'HO CHI MINH',
     area: '460 sqm',
     location: 'Thu Duc City, HCMC',
