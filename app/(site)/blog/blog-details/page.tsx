@@ -8,6 +8,32 @@ import { useState } from 'react'
 export default function SingleBlogPage() {
   const searchParams = useSearchParams()
   const currentBlogId = searchParams.get('_id')
+  const [selectedImageSize, setSelectedImageSize] = useState({ width: 800, height: 800 }); // Kích thước mặc định
+
+  const calculateImageSize = (selectedImage: string) => {
+    const img = document.createElement('img');
+    img.src = selectedImage;
+    
+    img.onload = () => {
+      const aspectRatio = img.width / img.height;
+  
+      let maxWidth = 800;
+      let maxHeight = 800;
+  
+      if (aspectRatio > 1) { // ảnh nằm ngang
+        maxHeight = 800;
+        maxWidth = 1000;
+      } else if (aspectRatio < 1) { // ảnh nằm dọc
+        maxWidth = 500;
+        maxHeight = 1000;
+      } else { // ảnh vuông
+        maxWidth = 800;
+        maxHeight = 800;
+      }
+  
+      setSelectedImageSize({ width: maxWidth, height: maxHeight });
+    };
+  };
 
   const blogPost = BlogData.find(
     (blog) => blog._id.toString() === currentBlogId,
@@ -22,6 +48,7 @@ export default function SingleBlogPage() {
 
   const openModal = (imageURL: string) => {
     setSelectedImage(imageURL)
+    calculateImageSize(imageURL)
   }
 
   const closeModal = () => {
@@ -161,23 +188,23 @@ export default function SingleBlogPage() {
                         ))}
                     </div>
                     {selectedImage && (
-                      <div className="fixed inset-0 flex items-center justify-center z-99999">
-                        <div className="modal-container">
-                          <div
-                            className="absolute inset-0 bg-black opacity-90"
-                            onClick={closeModal}
-                            onContextMenu={(e) => e.preventDefault()}
-                          ></div>
-                          <div className="relative z-10">
-                            <Image
-                              className="rounded max-w-full h-auto"
-                              src={selectedImage}
-                              width={500 * zoomLevel}
-                              height={300 * zoomLevel}
-                              alt="Popup Image"
-                              draggable={false}
-                              onDragStart={(e) => e.preventDefault()}
-                            />
+  <div className="fixed inset-0 flex items-center justify-center z-99999">
+    <div className="modal-container">
+      <div
+        className="absolute inset-0 bg-black opacity-90"
+        onClick={closeModal}
+        onContextMenu={(e) => e.preventDefault()}
+      ></div>
+      <div className="relative z-10">
+        <Image
+          className="rounded max-w-full max-h-[700px] min-h-[700px]"
+          src={selectedImage}
+          width={selectedImageSize.width}
+          height={selectedImageSize.height}
+          alt="Popup Image"
+          draggable={false}
+          onDragStart={(e) => e.preventDefault()}
+        />
                             <button
                               onClick={handleZoomIn}
                               className="fixed top-8 right-[70px] z-20 space-x-2 w-10 h-10 flex justify-center items-center hover:bg-primary rounded"

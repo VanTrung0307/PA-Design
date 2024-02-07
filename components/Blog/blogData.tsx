@@ -154,7 +154,7 @@ const BlogData: Blog[] = [
     mainImage: //thế ảnh số 0 vào đây
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706627424/PA%20Design%20Office/nicwqecluzcdkddtxcnz.jpg',
     categoryImage: [
-      // thiếu ảnh số 0
+      'https://res.cloudinary.com/duq4vjwmq/image/upload/v1707283629/PA%20Website/weyz4gcwjstesuk8cflq.jpg',
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706627424/PA%20Design%20Office/nicwqecluzcdkddtxcnz.jpg',
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706627423/PA%20Design%20Office/abvzugh3y5qnkayba0fk.jpg',
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706627427/PA%20Design%20Office/cx3lyfohwm7b7jpxhsby.jpg',
@@ -294,7 +294,7 @@ const BlogData: Blog[] = [
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706631621/Coco%20House/hhpre7b93lplvtbnbdxq.jpg',
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706631622/Coco%20House/bque2cxxhbuvq2dxvj0x.jpg',
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706631623/Coco%20House/dryrqkscpojc8wwuzya0.jpg',
-      // thiếu ảnh số 4
+      'https://res.cloudinary.com/duq4vjwmq/image/upload/v1707283047/PA%20Website/hlivsinlqv1bxylirupb.jpg',
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706631625/Coco%20House/lxtbyswygrxiwcmjlcna.jpg',
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706631624/Coco%20House/e2tdjvey3rgd7iroh9sg.jpg',
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706631626/Coco%20House/xwbwif8qegkr6qwvb4c7.jpg',
@@ -367,7 +367,7 @@ const BlogData: Blog[] = [
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706633270/Giang%20Caf%C3%A9/dm3brcg6woegtv3mckzv.jpg',
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706632702/Giang%20Caf%C3%A9/lfvmravuxcstaizbwuk3.jpg',
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706632703/Giang%20Caf%C3%A9/tkdf0shtz1tfgcpeu4o2.jpg',
-      // thiếu ảnh số 10
+      'https://res.cloudinary.com/duq4vjwmq/image/upload/v1707283487/PA%20Website/oabw4ev2xfw4oszjfjut.jpg',
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706632696/Giang%20Caf%C3%A9/ecorttsd1atpprtzla3i.jpg',
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706633123/Giang%20Caf%C3%A9/gy94opm3rh5jkv4opkrs.jpg',
     ],
@@ -425,7 +425,7 @@ const BlogData: Blog[] = [
     categoryImage: [
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706634514/Gateway%20Vung%20Tau%20Apartment/a8xqdmwxnjjkfunyi8pv.jpg',
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706634515/Gateway%20Vung%20Tau%20Apartment/cgahumzknlnsotzsczgc.jpg',
-      // thiếu ảnh số 3
+      'https://res.cloudinary.com/duq4vjwmq/image/upload/v1707283632/PA%20Website/l89rojs0g0yt5xhqsz8j.jpg',
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706634516/Gateway%20Vung%20Tau%20Apartment/euwd9s2u9bi5xajde34c.jpg',
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706634517/Gateway%20Vung%20Tau%20Apartment/iygvyfw2shfsfjvqcits.jpg',
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706634518/Gateway%20Vung%20Tau%20Apartment/ldodpc8fkcludsojkp0d.jpg',
@@ -526,7 +526,7 @@ const BlogData: Blog[] = [
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706636360/16.%20Sunrise%20City%20Apartment/1.%20Liv/ophhqmiiqwicyyznont0.jpg',
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706636357/16.%20Sunrise%20City%20Apartment/1.%20Liv/h6cxemacvzu1vmfw5ysm.jpg',
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706636361/16.%20Sunrise%20City%20Apartment/1.%20Liv/mtrtshl9jero2kwmg4z2.jpg',
-      //thiếu ảnh sub 3
+      'https://res.cloudinary.com/duq4vjwmq/image/upload/v1707283630/PA%20Website/nqdvkitez8b2q1exw0ho.jpg',
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706636356/16.%20Sunrise%20City%20Apartment/1.%20Liv/inpe92rljaxooevl9h83.jpg',
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706636361/16.%20Sunrise%20City%20Apartment/1.%20Liv/cshma8qpr4b90rd0oedk.jpg',
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706636351/16.%20Sunrise%20City%20Apartment/2.%20Kit%20%2B%20Din/uwzzhzx43lkxkewvoyb1.jpg',
