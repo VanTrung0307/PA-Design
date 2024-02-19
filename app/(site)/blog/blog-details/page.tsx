@@ -20,13 +20,14 @@ export default function SingleBlogPage() {
       let maxWidth = 800;
       let maxHeight = 800;
   
-      if (aspectRatio > 1) { // ảnh nằm ngang
-        maxHeight = 800;
-        maxWidth = 1000;
-      } else if (aspectRatio < 1) { // ảnh nằm dọc
-        maxWidth = 500;
-        maxHeight = 1000;
-      } else { // ảnh vuông
+      if (aspectRatio > 1) {
+        maxWidth = Math.min(1000, maxHeight * aspectRatio);
+        maxHeight = 800
+
+      } else if (aspectRatio < 1) {
+        maxWidth = 580;
+
+      } else { 
         maxWidth = 800;
         maxHeight = 800;
       }
@@ -48,11 +49,13 @@ export default function SingleBlogPage() {
 
   const openModal = (imageURL: string) => {
     setSelectedImage(imageURL)
+    setZoomLevel(1);
     calculateImageSize(imageURL)
   }
 
   const closeModal = () => {
     setSelectedImage(null)
+    setZoomLevel(1);
   }
 
   const handlePreviousImage = () => {
@@ -64,6 +67,7 @@ export default function SingleBlogPage() {
       blogPost.categoryImage.length
     const previousImage = blogPost.categoryImage[previousIndex]
     setSelectedImage(previousImage)
+    calculateImageSize(previousImage)
   }
 
   const handleNextImage = () => {
@@ -73,16 +77,17 @@ export default function SingleBlogPage() {
     const nextIndex = (currentIndex + 1) % blogPost.categoryImage.length
     const nextImage = blogPost.categoryImage[nextIndex]
     setSelectedImage(nextImage)
+    calculateImageSize(nextImage)
   }
 
   const [zoomLevel, setZoomLevel] = useState(1);
 
   const handleZoomIn = () => {
-    setZoomLevel(zoomLevel + 0.1);
+    setZoomLevel(Math.min(zoomLevel + 0.1)); // Giới hạn zoom tối đa là 3 lần
   };
-
+  
   const handleZoomOut = () => {
-    setZoomLevel(zoomLevel - 0.1);
+    setZoomLevel(Math.max(zoomLevel - 0.1)); // Giới hạn zoom tối thiểu là 1 lần
   };
 
   return (
@@ -188,23 +193,23 @@ export default function SingleBlogPage() {
                         ))}
                     </div>
                     {selectedImage && (
-  <div className="fixed inset-0 flex items-center justify-center z-99999">
-    <div className="modal-container">
-      <div
-        className="absolute inset-0 bg-black opacity-90"
-        onClick={closeModal}
-        onContextMenu={(e) => e.preventDefault()}
-      ></div>
-      <div className="relative z-10">
-        <Image
-          className="rounded max-w-full max-h-[700px] min-h-[700px]"
-          src={selectedImage}
-          width={selectedImageSize.width}
-          height={selectedImageSize.height}
-          alt="Popup Image"
-          draggable={false}
-          onDragStart={(e) => e.preventDefault()}
-        />
+                      <div className="fixed inset-0 flex items-center justify-center z-99999">
+                        <div className="modal-container">
+                          <div
+                            className="absolute inset-0 bg-black opacity-90"
+                            onClick={closeModal}
+                            onContextMenu={(e) => e.preventDefault()}
+                          ></div>
+                          <div className="relative z-10">
+                            <Image
+                              className="rounded max-w-full"
+                              src={selectedImage}
+                              width={selectedImageSize.width * zoomLevel}
+                              height={selectedImageSize.height * zoomLevel}
+                              alt="Popup Image"
+                              draggable={false}
+                              onDragStart={(e) => e.preventDefault()}
+                            />
                             <button
                               onClick={handleZoomIn}
                               className="fixed top-8 right-[70px] z-20 space-x-2 w-10 h-10 flex justify-center items-center hover:bg-primary rounded"

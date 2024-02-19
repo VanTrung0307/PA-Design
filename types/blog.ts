@@ -12,6 +12,7 @@ export type Blog = {
   city?: string;
   mainImage?: any;
   categoryImage?: any[];
+  carouselImage?: any;
   categories?: string;
   create_at?: string;
   area: string;

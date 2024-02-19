@@ -5,6 +5,8 @@ const BlogData: Blog[] = [
     _id: 1,
     mainImage:
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706624045/Thao%20Dien%20Villa/ckbiurac6ocjoxwyraed.jpg',
+    carouselImage:
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706624046/Thao%20Dien%20Villa/pj0eiolgf9twi1wextm7.jpg',
     categoryImage: [
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706624045/Thao%20Dien%20Villa/ckbiurac6ocjoxwyraed.jpg',
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706624049/Thao%20Dien%20Villa/ch6a7a40o6npwdpli9rs.jpg',
@@ -85,6 +87,8 @@ const BlogData: Blog[] = [
     _id: 2,
     mainImage:
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706625931/Go%20Vap%20House/p7rtenldsiscr5yasfi3.jpg',
+    carouselImage:
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706625931/Go%20Vap%20House/niajck4wpjai4fc53spe.jpg',
     categoryImage: [
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706625931/Go%20Vap%20House/p7rtenldsiscr5yasfi3.jpg',
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706625931/Go%20Vap%20House/niajck4wpjai4fc53spe.jpg',
@@ -123,6 +127,8 @@ const BlogData: Blog[] = [
     _id: 3,
     mainImage:
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706627113/Spiral%20House/t0te7qluvdw5ny03pvxo.jpg',
+    carouselImage:
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627036/Spiral%20House/jbybhcgzquryz4k3xpoq.jpg',
     categoryImage: [
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706627035/Spiral%20House/adtydsr3x9ryxskwxhs9.jpg',
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706627113/Spiral%20House/t0te7qluvdw5ny03pvxo.jpg',
@@ -197,6 +203,8 @@ const BlogData: Blog[] = [
     _id: 5,
     mainImage:
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706628158/Lavilla/xn4dj1uwckd1zr9o1wam.jpg',
+    carouselImage:
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706628156/Lavilla/aiaathjgzrzo5rawzrfc.jpg',
     categoryImage: [
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706628158/Lavilla/xn4dj1uwckd1zr9o1wam.jpg',
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706628157/Lavilla/sywscvignjvuxd3wy4zb.jpg',
@@ -229,6 +237,8 @@ const BlogData: Blog[] = [
     _id: 6,
     mainImage:
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706628856/VISTA%20VERDE/qnngfpa7v4idmogzl5lx.png',
+    carouselImage:
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706628856/VISTA%20VERDE/qnngfpa7v4idmogzl5lx.png', 
     categoryImage: [
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706628856/VISTA%20VERDE/qnngfpa7v4idmogzl5lx.png', 
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706628859/VISTA%20VERDE/phsyd1odflpp58ixbwcm.png', 
