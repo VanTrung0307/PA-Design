@@ -6,7 +6,7 @@ const BlogData: Blog[] = [
     mainImage:
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706624045/Thao%20Dien%20Villa/ckbiurac6ocjoxwyraed.jpg',
     carouselImage:
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706624046/Thao%20Dien%20Villa/pj0eiolgf9twi1wextm7.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706624045/Thao%20Dien%20Villa/ckbiurac6ocjoxwyraed.jpg',
     categoryImage: [
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706624045/Thao%20Dien%20Villa/ckbiurac6ocjoxwyraed.jpg',
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706624049/Thao%20Dien%20Villa/ch6a7a40o6npwdpli9rs.jpg',
@@ -86,7 +86,7 @@ const BlogData: Blog[] = [
   {
     _id: 2,
     mainImage:
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706625931/Go%20Vap%20House/p7rtenldsiscr5yasfi3.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706625932/Go%20Vap%20House/qfvzyf5vicz2ffe2tvmu.jpg',
     carouselImage:
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706625931/Go%20Vap%20House/niajck4wpjai4fc53spe.jpg',
     categoryImage: [
@@ -126,24 +126,30 @@ const BlogData: Blog[] = [
   {
     _id: 3,
     mainImage:
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627113/Spiral%20House/t0te7qluvdw5ny03pvxo.jpg',
-    carouselImage:
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627036/Spiral%20House/jbybhcgzquryz4k3xpoq.jpg',
+      'https://res.cloudinary.com/duq4vjwmq/image/upload/v1708424675/PA%20Website/2_bi%CC%80a_ocl17l.jpg',
     categoryImage: [
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627035/Spiral%20House/adtydsr3x9ryxskwxhs9.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627113/Spiral%20House/t0te7qluvdw5ny03pvxo.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627113/Spiral%20House/xopxdpi3nu2qppvzjci6.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627113/Spiral%20House/ttesvsvplynwyorprzgq.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627114/Spiral%20House/cshql2vmpdyttrrrehae.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627114/Spiral%20House/f8a0ajeeaubbkoaqmbf5.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627115/Spiral%20House/fz4iem5mhabueybb4cgj.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627114/Spiral%20House/lyzebpxsgjbhudqmfbvo.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627115/Spiral%20House/wf6ks8girsh4b6j9tqfu.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627036/Spiral%20House/jbybhcgzquryz4k3xpoq.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627058/Spiral%20House/htyjcob0ysh9ydki3g1j.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627079/Spiral%20House/bh8ig4w2095diyr08ra4.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627112/Spiral%20House/td6hjhperntotuvrxza2.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627112/Spiral%20House/vvp6sc31zgaa2mbl3lcw.jpg',
+      'https://res.cloudinary.com/duq4vjwmq/image/upload/v1708424563/PA%20Website/1_fhigvm.jpg',
+      'https://res.cloudinary.com/duq4vjwmq/image/upload/v1708424675/PA%20Website/2_bi%CC%80a_ocl17l.jpg',
+      'https://res.cloudinary.com/duq4vjwmq/image/upload/v1708424819/PA%20Website/3_wwmezk.jpg',
+      'https://res.cloudinary.com/duq4vjwmq/image/upload/v1708424820/PA%20Website/4_hzlc57.jpg',
+      'https://res.cloudinary.com/duq4vjwmq/image/upload/v1708424816/PA%20Website/5_kzbz0g.jpg',
+      'https://res.cloudinary.com/duq4vjwmq/image/upload/v1708424819/PA%20Website/6_xehsqy.jpg',
+      'https://res.cloudinary.com/duq4vjwmq/image/upload/v1708424815/PA%20Website/7_yeygan.jpg',
+      'https://res.cloudinary.com/duq4vjwmq/image/upload/v1708424966/PA%20Website/8_qawvrt.jpg',
+      'https://res.cloudinary.com/duq4vjwmq/image/upload/v1708424974/PA%20Website/9_ked2cx.jpg',
+      'https://res.cloudinary.com/duq4vjwmq/image/upload/v1708424979/PA%20Website/10_ekfspi.jpg',
+      'https://res.cloudinary.com/duq4vjwmq/image/upload/v1708424985/PA%20Website/11_ztgpbu.jpg',
+      'https://res.cloudinary.com/duq4vjwmq/image/upload/v1708424988/PA%20Website/12_guway9.jpg',
+      'https://res.cloudinary.com/duq4vjwmq/image/upload/v1708424992/PA%20Website/13_k2pmul.jpg',
+      'https://res.cloudinary.com/duq4vjwmq/image/upload/v1708424999/PA%20Website/14_nwnxko.jpg',
+      'https://res.cloudinary.com/duq4vjwmq/image/upload/v1708425002/PA%20Website/15_lmv6lm.jpg',
+      'https://res.cloudinary.com/duq4vjwmq/image/upload/v1708425006/PA%20Website/16_iq6il4.jpg',
+      'https://res.cloudinary.com/duq4vjwmq/image/upload/v1708425213/PA%20Website/17_mx0kov.jpg',
+      'https://res.cloudinary.com/duq4vjwmq/image/upload/v1708425219/PA%20Website/18_zc1gon.jpg',
+      'https://res.cloudinary.com/duq4vjwmq/image/upload/v1708425222/PA%20Website/19_mduv94.jpg',
+      'https://res.cloudinary.com/duq4vjwmq/image/upload/v1708425222/PA%20Website/19_mduv94.jpg',
+      'https://res.cloudinary.com/duq4vjwmq/image/upload/v1708425229/PA%20Website/21_jhkzxg.jpg',
+      'https://res.cloudinary.com/duq4vjwmq/image/upload/v1708425232/PA%20Website/22_s5g59i.jpg',
     ],
     categories: 'HOUSE',
     create_at: '17/07/2019',
@@ -157,11 +163,10 @@ const BlogData: Blog[] = [
   },
   {
     _id: 4,
-    mainImage: //thế ảnh số 0 vào đây
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627424/PA%20Design%20Office/nicwqecluzcdkddtxcnz.jpg',
+    mainImage:
+      'https://res.cloudinary.com/duq4vjwmq/image/upload/v1707283629/PA%20Website/weyz4gcwjstesuk8cflq.jpg',
     categoryImage: [
       'https://res.cloudinary.com/duq4vjwmq/image/upload/v1707283629/PA%20Website/weyz4gcwjstesuk8cflq.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627424/PA%20Design%20Office/nicwqecluzcdkddtxcnz.jpg',
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706627423/PA%20Design%20Office/abvzugh3y5qnkayba0fk.jpg',
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706627427/PA%20Design%20Office/cx3lyfohwm7b7jpxhsby.jpg',
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706627429/PA%20Design%20Office/mdp8ruywtggffdonh9km.jpg',
@@ -202,9 +207,7 @@ const BlogData: Blog[] = [
   {
     _id: 5,
     mainImage:
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706628158/Lavilla/xn4dj1uwckd1zr9o1wam.jpg',
-    carouselImage:
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706628156/Lavilla/aiaathjgzrzo5rawzrfc.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706628158/Lavilla/yjetrrsgpgqcddeofj7n.jpg',
     categoryImage: [
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706628158/Lavilla/xn4dj1uwckd1zr9o1wam.jpg',
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706628157/Lavilla/sywscvignjvuxd3wy4zb.jpg',
@@ -236,9 +239,9 @@ const BlogData: Blog[] = [
   {
     _id: 6,
     mainImage:
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706628856/VISTA%20VERDE/qnngfpa7v4idmogzl5lx.png',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706628860/VISTA%20VERDE/kmbcytu59mibsqtpnbfk.png', 
     carouselImage:
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706628856/VISTA%20VERDE/qnngfpa7v4idmogzl5lx.png', 
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706628860/VISTA%20VERDE/kmbcytu59mibsqtpnbfk.png', 
     categoryImage: [
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706628856/VISTA%20VERDE/qnngfpa7v4idmogzl5lx.png', 
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706628859/VISTA%20VERDE/phsyd1odflpp58ixbwcm.png', 
@@ -270,7 +273,9 @@ const BlogData: Blog[] = [
   {
     _id: 7,
     mainImage:
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706631382/Long%20An%20House/yqjybe3mjydn2hv8qywn.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706631380/Long%20An%20House/cnjswjh3jtntrosehqc0.jpg',
+    carouselImage:
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706631380/Long%20An%20House/cnjswjh3jtntrosehqc0.jpg',
     categoryImage: [
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706631380/Long%20An%20House/yzqknrsll83whrr4tj1u.jpg',
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706631382/Long%20An%20House/yqjybe3mjydn2hv8qywn.jpg',
@@ -299,7 +304,7 @@ const BlogData: Blog[] = [
   {
     _id: 8,
     mainImage:
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706631621/Coco%20House/hhpre7b93lplvtbnbdxq.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706631622/Coco%20House/bque2cxxhbuvq2dxvj0x.jpg',
     categoryImage: [
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706631621/Coco%20House/hhpre7b93lplvtbnbdxq.jpg',
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706631622/Coco%20House/bque2cxxhbuvq2dxvj0x.jpg',
@@ -431,7 +436,9 @@ const BlogData: Blog[] = [
   {
     _id: 13,
     mainImage:
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706634514/Gateway%20Vung%20Tau%20Apartment/a8xqdmwxnjjkfunyi8pv.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706634520/Gateway%20Vung%20Tau%20Apartment/nsa9ecmqczvnbhe0dvbv.jpg',
+    carouselImage:
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706634520/Gateway%20Vung%20Tau%20Apartment/nsa9ecmqczvnbhe0dvbv.jpg',
     categoryImage: [
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706634514/Gateway%20Vung%20Tau%20Apartment/a8xqdmwxnjjkfunyi8pv.jpg',
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706634515/Gateway%20Vung%20Tau%20Apartment/cgahumzknlnsotzsczgc.jpg',
@@ -481,7 +488,7 @@ const BlogData: Blog[] = [
   {
     _id: 15,
     mainImage:
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706635861/15.%20Dragon%20Hill%20Apartment/h8yglqxosxb8hzsg7wcv.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706635866/15.%20Dragon%20Hill%20Apartment/wuwrppy1vbpvmn0oinpr.jpg',
     categoryImage: [
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706635860/15.%20Dragon%20Hill%20Apartment/q7gp0gmijnvjmgzlp2tn.jpg',
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706635857/15.%20Dragon%20Hill%20Apartment/xbnrluwgu3agks3crzun.jpg',

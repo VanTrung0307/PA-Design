@@ -30,7 +30,7 @@ const RelatedPost = ({ currentBlogId }: RelatedPostProps) => {
               <div className="relative max-w-full w-100 h-100 group gap-5 rounded-lg">
                 {post.mainImage ? (
                   <Link href={`/blog/blog-details?_id=${post._id}`}>
-                    <div className="relative gap-5 max-w-full h-[400px]">
+                    <div className="relative gap-5 w-[400px] h-[400px]">
                       <Image
                         width={1000}
                         height={1000}

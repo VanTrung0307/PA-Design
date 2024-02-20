@@ -28,7 +28,7 @@ const Header = () => {
   })
 
   return (
-    <header className={`left-0 top-0 w-full z-99999 py-7`}>
+    <header className={`left-0 top-0 w-full z-99999 pt-[1.5rem] pb-[0.75rem]`}>
       <div className="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0 lg:flex items-center justify-between relative">
         <div className="w-full lg:w-1/4 flex items-center justify-between">
           <a href="/">
@@ -123,7 +123,7 @@ const Header = () => {
                       </ul>
                     </>
                   ) : (
-                    <div className="flex justify-center items-center ml-[150px]">
+                    <div className="flex justify-end items-center mr-[30px]">
                       <Link
                         href={`${menuItem.path}`}
                         className={`${pathUrl === menuItem.path

@@ -3,12 +3,15 @@ import RelatedPost from '@/components/Blog/RelatedPost'
 import BlogData from '@/components/Blog/blogData'
 import Image from 'next/image'
 import { useSearchParams } from 'next/navigation'
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
+
+const SWIPE_THRESHOLD = 100;
+const SWIPE_TIMEOUT = 250;
 
 export default function SingleBlogPage() {
   const searchParams = useSearchParams()
   const currentBlogId = searchParams.get('_id')
-  const [selectedImageSize, setSelectedImageSize] = useState({ width: 800, height: 800 }); // Kích thước mặc định
+  const [selectedImageSize, setSelectedImageSize] = useState({ width: 800, height: 800 });
 
   const calculateImageSize = (selectedImage: string) => {
     const img = document.createElement('img');
@@ -83,12 +86,82 @@ export default function SingleBlogPage() {
   const [zoomLevel, setZoomLevel] = useState(1);
 
   const handleZoomIn = () => {
-    setZoomLevel(Math.min(zoomLevel + 0.1)); // Giới hạn zoom tối đa là 3 lần
+    setZoomLevel(Math.min(zoomLevel + 0.1));
   };
   
   const handleZoomOut = () => {
-    setZoomLevel(Math.max(zoomLevel - 0.1)); // Giới hạn zoom tối thiểu là 1 lần
+    setZoomLevel(Math.max(zoomLevel - 0.1));
   };
+  
+  useEffect(() => {
+    const handleKeyPress = (event: KeyboardEvent) => {
+      if (selectedImage) {
+        switch (event.key) {
+          case 'ArrowLeft':
+            handlePreviousImage();
+            break;
+          case 'ArrowRight':
+            handleNextImage();
+            break;
+          default:
+            break;
+        }
+      }
+    };
+  
+    document.addEventListener('keydown', handleKeyPress);
+  
+    return () => {
+      document.removeEventListener('keydown', handleKeyPress);
+    };
+  }, [selectedImage, handlePreviousImage, handleNextImage]);
+
+  const swipeStartX = useRef<number | null>(null);
+  const swipeEndX = useRef<number | null>(null);
+
+  const handleTouchStart = (event: TouchEvent) => {
+    swipeStartX.current = event.touches[0].clientX;
+  };
+
+  const handleTouchMove = (event: TouchEvent) => {
+    swipeEndX.current = event.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (swipeStartX.current === null || swipeEndX.current === null) {
+      console.log('Missing swipe start or end position');
+      return;
+    }
+
+    const deltaX = swipeEndX.current - swipeStartX.current;
+    console.log('Delta X:', deltaX);
+
+    if (Math.abs(deltaX) > SWIPE_THRESHOLD) {
+      if (deltaX > 0) {
+        console.log('Swiped right');
+        handlePreviousImage();
+      } else {
+        console.log('Swiped left');
+        handleNextImage();
+      }
+    } else {
+      console.log('Swipe distance not enough');
+    }
+    swipeStartX.current = null;
+    swipeEndX.current = null;
+  };
+
+  useEffect(() => {
+    document.addEventListener('touchstart', handleTouchStart);
+    document.addEventListener('touchmove', handleTouchMove);
+    document.addEventListener('touchend', handleTouchEnd);
+
+    return () => {
+      document.removeEventListener('touchstart', handleTouchStart);
+      document.removeEventListener('touchmove', handleTouchMove);
+      document.removeEventListener('touchend', handleTouchEnd);
+    };
+  }, []);
 
   return (
     <>
@@ -216,9 +289,9 @@ export default function SingleBlogPage() {
                               title="Zoom In"
                             >
                               <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className="bi bi-zoom-in text-white" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11M13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0" />
+                                <path fillRule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11M13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0" />
                                 <path d="M10.344 11.742c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1 6.538 6.538 0 0 1-1.398 1.4z" />
-                                <path fill-rule="evenodd" d="M6.5 3a.5.5 0 0 1 .5.5V6h2.5a.5.5 0 0 1 0 1H7v2.5a.5.5 0 0 1-1 0V7H3.5a.5.5 0 0 1 0-1H6V3.5a.5.5 0 0 1 .5-.5" />
+                                <path fillRule="evenodd" d="M6.5 3a.5.5 0 0 1 .5.5V6h2.5a.5.5 0 0 1 0 1H7v2.5a.5.5 0 0 1-1 0V7H3.5a.5.5 0 0 1 0-1H6V3.5a.5.5 0 0 1 .5-.5" />
                               </svg>
                             </button>
                             <button
