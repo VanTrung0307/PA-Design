@@ -11,7 +11,7 @@ const SupportPage = () => {
   return (
     <>
       <title>{`About - PA Design`}</title>
-      <div className="pt-10">
+      <div className="pt-10 pb-20">
         <Contact />
       </div>
     </>

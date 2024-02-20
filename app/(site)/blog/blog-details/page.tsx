@@ -122,20 +122,19 @@ export default function SingleBlogPage() {
   const handleTouchStart = (event: TouchEvent) => {
     swipeStartX.current = event.touches[0].clientX;
   };
-
+  
   const handleTouchMove = (event: TouchEvent) => {
     swipeEndX.current = event.touches[0].clientX;
   };
-
+  
   const handleTouchEnd = () => {
     if (swipeStartX.current === null || swipeEndX.current === null) {
       console.log('Missing swipe start or end position');
       return;
     }
-
+  
     const deltaX = swipeEndX.current - swipeStartX.current;
-    console.log('Delta X:', deltaX);
-
+  
     if (Math.abs(deltaX) > SWIPE_THRESHOLD) {
       if (deltaX > 0) {
         console.log('Swiped right');
@@ -144,24 +143,24 @@ export default function SingleBlogPage() {
         console.log('Swiped left');
         handleNextImage();
       }
-    } else {
-      console.log('Swipe distance not enough');
     }
+  
     swipeStartX.current = null;
     swipeEndX.current = null;
   };
-
+  
   useEffect(() => {
     document.addEventListener('touchstart', handleTouchStart);
     document.addEventListener('touchmove', handleTouchMove);
     document.addEventListener('touchend', handleTouchEnd);
-
+  
     return () => {
       document.removeEventListener('touchstart', handleTouchStart);
       document.removeEventListener('touchmove', handleTouchMove);
       document.removeEventListener('touchend', handleTouchEnd);
     };
-  }, []);
+  }, [handlePreviousImage, handleNextImage]);
+  
 
   return (
     <>
@@ -234,7 +233,7 @@ export default function SingleBlogPage() {
                   </ul>
 
                   <div className="blog-details">
-                    <div className="flex flex-wrap gap-5">
+                    <div className=" flex-container flex flex-wrap gap-5">
                       {blogPost.categoryImage &&
                         blogPost.categoryImage.map((image, index) => (
                           <div
@@ -254,7 +253,7 @@ export default function SingleBlogPage() {
                               }}
                             ></div>
                             <Image
-                              className="w-[400px] h-[400px] rounded object-cover"
+                              className="categoryimages-container w-[400px] h-[400px] rounded object-cover"
                               src={image}
                               width={400}
                               height={400}
@@ -265,6 +264,14 @@ export default function SingleBlogPage() {
                           </div>
                         ))}
                     </div>
+                    <style jsx>{`
+
+                          @media (min-width: 495px) and (max-width: 1385px) {
+                              .flex-container {
+                                  justify-content: center; // Thiết lập lại justify-content: center trong khoảng từ 966px đến 1385px
+                              }
+                          }
+                      `}</style>
                     {selectedImage && (
                       <div className="fixed inset-0 flex items-center justify-center z-99999">
                         <div className="modal-container">
@@ -300,9 +307,9 @@ export default function SingleBlogPage() {
                               title="Zoom Out"
                             >
                               <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className="bi bi-zoom-out text-white" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11M13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0" />
+                                <path fillRule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11M13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0" />
                                 <path d="M10.344 11.742c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1 6.538 6.538 0 0 1-1.398 1.4z" />
-                                <path fill-rule="evenodd" d="M3 6.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5" />
+                                <path fillRule="evenodd" d="M3 6.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5" />
                               </svg>
                             </button>
                             <button

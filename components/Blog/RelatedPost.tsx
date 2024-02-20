@@ -21,24 +21,26 @@ const RelatedPost = ({ currentBlogId }: RelatedPostProps) => {
           Related Posts
         </h4>
 
-        <div className="w-full">
+        <div className="w-full flex flex-wrap justify-center">
           {relatedPosts.map((post, key) => (
             <div
-              className="inline-block xl:inline-block xl:w-1/3 xl:pr-4 mb-7.5 rounded-lg"
+              className="related-post-item inline-block xl:inline-block xl:w-1/3 xl:pr-4 mb-7.5 rounded-lg"
               key={key}
             >
               <div className="relative max-w-full w-100 h-100 group gap-5 rounded-lg">
                 {post.mainImage ? (
                   <Link href={`/blog/blog-details?_id=${post._id}`}>
-                    <div className="relative gap-5 w-[400px] h-[400px]">
-                      <Image
-                        width={1000}
-                        height={1000}
-                        src={post.mainImage}
-                        alt="Blog"
-                        className="object-cover w-full h-full rounded-lg"
-                      />
-                      <div className="absolute w-full h-full rounded-lg bottom-0 left-0 right-0 p-2 bg-black bg-opacity-70 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center">
+                    <div className="relative max-w-full h-96 sm:h-[400px] mx-auto">
+                      <div className="image-container">
+                        <Image
+                          layout="fill"
+                          objectFit="cover"
+                          src={post.mainImage}
+                          alt="Blog"
+                          className="rounded-lg"
+                        />
+                      </div>
+                      <div className="absolute w-full bottom-0 left-0 p-2 bg-black bg-opacity-70 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center">
                         <h5 className="font-medium text-2xl text-white">
                           {post.title.length > 24
                             ? `${post.title.slice(0, 24)}...`
@@ -58,6 +60,25 @@ const RelatedPost = ({ currentBlogId }: RelatedPostProps) => {
           ))}
         </div>
       </div>
+      <style jsx>{`
+                        @media (max-width: 469px) {
+                          .image-container {
+                            width: 284px;
+                            object-fit: cover;
+                          }
+                        }
+                        @media (min-width: 470px) and (max-width: 1280px) {
+                          .image-container {
+                            width: 400px;
+                            object-fit: cover;
+                          }
+                        }
+                        @media (min-width: 638px) and (max-width: 1279px) {
+                          .related-post-item {
+                            margin-right: 20px;
+                          }
+                        }
+                      `}</style>
     </>
   )
 }
