@@ -126,6 +126,38 @@ const BlogData: Blog[] = [
   {
     _id: 3,
     mainImage:
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706628158/Lavilla/yjetrrsgpgqcddeofj7n.jpg',
+    categoryImage: [
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706628158/Lavilla/xn4dj1uwckd1zr9o1wam.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706628157/Lavilla/sywscvignjvuxd3wy4zb.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706628156/Lavilla/aiaathjgzrzo5rawzrfc.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706628158/Lavilla/yjetrrsgpgqcddeofj7n.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706628150/Lavilla/jjblttjufv65oamxma2x.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706628150/Lavilla/mfjmfsrpzufcxjv8kwpu.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706628159/Lavilla/uhvaixpjauykqzjhup9x.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706628161/Lavilla/t5unar8sijhcizkb3k4y.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706628160/Lavilla/mvivlabyv6xiqcd2kytg.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706628162/Lavilla/dqnveu7bgfquruzjpxkm.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706628153/Lavilla/pyklyqlwq2vtnsxlagyd.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706628155/Lavilla/k0szy5kubofupammtysg.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706628163/Lavilla/dwozeopcyhr6um4w4gde.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706628151/Lavilla/jialmvl0skk5embe6154.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706628150/Lavilla/pzjsldmbetfrrtpgfkpk.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706628156/Lavilla/wjpnqutdirplcjhhlret.jpg',
+    ],
+    categories: 'VILLA',
+    create_at: '17/07/2019',
+    title: 'LAVILLA',
+    city: 'LONG AN',
+    area: '300 sqm',
+    location: 'Tan An, Long An Province',
+    leadArchitect: 'Pham Hoang Duong',
+    designTeam: 'Chau Vinh Thien, Tran Thi Thu Thanh',
+    description: 'Located on a 300 sqm land in Tan An Centre, Long An Province. Lavilla has been built based on the family’s requirement about a new and innovative house. The main colour is grey white, combining with yellow to create the highlights for the house. The design is the combination of simple space blocks to form light waves on the Mekong Delta river. By using different materials such as copper, iron, and glass in an innovative way, we have created a unique trait for the building. Besides, the house is developed based on the primary requirements about the belief of spiritual world of the owner. PA Design always respects personal beliefs and helps customers bring the story into their house. Since the house locates at the end of a T-junction, its main door does not face the street as usual. In stead, we turn the main door’s direction to the East and combine with a pond and a screen to separate the inside space from the T-junction. This combination creates a necessary privacy for the house and copes well with the Feng Shui factors.'
+  },
+  {
+    _id: 4,
+    mainImage:
       'https://res.cloudinary.com/duq4vjwmq/image/upload/v1708424675/PA%20Website/2_bi%CC%80a_ocl17l.jpg',
     categoryImage: [
       'https://res.cloudinary.com/duq4vjwmq/image/upload/v1708424563/PA%20Website/1_fhigvm.jpg',
@@ -162,79 +194,35 @@ const BlogData: Blog[] = [
     description: 'The house for three generations in a busy residential area in District 9. With the mission to make the “breathing air” out of the crowded city, along with a unique space for the house owner, we have designed the house with curves and spirals to create gentle flows of water. The living space is cut and shaped to make green ways that lead light and wind to every room in the house. The main block stands in the back instead of the front side to create a “breathing space” for the building as well as a “barrier” separating the house from the noisy world.'
   },
   {
-    _id: 4,
-    mainImage:
-      'https://res.cloudinary.com/duq4vjwmq/image/upload/v1707283629/PA%20Website/weyz4gcwjstesuk8cflq.jpg',
-    categoryImage: [
-      'https://res.cloudinary.com/duq4vjwmq/image/upload/v1707283629/PA%20Website/weyz4gcwjstesuk8cflq.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627423/PA%20Design%20Office/abvzugh3y5qnkayba0fk.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627427/PA%20Design%20Office/cx3lyfohwm7b7jpxhsby.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627429/PA%20Design%20Office/mdp8ruywtggffdonh9km.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627430/PA%20Design%20Office/jodtpjhoyltyhrhaw5rv.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627430/PA%20Design%20Office/rn1ejfr4dml0eu0aeek8.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627430/PA%20Design%20Office/c1gs6jdneoxnnyhokpbd.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627430/PA%20Design%20Office/zlgnifgsrv5wlbr5pvg0.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627431/PA%20Design%20Office/jtarv6qqroey5dqizigw.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627432/PA%20Design%20Office/l2amnwouumpcieovpvpa.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627432/PA%20Design%20Office/bvq5dw4lgldb8o8bnefw.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627432/PA%20Design%20Office/jkmparv6trwupbqwp9rp.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627423/PA%20Design%20Office/gelg4okgpxq8orr3knwc.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627423/PA%20Design%20Office/lzuqgqhomk8tlhmcskoa.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627424/PA%20Design%20Office/ospkdo8vn6ltxxibisrt.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627425/PA%20Design%20Office/miuxropykfstl44ossgc.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627425/PA%20Design%20Office/bga1nt6cahhuyjkme8o7.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627425/PA%20Design%20Office/qe4q9xm86g7ol98guddg.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627426/PA%20Design%20Office/b1mneafbyik48zknbt7l.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627426/PA%20Design%20Office/zqy2kpzyjktfedzvshh4.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627427/PA%20Design%20Office/pcjuemkqd0vhjiarzlnq.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627427/PA%20Design%20Office/d7fpndabmfkiqksptinb.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627427/PA%20Design%20Office/ihau2xnmvoaksrlb2n7h.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627428/PA%20Design%20Office/ut4h3lczbi8yqemaygmx.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627428/PA%20Design%20Office/hiogdjomz0i6nevbs20e.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627429/PA%20Design%20Office/yajri3k7lw3kbsarktfw.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627429/PA%20Design%20Office/jrmym6ur4paxsxshsj7f.jpg',
-    ],
-    categories: 'OFFICE',
-    create_at: '17/07/2019',
-    title: 'PA DESIGN OFFICE',
-    city: 'HO CHI MINH',
-    area: '160 sqm',
-    location: 'Tan Phu District, HCMC',
-    leadArchitect: 'Chau Vinh Thien',
-    designTeam: 'Tran Thi Thu Thanh, Pham Hoang Duong',
-    description: 'PA Design Studio is reconstucted from an old house. For the purpose of not only a working place but also a space for meditation and reflection of artists who are surrounded by the stuffy city, PA creates a little airy garden to escape the chain of the city and buff the creativity inside each PA member.'
-  },
-  {
     _id: 5,
     mainImage:
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706628158/Lavilla/yjetrrsgpgqcddeofj7n.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706631380/Long%20An%20House/cnjswjh3jtntrosehqc0.jpg',
+    carouselImage:
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706631380/Long%20An%20House/cnjswjh3jtntrosehqc0.jpg',
     categoryImage: [
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706628158/Lavilla/xn4dj1uwckd1zr9o1wam.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706628157/Lavilla/sywscvignjvuxd3wy4zb.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706628156/Lavilla/aiaathjgzrzo5rawzrfc.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706628158/Lavilla/yjetrrsgpgqcddeofj7n.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706628150/Lavilla/jjblttjufv65oamxma2x.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706628150/Lavilla/mfjmfsrpzufcxjv8kwpu.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706628159/Lavilla/uhvaixpjauykqzjhup9x.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706628161/Lavilla/t5unar8sijhcizkb3k4y.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706628160/Lavilla/mvivlabyv6xiqcd2kytg.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706628162/Lavilla/dqnveu7bgfquruzjpxkm.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706628153/Lavilla/pyklyqlwq2vtnsxlagyd.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706628155/Lavilla/k0szy5kubofupammtysg.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706628163/Lavilla/dwozeopcyhr6um4w4gde.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706628151/Lavilla/jialmvl0skk5embe6154.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706628150/Lavilla/pzjsldmbetfrrtpgfkpk.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706628156/Lavilla/wjpnqutdirplcjhhlret.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706631380/Long%20An%20House/yzqknrsll83whrr4tj1u.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706631382/Long%20An%20House/yqjybe3mjydn2hv8qywn.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706631380/Long%20An%20House/cnjswjh3jtntrosehqc0.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706631380/Long%20An%20House/bo8ygt0cynmps3vqq5pb.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706631383/Long%20An%20House/ucfd2uov8rwjstpb4au7.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706631382/Long%20An%20House/bvazhctbwavjm1nz0jyl.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706631382/Long%20An%20House/ihfmcta3lqdinjjhfetv.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706631383/Long%20An%20House/edhiqhw6izh3jwzqjl52.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706631383/Long%20An%20House/hqjbzqkyilps4fssggrh.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706631386/Long%20An%20House/j8r8mb8yzidruix16ftl.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706631386/Long%20An%20House/jcxtup2v6oukgbpgtwwg.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706631386/Long%20An%20House/b0vjeouwzzyxwz6ff0ye.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706631387/Long%20An%20House/ofky0xoimzjddd1xprtc.jpg',
     ],
-    categories: 'VILLA',
+    categories: 'HOUSE',
     create_at: '17/07/2019',
-    title: 'LAVILLA',
+    title: 'LONG AN HOUSE',
     city: 'LONG AN',
-    area: '300 sqm',
+    area: '289 sqm',
     location: 'Tan An, Long An Province',
-    leadArchitect: 'Pham Hoang Duong',
-    designTeam: 'Chau Vinh Thien, Tran Thi Thu Thanh',
-    description: 'Located on a 300 sqm land in Tan An Centre, Long An Province. Lavilla has been built based on the family’s requirement about a new and innovative house. The main colour is grey white, combining with yellow to create the highlights for the house. The design is the combination of simple space blocks to form light waves on the Mekong Delta river. By using different materials such as copper, iron, and glass in an innovative way, we have created a unique trait for the building. Besides, the house is developed based on the primary requirements about the belief of spiritual world of the owner. PA Design always respects personal beliefs and helps customers bring the story into their house. Since the house locates at the end of a T-junction, its main door does not face the street as usual. In stead, we turn the main door’s direction to the East and combine with a pond and a screen to separate the inside space from the T-junction. This combination creates a necessary privacy for the house and copes well with the Feng Shui factors.'
+    leadArchitect: 'Chau Vinh Thien',
+    designTeam: 'Pham Hoang Duong, Tran Thi Thu Thanh, Huynh Dang Khanh Linh',
+    description: 'Based on the idea of demonstrating the traditional beauty of Vietnam, PA Design has brough an old but gold experience to the customer. This is the nostalgia that harmoniously integrates with modern features in the new pace of life. We use traditional materials such as Yin Yang roof tiles and wood and paint the wall in an elegant style to tell an old story in modern colours. To us, this house is not only a shelter but also a home for the owner to comeback after a hard working day.'
   },
   {
     _id: 6,
@@ -273,37 +261,6 @@ const BlogData: Blog[] = [
   {
     _id: 7,
     mainImage:
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706631380/Long%20An%20House/cnjswjh3jtntrosehqc0.jpg',
-    carouselImage:
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706631380/Long%20An%20House/cnjswjh3jtntrosehqc0.jpg',
-    categoryImage: [
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706631380/Long%20An%20House/yzqknrsll83whrr4tj1u.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706631382/Long%20An%20House/yqjybe3mjydn2hv8qywn.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706631380/Long%20An%20House/cnjswjh3jtntrosehqc0.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706631380/Long%20An%20House/bo8ygt0cynmps3vqq5pb.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706631383/Long%20An%20House/ucfd2uov8rwjstpb4au7.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706631382/Long%20An%20House/bvazhctbwavjm1nz0jyl.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706631382/Long%20An%20House/ihfmcta3lqdinjjhfetv.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706631383/Long%20An%20House/edhiqhw6izh3jwzqjl52.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706631383/Long%20An%20House/hqjbzqkyilps4fssggrh.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706631386/Long%20An%20House/j8r8mb8yzidruix16ftl.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706631386/Long%20An%20House/jcxtup2v6oukgbpgtwwg.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706631386/Long%20An%20House/b0vjeouwzzyxwz6ff0ye.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706631387/Long%20An%20House/ofky0xoimzjddd1xprtc.jpg',
-    ],
-    categories: 'HOUSE',
-    create_at: '17/07/2019',
-    title: 'LONG AN HOUSE',
-    city: 'LONG AN',
-    area: '289 sqm',
-    location: 'Tan An, Long An Province',
-    leadArchitect: 'Chau Vinh Thien',
-    designTeam: 'Pham Hoang Duong, Tran Thi Thu Thanh, Huynh Dang Khanh Linh',
-    description: 'Based on the idea of demonstrating the traditional beauty of Vietnam, PA Design has brough an old but gold experience to the customer. This is the nostalgia that harmoniously integrates with modern features in the new pace of life. We use traditional materials such as Yin Yang roof tiles and wood and paint the wall in an elegant style to tell an old story in modern colours. To us, this house is not only a shelter but also a home for the owner to comeback after a hard working day.'
-  },
-  {
-    _id: 8,
-    mainImage:
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706631622/Coco%20House/bque2cxxhbuvq2dxvj0x.jpg',
     categoryImage: [
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706631621/Coco%20House/hhpre7b93lplvtbnbdxq.jpg',
@@ -330,74 +287,7 @@ const BlogData: Blog[] = [
     description: 'A Hidden Gem in a Green Garden. On 2000 square meters of land, we designed a house with a roof inspired by the coconut leaf, a symbol of Ben Tre Province, in response to the mission of combining traditional and modern traits with a breath of Ben Tre village. The house is a child being held and protected in the hometown’s arms. Bedrooms are connected into a block with the view to the green space outside. Between the corridors, the skylight is added to create a fresh and airy space. In the middle of the green garden, the home of three generations is attached to the spacious rows of verandas, waiting for warm family parties on the weekends.'
   },
   {
-    _id: 9,
-    mainImage:
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706632077/Mihy%20Jewelry/wkptk89cisu0hfthz2g4.jpg',
-    categoryImage: [
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706632077/Mihy%20Jewelry/wkptk89cisu0hfthz2g4.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706632077/Mihy%20Jewelry/n46cus3ztv9fmcxjtxz0.jpg',
-    ],
-    categories: 'STORE',
-    create_at: '17/07/2019',
-    title: 'MIHY JEWELRY',
-    city: 'HO CHI MINH',
-    area: '18 sqm',
-    location: 'Tan Binh District, HCMC',
-    leadArchitect: 'Chau Vinh Thien',
-    designTeam: 'Pham Hoang Duong, Tran Thi Thu Thanh',
-    description: 'Mihy Jewelry is a small project but PA Design has poured our heart and soul into. The construction is inspired from the jewelers treasuring the jewelries on their delicate hands. The materials and furniture follow a special style to depict a jewlry workshop. By this, customers can experience the feeling of choosing the jewlries at where they are made.'
-  },
-  {
-    _id: 10,
-    mainImage:
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706632421/Nhon%20Hoa%206/pz7kdjctclnbhw1by73q.jpg',
-    categoryImage: [
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706632421/Nhon%20Hoa%206/pz7kdjctclnbhw1by73q.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706632422/Nhon%20Hoa%206/mfacoec2cvdvd3zbm2lb.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706632422/Nhon%20Hoa%206/lyj0iede02g7yvgybbze.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706632422/Nhon%20Hoa%206/f4gunbmdw2tawh8jnwlk.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706632422/Nhon%20Hoa%206/ftsqddyvrqf09ijlm8ul.jpg',
-    ],
-    categories: 'HOUSE',
-    create_at: '17/07/2019',
-    title: 'NHON HOA 6',
-    city: 'DA LAT',
-    area: '450 sqm',
-    location: 'Da Lat City',
-    leadArchitect: 'Chau Vinh Thien',
-    designTeam: 'Pham Hoang Duong, Tran Thi Thu Thanh, Le Tu Tan',
-    description: 'This construction is a challenge from the investor to "bring the boat to the mountain". PA team has brought the image of a boat to the roof of the building combining with the traditonal patterns. Additionally, PA has created a large void to get all the natual and sun light to the corridors and stairs. The curves also represent the solf waves that the boat is riding on.'
-  },
-  {
-    _id: 11,
-    mainImage:
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706632766/Giang%20Caf%C3%A9/xbgwd84kaykjyuracqfb.jpg',
-    categoryImage: [
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706632766/Giang%20Caf%C3%A9/xbgwd84kaykjyuracqfb.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706632786/Giang%20Caf%C3%A9/shcqxpdtnm5izryt2edb.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706632698/Giang%20Caf%C3%A9/u0hu5k0iqi8nwxy1vqfk.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706633257/Giang%20Caf%C3%A9/e0eyofc7tqgq4e9ezkzv.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706632700/Giang%20Caf%C3%A9/zhkjhlq1lncjolutqc1w.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706633261/Giang%20Caf%C3%A9/pecgdvqxcw1t1lqoavyb.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706633270/Giang%20Caf%C3%A9/dm3brcg6woegtv3mckzv.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706632702/Giang%20Caf%C3%A9/lfvmravuxcstaizbwuk3.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706632703/Giang%20Caf%C3%A9/tkdf0shtz1tfgcpeu4o2.jpg',
-      'https://res.cloudinary.com/duq4vjwmq/image/upload/v1707283487/PA%20Website/oabw4ev2xfw4oszjfjut.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706632696/Giang%20Caf%C3%A9/ecorttsd1atpprtzla3i.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706633123/Giang%20Caf%C3%A9/gy94opm3rh5jkv4opkrs.jpg',
-    ],
-    categories: 'CAFÉ',
-    create_at: '17/07/2019',
-    title: 'GIANG CAFÉ',
-    city: 'HO CHI MINH',
-    area: '240 sqm',
-    location: 'Binh Tan District, HCMC',
-    leadArchitect: 'Chau Vinh Thien',
-    designTeam: 'Tran Thi Thu Thanh, Pham Hoang Duong, Huynh Dang Khanh Linh',
-    description: 'Giang Cafe is a challenging mission for PA team from the investor: make the appearence younger and more attractive yet keep its art origin. We choose modern and young materials such as mosaic tiles and bright wood to make the Cafe friendlier to youngsters. We also use many glasses tiles to get the natural lights and bring the people inside a comfortable and relaxing feeling. Last but not least, green corners and plants are added to provide the cafe with fresh air.'
-  },
-  {
-    _id: 12,
+    _id: 8,
     mainImage:
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706633665/Gateway%20Vung%20Tau%20Penthouse/zfwmpefc28mdr9egxvlr.jpg',
     categoryImage: [
@@ -434,7 +324,7 @@ const BlogData: Blog[] = [
     description: 'A Penthouse at the gateway of Vung Tau City. This is a personal resort house so it is designed following the owner characteristic with the white as the key colour. The highlighting details are made of glass, mirror, and water ripple metal panels to enhance the modern and grace features of the house. The dining room has a big table to hold parties for the family in their holidays. Bedrooms are also arranged similarly to the owners personal house to make a familiar and comfortable feeling.'
   },
   {
-    _id: 13,
+    _id: 9,
     mainImage:
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706634520/Gateway%20Vung%20Tau%20Apartment/nsa9ecmqczvnbhe0dvbv.jpg',
     carouselImage:
@@ -459,34 +349,7 @@ const BlogData: Blog[] = [
     description: 'Inspired from constructions in Santorini, PA team has brought Aegean Sea into the Gateway Apartment. Using the key materials including bamboo and wood, we create a signature style for the house and make it as peaceful as in a fishing village with a breeze from the sea.'
   },
   {
-    _id: 14,
-    mainImage:
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706635576/27%7C7%20CORPORATION/iddhyaq98sjgqdrqzx86.jpg',
-    categoryImage: [
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706635576/27%7C7%20CORPORATION/iddhyaq98sjgqdrqzx86.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706635148/27%7C7%20CORPORATION/hasyz8txduzeieaofbaa.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706635574/27%7C7%20CORPORATION/u99jfcssrsxjdtlu39ou.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706635575/27%7C7%20CORPORATION/e9jd7jfok73evvom5pxv.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706635575/27%7C7%20CORPORATION/jzgpaf1bp7okjyfwkcei.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706635149/27%7C7%20CORPORATION/ujvkifsemtg6kgrhjzhd.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706635570/27%7C7%20CORPORATION/mdsf0qxsqtls3ex6liay.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706635151/27%7C7%20CORPORATION/gzwtqu7osiwnyizdakm2.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706635571/27%7C7%20CORPORATION/r8y3mqtndrj8hojbetk7.jpg',
-      'https://res.cloudinary.com/df7v1hify/image/upload/v1706635572/27%7C7%20CORPORATION/a5d9wyqsjdaqka3johdg.jpg',
-      
-    ],
-    categories: 'OFFICE',
-    create_at: '17/07/2019',
-    title: '27|7 CORPPORATION',
-    city: 'HO CHI MINH',
-    area: '460 sqm',
-    location: 'Thu Duc City, HCMC',
-    leadArchitect: 'Chau Vinh Thien',
-    designTeam: 'Pham Hoang Duong, Tran Thi Thu Thanh',
-    description: 'This office was rescontructed from an old film studio. We use modern and bright colours combined with the open working space to make the staff feel airy and fresh. We also mainly use black, white and wood materials and colours to bring the light feeling for people working inside.'
-  },
-  {
-    _id: 15,
+    _id: 10,
     mainImage:
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706635866/15.%20Dragon%20Hill%20Apartment/wuwrppy1vbpvmn0oinpr.jpg',
     categoryImage: [
@@ -529,7 +392,7 @@ const BlogData: Blog[] = [
     description: 'The apartment has a modern style with the highlights from the gentle curves. The combination of the Navy Blue and neutral  colours such as white, grey, and natural wood makes the space shines and brings the relaxing positive energy to the house.'
   },
   {
-    _id: 16,
+    _id: 11,
     mainImage:
       'https://res.cloudinary.com/df7v1hify/image/upload/v1706636358/16.%20Sunrise%20City%20Apartment/1.%20Liv/oeiqmxqdjc6imczxyxcj.jpg',
     categoryImage: [
@@ -572,6 +435,143 @@ const BlogData: Blog[] = [
     leadArchitect: 'Tran Thi Thu Thanh',
     designTeam: 'Chau Vinh Thien, Pham Hoang Duong',
     description: 'This is an apartment in District 7 with city view but little space. PA team has made the best use of the space to arrange the functions  , which meets the owners requirement of using the house without feeling stuffy. Multifunctional funiture is used to make the house neat and tidy and not taking too much space. We choose the Pastel tone to make the house lighter, brighter and more spacious. Also, curves are used to make highlight for the house.'
+  },
+  {
+    _id: 12,
+    mainImage:
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706632766/Giang%20Caf%C3%A9/xbgwd84kaykjyuracqfb.jpg',
+    categoryImage: [
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706632766/Giang%20Caf%C3%A9/xbgwd84kaykjyuracqfb.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706632786/Giang%20Caf%C3%A9/shcqxpdtnm5izryt2edb.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706632698/Giang%20Caf%C3%A9/u0hu5k0iqi8nwxy1vqfk.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706633257/Giang%20Caf%C3%A9/e0eyofc7tqgq4e9ezkzv.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706632700/Giang%20Caf%C3%A9/zhkjhlq1lncjolutqc1w.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706633261/Giang%20Caf%C3%A9/pecgdvqxcw1t1lqoavyb.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706633270/Giang%20Caf%C3%A9/dm3brcg6woegtv3mckzv.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706632702/Giang%20Caf%C3%A9/lfvmravuxcstaizbwuk3.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706632703/Giang%20Caf%C3%A9/tkdf0shtz1tfgcpeu4o2.jpg',
+      'https://res.cloudinary.com/duq4vjwmq/image/upload/v1707283487/PA%20Website/oabw4ev2xfw4oszjfjut.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706632696/Giang%20Caf%C3%A9/ecorttsd1atpprtzla3i.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706633123/Giang%20Caf%C3%A9/gy94opm3rh5jkv4opkrs.jpg',
+    ],
+    categories: 'CAFÉ',
+    create_at: '17/07/2019',
+    title: 'GIANG CAFÉ',
+    city: 'HO CHI MINH',
+    area: '240 sqm',
+    location: 'Binh Tan District, HCMC',
+    leadArchitect: 'Chau Vinh Thien',
+    designTeam: 'Tran Thi Thu Thanh, Pham Hoang Duong, Huynh Dang Khanh Linh',
+    description: 'Giang Cafe is a challenging mission for PA team from the investor: make the appearence younger and more attractive yet keep its art origin. We choose modern and young materials such as mosaic tiles and bright wood to make the Cafe friendlier to youngsters. We also use many glasses tiles to get the natural lights and bring the people inside a comfortable and relaxing feeling. Last but not least, green corners and plants are added to provide the cafe with fresh air.'
+  },
+  {
+    _id:13,
+    mainImage:
+      'https://res.cloudinary.com/duq4vjwmq/image/upload/v1707283629/PA%20Website/weyz4gcwjstesuk8cflq.jpg',
+    categoryImage: [
+      'https://res.cloudinary.com/duq4vjwmq/image/upload/v1707283629/PA%20Website/weyz4gcwjstesuk8cflq.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627423/PA%20Design%20Office/abvzugh3y5qnkayba0fk.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627427/PA%20Design%20Office/cx3lyfohwm7b7jpxhsby.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627429/PA%20Design%20Office/mdp8ruywtggffdonh9km.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627430/PA%20Design%20Office/jodtpjhoyltyhrhaw5rv.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627430/PA%20Design%20Office/rn1ejfr4dml0eu0aeek8.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627430/PA%20Design%20Office/c1gs6jdneoxnnyhokpbd.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627430/PA%20Design%20Office/zlgnifgsrv5wlbr5pvg0.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627431/PA%20Design%20Office/jtarv6qqroey5dqizigw.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627432/PA%20Design%20Office/l2amnwouumpcieovpvpa.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627432/PA%20Design%20Office/bvq5dw4lgldb8o8bnefw.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627432/PA%20Design%20Office/jkmparv6trwupbqwp9rp.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627423/PA%20Design%20Office/gelg4okgpxq8orr3knwc.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627423/PA%20Design%20Office/lzuqgqhomk8tlhmcskoa.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627424/PA%20Design%20Office/ospkdo8vn6ltxxibisrt.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627425/PA%20Design%20Office/miuxropykfstl44ossgc.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627425/PA%20Design%20Office/bga1nt6cahhuyjkme8o7.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627425/PA%20Design%20Office/qe4q9xm86g7ol98guddg.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627426/PA%20Design%20Office/b1mneafbyik48zknbt7l.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627426/PA%20Design%20Office/zqy2kpzyjktfedzvshh4.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627427/PA%20Design%20Office/pcjuemkqd0vhjiarzlnq.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627427/PA%20Design%20Office/d7fpndabmfkiqksptinb.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627427/PA%20Design%20Office/ihau2xnmvoaksrlb2n7h.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627428/PA%20Design%20Office/ut4h3lczbi8yqemaygmx.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627428/PA%20Design%20Office/hiogdjomz0i6nevbs20e.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627429/PA%20Design%20Office/yajri3k7lw3kbsarktfw.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706627429/PA%20Design%20Office/jrmym6ur4paxsxshsj7f.jpg',
+    ],
+    categories: 'OFFICE',
+    create_at: '17/07/2019',
+    title: 'PA DESIGN OFFICE',
+    city: 'HO CHI MINH',
+    area: '160 sqm',
+    location: 'Tan Phu District, HCMC',
+    leadArchitect: 'Chau Vinh Thien',
+    designTeam: 'Tran Thi Thu Thanh, Pham Hoang Duong',
+    description: 'PA Design Studio is reconstucted from an old house. For the purpose of not only a working place but also a space for meditation and reflection of artists who are surrounded by the stuffy city, PA creates a little airy garden to escape the chain of the city and buff the creativity inside each PA member.'
+  },
+  {
+    _id: 14,
+    mainImage:
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706635576/27%7C7%20CORPORATION/iddhyaq98sjgqdrqzx86.jpg',
+    categoryImage: [
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706635576/27%7C7%20CORPORATION/iddhyaq98sjgqdrqzx86.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706635148/27%7C7%20CORPORATION/hasyz8txduzeieaofbaa.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706635574/27%7C7%20CORPORATION/u99jfcssrsxjdtlu39ou.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706635575/27%7C7%20CORPORATION/e9jd7jfok73evvom5pxv.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706635575/27%7C7%20CORPORATION/jzgpaf1bp7okjyfwkcei.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706635149/27%7C7%20CORPORATION/ujvkifsemtg6kgrhjzhd.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706635570/27%7C7%20CORPORATION/mdsf0qxsqtls3ex6liay.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706635151/27%7C7%20CORPORATION/gzwtqu7osiwnyizdakm2.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706635571/27%7C7%20CORPORATION/r8y3mqtndrj8hojbetk7.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706635572/27%7C7%20CORPORATION/a5d9wyqsjdaqka3johdg.jpg',
+      
+    ],
+    categories: 'OFFICE',
+    create_at: '17/07/2019',
+    title: '27|7 CORPPORATION',
+    city: 'HO CHI MINH',
+    area: '460 sqm',
+    location: 'Thu Duc City, HCMC',
+    leadArchitect: 'Chau Vinh Thien',
+    designTeam: 'Pham Hoang Duong, Tran Thi Thu Thanh',
+    description: 'This office was rescontructed from an old film studio. We use modern and bright colours combined with the open working space to make the staff feel airy and fresh. We also mainly use black, white and wood materials and colours to bring the light feeling for people working inside.'
+  },
+  {
+    _id: 15,
+    mainImage:
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706632421/Nhon%20Hoa%206/pz7kdjctclnbhw1by73q.jpg',
+    categoryImage: [
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706632421/Nhon%20Hoa%206/pz7kdjctclnbhw1by73q.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706632422/Nhon%20Hoa%206/mfacoec2cvdvd3zbm2lb.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706632422/Nhon%20Hoa%206/lyj0iede02g7yvgybbze.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706632422/Nhon%20Hoa%206/f4gunbmdw2tawh8jnwlk.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706632422/Nhon%20Hoa%206/ftsqddyvrqf09ijlm8ul.jpg',
+    ],
+    categories: 'HOUSE',
+    create_at: '17/07/2019',
+    title: 'NHON HOA 6',
+    city: 'DA LAT',
+    area: '450 sqm',
+    location: 'Da Lat City',
+    leadArchitect: 'Chau Vinh Thien',
+    designTeam: 'Pham Hoang Duong, Tran Thi Thu Thanh, Le Tu Tan',
+    description: 'This construction is a challenge from the investor to "bring the boat to the mountain". PA team has brought the image of a boat to the roof of the building combining with the traditonal patterns. Additionally, PA has created a large void to get all the natual and sun light to the corridors and stairs. The curves also represent the solf waves that the boat is riding on.'
+  },
+  {
+    _id: 16,
+    mainImage:
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706632077/Mihy%20Jewelry/wkptk89cisu0hfthz2g4.jpg',
+    categoryImage: [
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706632077/Mihy%20Jewelry/wkptk89cisu0hfthz2g4.jpg',
+      'https://res.cloudinary.com/df7v1hify/image/upload/v1706632077/Mihy%20Jewelry/n46cus3ztv9fmcxjtxz0.jpg',
+    ],
+    categories: 'STORE',
+    create_at: '17/07/2019',
+    title: 'MIHY JEWELRY',
+    city: 'HO CHI MINH',
+    area: '18 sqm',
+    location: 'Tan Binh District, HCMC',
+    leadArchitect: 'Chau Vinh Thien',
+    designTeam: 'Pham Hoang Duong, Tran Thi Thu Thanh',
+    description: 'Mihy Jewelry is a small project but PA Design has poured our heart and soul into. The construction is inspired from the jewelers treasuring the jewelries on their delicate hands. The materials and furniture follow a special style to depict a jewlry workshop. By this, customers can experience the feeling of choosing the jewlries at where they are made.'
   },
   {
     _id: 17,
