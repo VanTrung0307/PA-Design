@@ -44,11 +44,6 @@ export default function SingleBlogPage() {
   )
 
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
-  if (selectedImage) {
-    document.body.classList.add('overflow-hidden');
-  } else {
-    document.body.classList.remove('overflow-hidden');
-  }
 
   const openModal = (imageURL: string) => {
     setSelectedImage(imageURL)
@@ -59,6 +54,7 @@ export default function SingleBlogPage() {
   const closeModal = () => {
     setSelectedImage(null)
     setZoomLevel(1);
+    setZoomOutCount(0);
   }
 
   const handlePreviousImage = () => {
@@ -85,12 +81,42 @@ export default function SingleBlogPage() {
 
   const [zoomLevel, setZoomLevel] = useState(1);
 
+  const [zoomOutCount, setZoomOutCount] = useState(0);
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 430);
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   const handleZoomIn = () => {
-    setZoomLevel(Math.min(zoomLevel + 0.1));
+    if(zoomOutCount > 0)
+      setZoomLevel(Math.min(zoomLevel + 0.2));
   };
   
   const handleZoomOut = () => {
-    setZoomLevel(Math.max(zoomLevel - 0.1));
+    let decreaseAmount = 0.4;
+    if (zoomLevel <= 0.6) {
+      decreaseAmount = 0.1;
+    }
+    const newZoomLevel = Math.max(0.1, zoomLevel - decreaseAmount);
+    setZoomLevel(newZoomLevel);
+    const ratio = newZoomLevel / zoomLevel;
+    const newWidth = selectedImageSize.width * ratio;
+    const newHeight = selectedImageSize.height * ratio;
+    setSelectedImageSize({ width: newWidth, height: newHeight });
+
+    setZoomOutCount(zoomOutCount + 1);
+    console.log("Zoomout count:", zoomOutCount)
   };
   
   useEffect(() => {
@@ -265,7 +291,6 @@ export default function SingleBlogPage() {
                         ))}
                     </div>
                     <style jsx>{`
-
                           @media (min-width: 495px) and (max-width: 1385px) {
                               .flex-container {
                                   justify-content: center; // Thiết lập lại justify-content: center trong khoảng từ 966px đến 1385px
@@ -291,7 +316,7 @@ export default function SingleBlogPage() {
                               onDragStart={(e) => e.preventDefault()}
                             />
                             <button
-                              onClick={handleZoomIn}
+                              onClick={handleZoomIn} disabled={isMobile && zoomOutCount < 0 }
                               className="fixed top-8 right-[70px] z-20 space-x-2 w-10 h-10 flex justify-center items-center hover:bg-primary rounded"
                               title="Zoom In"
                             >
