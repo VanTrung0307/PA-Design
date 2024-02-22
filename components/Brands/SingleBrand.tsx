@@ -32,12 +32,14 @@ const SingleBrand = ({ brand }: { brand: Brand }) => {
           src={image}
           alt={name}
           fill
+          loading="lazy"
         />
         <Image
           className="hidden opacity-50 transition-all duration-300 hover:opacity-100 dark:block"
           src={imageLight}
           alt={name}
           fill
+          loading="lazy"
         />
       </motion.a>
     </>

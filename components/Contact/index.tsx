@@ -26,12 +26,14 @@ const Contact = () => {
               alt="Dotted"
               className="dark:hidden"
               fill
+              loading="lazy"
             />
             <Image
               src="./images/shape/shape-dotted-dark.svg"
               alt="Dotted"
               className="hidden dark:block"
               fill
+              loading="lazy"
             />
           </div>
 
@@ -97,6 +99,7 @@ const Contact = () => {
                 alt="Logo"
                 className="dark:hidden"
                 style={{ border: '5px solid black' }}
+                loading="lazy"
               />
               <Image
                 width={500}
@@ -105,6 +108,7 @@ const Contact = () => {
                 alt="Logo"
                 className="hidden dark:block"
                 style={{ border: '5px solid white' }}
+                loading="lazy"
               />
               <div className="flex text-center items-center justify-center mt-5">
                 <span className="text-black dark:text-white text-3xl font-bold">

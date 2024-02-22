@@ -20,12 +20,14 @@ const FeaturesTab = () => {
               className="dark:hidden"
               src="/images/shape/shape-dotted-light.svg"
               alt="Dotted Shape"
+              loading="lazy"
             />
             <Image
               fill
               className="hidden dark:block"
               src="/images/shape/shape-dotted-dark.svg"
               alt="Dotted Shape"
+              loading="lazy"
             />
           </div>
 

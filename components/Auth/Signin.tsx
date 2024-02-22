@@ -22,12 +22,14 @@ const Signin = () => {
               alt="Dotted"
               className="dark:hidden"
               fill
+              loading="lazy"
             />
             <Image
               src="/images/shape/shape-dotted-dark.svg"
               alt="Dotted"
               className="hidden dark:block"
               fill
+              loading="lazy"
             />
           </div>
 

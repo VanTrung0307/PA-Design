@@ -210,6 +210,7 @@ export default function SingleBlogPage() {
               <Image
                 src={blogPost?.mainImage}
                 alt={blogPost?.title}
+                loading='lazy'
                 fill
                 className="object-cover object-center"
                 draggable={false}
@@ -281,6 +282,7 @@ export default function SingleBlogPage() {
                             <Image
                               className="categoryimages-container w-[400px] h-[400px] rounded object-cover"
                               src={image}
+                              loading='lazy'
                               width={400}
                               height={400}
                               alt={`image-${index}`}
@@ -309,6 +311,7 @@ export default function SingleBlogPage() {
                             <Image
                               className="rounded max-w-full"
                               src={selectedImage}
+                              loading='lazy'
                               width={selectedImageSize.width * zoomLevel}
                               height={selectedImageSize.height * zoomLevel}
                               alt="Popup Image"

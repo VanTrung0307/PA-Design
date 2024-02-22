@@ -38,6 +38,7 @@ const RelatedPost = ({ currentBlogId }: RelatedPostProps) => {
                           src={post.mainImage}
                           alt="Blog"
                           className="rounded-lg"
+                          loading="lazy"
                         />
                       </div>
                       <div className="absolute w-full bottom-0 left-0 p-2 bg-black bg-opacity-70 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center">

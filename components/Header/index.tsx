@@ -38,6 +38,7 @@ const Header = () => {
               width={150}
               height={60}
               className="w-full hidden dark:block"
+              loading="lazy"
             />
             <Image
               src="/images/logo/logo-light.png"
@@ -45,6 +46,7 @@ const Header = () => {
               width={130}
               height={60}
               className="w-full dark:hidden"
+              loading="lazy"
             />
           </a>
 
@@ -86,7 +88,7 @@ const Header = () => {
 
         {/* Nav Menu Start   */}
         <div
-          className={`w-full lg:w-full h-0 lg:h-auto invisible lg:visible lg:flex items-center justify-between ${navigationOpen &&
+          className={`w-full lg:w-full h-0 lg:h-auto invisible lg:visible lg:flex items-center justify-around ${navigationOpen &&
             '!visible bg-white dark:bg-blacksection shadow-solid-5 h-auto max-h-[400px] overflow-y-scroll rounded-md mt-4 p-7.5'
             }`}
         >
@@ -123,7 +125,7 @@ const Header = () => {
                       </ul>
                     </>
                   ) : (
-                    <div className="flex justify-end items-center mr-[30px]">
+                    <div className="responsiveNav flex justify-end items-center mr-[30px]">
                       <Link
                         href={`${menuItem.path}`}
                         className={`${pathUrl === menuItem.path

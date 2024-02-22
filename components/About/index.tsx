@@ -34,12 +34,14 @@ const About = () => {
                 alt="About"
                 className="dark:hidden"
                 fill
+                loading="lazy"
               />
               <Image
                 src="/images/about/about-dark-01.png"
                 alt="About"
                 className="hidden dark:block"
                 fill
+                loading="lazy"
               />
             </motion.div>
             <motion.div
@@ -196,12 +198,14 @@ const About = () => {
                 alt="About"
                 className="dark:hidden"
                 fill
+                loading="lazy"
               />
               <Image
                 src="./images/about/about-dark-02.svg"
                 alt="About"
                 className="hidden dark:block"
                 fill
+                loading="lazy"
               />
             </motion.div>
           </div>

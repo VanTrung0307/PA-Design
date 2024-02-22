@@ -51,7 +51,13 @@ const BlogItem: React.FC<BlogItemProps> = ({ blog, _id }) => {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <Image src={mainImage} alt={title} fill className='rounded-lg object-cover'/>
+          <Image 
+            src={mainImage} 
+            alt={title} 
+            fill 
+            className='rounded-lg object-cover'
+            loading="lazy"
+          />
           {/* {categoryImage &&
             categoryImage.map((image, index) => (
               <Image
