@@ -125,7 +125,7 @@ const Header = () => {
                       </ul>
                     </>
                   ) : (
-                    <div className="responsiveNav flex justify-end items-center mr-[30px]">
+                    <div className="flex justify-end items-center ml-[100px]">
                       <Link
                         href={`${menuItem.path}`}
                         className={`${pathUrl === menuItem.path

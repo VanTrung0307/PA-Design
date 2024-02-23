@@ -295,7 +295,7 @@ export default function SingleBlogPage() {
                     <style jsx>{`
                           @media (min-width: 495px) and (max-width: 1385px) {
                               .flex-container {
-                                  justify-content: center; // Thiết lập lại justify-content: center trong khoảng từ 966px đến 1385px
+                                  justify-content: center;
                               }
                           }
                       `}</style>
